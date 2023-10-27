@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
-  "version": "1.0.0",
+  "name": "@stefanobartoletti/nuxt-social-share",
+  "version": "0.1.0",
   "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "repository": "stefanobartoletti/nuxt-social-share",
   "license": "MIT",
   "type": "module",
   "exports": {
