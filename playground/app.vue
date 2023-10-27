@@ -1,6 +1,8 @@
 <template>
   <div>
     Nuxt module playground!
+
+    <SocialShare />
   </div>
 </template>
 

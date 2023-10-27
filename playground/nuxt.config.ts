@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  myModule: {},
+  socialShare: {},
   devtools: { enabled: true }
 })
