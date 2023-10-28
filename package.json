@@ -31,15 +31,17 @@
     "@nuxt/kit": "^3.8.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
+    "@iconify/vue": "^4.1.1",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.2",
     "@nuxt/schema": "^3.8.0",
     "@nuxt/test-utils": "^3.8.0",
+    "@types/node": "^20.8.9",
     "changelogen": "^0.5.5",
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
+    "sass": "^1.69.5",
     "vitest": "^0.33.0"
   }
 }
