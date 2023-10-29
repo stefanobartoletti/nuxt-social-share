@@ -36,7 +36,7 @@ const networksMap = {
   },
   twitter : {
     shareUrl: `https://twitter.com/intent/tweet?url=${pageUrl}`,
-    icon: 'ri:twitter-fill'
+    icon: 'ri:twitter-x-fill'
   },
   linkedin : {
     shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
@@ -70,7 +70,7 @@ const socialNetwork = networksMap[props.network]
 <style lang="scss" scoped>
 $networks:
   'facebook' #0866FF,
-  'twitter' #1D9BF0,
+  'twitter' #000000,
   'linkedin' #0A66C2,
   'pinterest' #BD081C,
   'pocket' #EF3F56,
