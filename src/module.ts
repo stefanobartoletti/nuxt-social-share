@@ -1,4 +1,4 @@
-import { defineNuxtModule, addComponent, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addComponent, createResolver } from '@nuxt/kit'
 import { defu } from 'defu'
 
 // Module options TypeScript interface definition
@@ -15,8 +15,6 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     // 'styled' and 'label' defaults are defined in props
-    // styled: false,
-    // label: true,
   },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
@@ -31,7 +29,5 @@ export default defineNuxtModule<ModuleOptions>({
       filePath: resolver.resolve('./runtime/components/SocialShare.vue')
     })
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
