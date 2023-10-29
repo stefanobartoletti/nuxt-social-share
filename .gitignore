@@ -54,3 +54,8 @@ coverage
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Archives
+*.zip
+*.tgz
+
