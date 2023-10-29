@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  socialShare: {},
+  socialShare: {
+    // styled: true,
+    // label: false,
+  },
   devtools: { enabled: true }
 })

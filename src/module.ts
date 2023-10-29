@@ -1,4 +1,5 @@
 import { defineNuxtModule, addComponent, addPlugin, createResolver } from '@nuxt/kit'
+import { defu } from 'defu'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -9,9 +10,17 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'socialShare'
   },
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    // 'styled' and 'label' defaults are defined in props
+    // styled: false,
+    // label: true,
+  },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    const moduleOptions: ModuleOptions = defu(nuxt.options.runtimeConfig.public.socialShare, options)
+
+    nuxt.options.runtimeConfig.public.socialShare = moduleOptions
 
     // From the runtime directory
     addComponent({

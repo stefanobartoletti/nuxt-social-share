@@ -1,7 +1,7 @@
 <template>
   <a
     class="share-button"
-    :class="[`network-${network}`, {'styled': styled}]"
+    :class="[`network-${network}`, {'styled': optionStyled}]"
     :href="socialNetwork.shareUrl"
     target="_blank"
   >
@@ -10,7 +10,7 @@
       :icon="socialNetwork.icon"
     />
     <span
-      v-if="label" 
+      v-if="optionLabel" 
       class="share-label"
     >Share</span>
   </a>
@@ -18,16 +18,21 @@
 
 <script setup>
 import { Icon } from '@iconify/vue';
-import { useRequestURL } from '#imports';
+import { useRequestURL, useRuntimeConfig } from '#imports';
 
 const props = defineProps({
   network: { type: String, required: true },
   styled: { type: Boolean, default: false },
-  url: { type: String, default: null },
   label: { type: Boolean, default: true },
+  url: { type: String, default: null },
 })
 
 const pageUrl = props.url || useRequestURL().href
+
+const options = useRuntimeConfig().public.socialShare
+
+const optionStyled = props.styled || options.styled
+const optionLabel = props.label || options.label
 
 const networksMap = {
   facebook : {

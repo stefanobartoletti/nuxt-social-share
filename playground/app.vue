@@ -10,6 +10,7 @@
         :key="network"
         :network="network"
         :styled="true"
+        :label="true"
       />
     </div>
 
