@@ -43,7 +43,7 @@ const networksMap = {
     icon: 'ri:linkedin-fill'
   },
   pinterest : {
-    shareUrl: `http://pinterest.com/pin/create/button/?url=${pageUrl}`,
+    shareUrl: `https://pinterest.com/pin/create/button/?url=${pageUrl}`,
     icon: 'jam:pinterest'
   },
   pocket : {
@@ -91,6 +91,7 @@ $networks:
 
   &.styled {
     font-size: 0.875rem;
+    line-height: normal;
     padding: 0.5rem;
     color: white;
     border-radius: 0.25rem;
