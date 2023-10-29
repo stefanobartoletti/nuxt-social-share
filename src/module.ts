@@ -2,7 +2,10 @@ import { defineNuxtModule, addComponent, addPlugin, createResolver } from '@nuxt
 import { defu } from 'defu'
 
 // Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  styled?: boolean
+  label?: boolean
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -18,7 +21,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    const moduleOptions: ModuleOptions = defu(nuxt.options.runtimeConfig.public.socialShare, options)
+    const moduleOptions: ModuleOptions = defu(nuxt.options.runtimeConfig.public.socialShare as ModuleOptions, options)
 
     nuxt.options.runtimeConfig.public.socialShare = moduleOptions
 
