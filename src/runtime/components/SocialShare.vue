@@ -22,8 +22,8 @@ import { useRequestURL, useRuntimeConfig } from '#imports';
 
 const props = defineProps({
   network: { type: String, required: true },
-  styled: { type: Boolean, default: false },
-  label: { type: Boolean, default: true },
+  styled: { type: Boolean, default: null },
+  label: { type: Boolean, default: null },
   url: { type: String, default: null },
 })
 
@@ -31,8 +31,8 @@ const pageUrl = props.url || useRequestURL().href
 
 const options = useRuntimeConfig().public.socialShare
 
-const optionStyled = props.styled || options.styled
-const optionLabel = props.label || options.label
+const optionStyled = props.styled != null ? props.styled : options.styled
+const optionLabel = props.label != null ? props.label : options.label
 
 const networksMap = {
   facebook : {

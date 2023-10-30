@@ -14,14 +14,15 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    // 'styled' and 'label' defaults are defined in props
+    styled: false,
+    label: true,
   },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    const moduleOptions: ModuleOptions = defu(nuxt.options.runtimeConfig.public.socialShare as ModuleOptions, options)
-
-    nuxt.options.runtimeConfig.public.socialShare = moduleOptions
+    nuxt.options.runtimeConfig.public.socialShare = defu(nuxt.options.runtimeConfig.public.socialShare, {
+      ...options
+    })
 
     // From the runtime directory
     addComponent({
