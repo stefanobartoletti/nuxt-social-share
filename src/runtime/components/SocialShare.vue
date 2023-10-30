@@ -1,7 +1,7 @@
 <template>
   <a
     class="share-button"
-    :class="[`network-${network}`, {'styled': optionStyled}]"
+    :class="[`network-${network}`, {'share-button-styled': optionStyled}]"
     :href="socialNetwork.shareUrl"
     target="_blank"
   >
@@ -93,26 +93,28 @@ $networks:
     font-size: 1.5em;
   }
 
-  &.styled {
-    font-size: 0.875rem;
-    line-height: normal;
-    padding: 0.5rem;
-    color: white;
-    border-radius: 0.25rem;
-    transition: all 0.25s ease-out;
+}
 
-    @each $name, $color in $networks {
-      &.network-#{$name} {
-        background-color: $color;
+.share-button-styled {
+  font-size: 0.875rem;
+  line-height: normal;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
 
-        &:hover {
-          background-color: darken($color, 10%);
-        }
+  @each $name, $color in $networks {
+    &.network-#{$name} {
+      background-color: $color;
+
+      &:hover {
+        background-color: darken($color, 10%);
       }
     }
-    .share-label {
-      padding: 0 0.5rem;
-    }
+  }
+  .share-label {
+    padding: 0 0.5rem;
   }
 }
+
 </style>

@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Social Share Buttons</h1>
 
-    <h2>Styled</h2>
+    <h2>styled = true, label = true</h2>
 
     <div class="buttons">
       <SocialShare
@@ -14,7 +14,7 @@
       />
     </div>
 
-    <h2>Styled no labels</h2>
+    <h2>styled = true, label = false</h2>
 
     <div class="buttons">
       <SocialShare
@@ -26,7 +26,20 @@
       />
     </div>
 
-    <h2>Unstyled (default)</h2>
+    <h2>styled = true, label = false, with custom style</h2>
+
+    <div class="buttons buttons-square">
+      <SocialShare
+        v-for="network in testNetworks"
+        :key="network"
+        :network="network"
+        :styled="true"
+        :label="false"
+        class="button-square"
+      />
+    </div>
+
+    <h2>defaults (styled = false, label = true)</h2>
 
     <div class="buttons">
       <SocialShare
@@ -61,5 +74,13 @@ const testNetworks = [
 .buttons {
   display: flex;
   gap: 0.5rem;
+}
+.buttons-square {
+  gap: 0rem;
+}
+.button-square {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0;
 }
 </style>
