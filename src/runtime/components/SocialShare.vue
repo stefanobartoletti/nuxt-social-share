@@ -27,12 +27,11 @@ const props = defineProps({
   url: { type: String, default: null },
 })
 
-const pageUrl = props.url || useRequestURL().href
-
 const options = useRuntimeConfig().public.socialShare
 
 const optionStyled = props.styled != null ? props.styled : options.styled
 const optionLabel = props.label != null ? props.label : options.label
+const pageUrl = props.url != null ? props.url : useRequestURL().href
 
 const networksMap = {
   facebook : {
@@ -107,7 +106,7 @@ $networks:
         background-color: $color;
 
         &:hover {
-          background-color: darken($color, 20%);
+          background-color: darken($color, 10%);
         }
       }
     }
