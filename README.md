@@ -78,7 +78,7 @@ The component will render the following minimal HTML:
 </a>
 ```
 
-> [Note]
+> **Note**
 > - As the component comes unstyled by default (only providing some minimal flex properties to correctly align icon and label), you can use these classes to apply every style you require to integrate it into your design. Or, if you use Tailwind or some similar framework, you can directly pass down required classes.
 > - Custom styles or additional classes can also be used when using the `styled` version.
 > - The only required prop is `network`, other like `styled` or `label` are best set from the module options (see 'Configuration' below)
@@ -160,10 +160,10 @@ Whether the "Share" label should be rendered or not. It is `true` by default, wh
 
 A list of the currently supported networks and of their URL arguments.
 
-> [Note]
+> **Note**
 > Currently I have only included networks that I use and that I have personally tested to be working. More are planned to be added, contributions are welcome.
 
-> [Important]
+> **Important**
 > At the moment only the `url` argument is implemented. More, like `title`, `text` and other, are planned for future release. 
 > Anyway, please note that only `url` is strictly required for the sharing to work: other metadata will be automatically retrived from Open Graph meta tags, that you always should properly set in your webpages.
 
