@@ -73,7 +73,11 @@ const testNetworks = [
 }
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  border: 2px solid lightgray;
+  padding: 2rem;
+  width: max-content;
 }
 .buttons-square {
   gap: 0rem;
