@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [18]
+
+    steps:
+      - uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 📦 Install dependencies
+        run: yarn install
+
+      - name: 🚧 Set up project
+        run: yarn dev:prepare
+
+      - name: 🛠 Build project
+        run: yarn prepack
+
+      - name: ✅ Lint
+        run: yarn lint
+
+      # - name: 🧪 Test project
+      #   run: yarn test
