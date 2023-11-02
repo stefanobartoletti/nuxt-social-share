@@ -249,7 +249,7 @@ npm run release
 [npm-downloads-src]: https://img.shields.io/npm/dm/@stefanobartoletti/nuxt-social-share.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npmjs.com/package/@stefanobartoletti/nuxt-social-share
 
-[code-quality-src]: https://img.shields.io/codacy/grade/xxx.svg?style=flat&colorA=18181B&colorB=28CF8D
+[code-quality-src]: https://img.shields.io/codacy/grade/437177566f784faf81dc6382e0919017.svg?style=flat&colorA=18181B&colorB=28CF8D
 [code-quality-href]: https://app.codacy.com/gh/stefanobartoletti/nuxt-social-share
 
 [bundle-size-src]: https://img.shields.io/bundlephobia/minzip/@stefanobartoletti/nuxt-social-share.svg?style=flat&colorA=18181B&colorB=28CF8D
