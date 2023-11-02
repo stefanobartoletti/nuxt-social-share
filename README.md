@@ -4,6 +4,8 @@
 
 # Nuxt Social Share
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0370b989a90b46e190111a2abb8e44c3)](https://app.codacy.com/gh/stefanobartoletti/nuxt-social-share?utm_source=github.com&utm_medium=referral&utm_content=stefanobartoletti/nuxt-social-share&utm_campaign=Badge_Grade)
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![code quality][code-quality-src]][code-quality-href]
