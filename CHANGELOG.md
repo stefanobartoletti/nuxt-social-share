@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.6
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.5...v0.1.6)
+
+### 🏡 Chore
+
+- **release:** V0.1.5 ([8f7f47d](https://github.com/stefanobartoletti/nuxt-social-share/commit/8f7f47d))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+
 ## v0.1.5
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.1...v0.1.5)
