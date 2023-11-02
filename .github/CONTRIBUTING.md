@@ -6,7 +6,7 @@ There are some guidelines that should be followed to ensure an easier management
 
 To open a bug, open an issue in the "Bug Report" category, making sure to follow these steps:
 
-- make sure that you have correctly set and used the module and its functionalities according to th documntation in the readme
+- make sure that you have correctly set and used the module and its functionalities according to th documentation in the readme
 - search on the existing issues, your problem may have already be answered or even solved
 - describe your issue in a clear and detailed way
 - use English in your reports
