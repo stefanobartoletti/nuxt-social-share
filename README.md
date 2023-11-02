@@ -75,23 +75,25 @@ The `SocialShare` component provides a share button for a single social network,
 <SocialShare network="facebook" :styled="true" :label="false" />
 ```
 
-The component will render the following minimal HTML: 
+The component will render by default the following minimal HTML: 
 
 ```html
-<a class="share-button network-{network}">
-  <svg class="share-icon">...</svg>
-  <span class="share-label">Share</span>
+<a class="social-share-button social-share-button--{network}">
+  <svg class="social-share-button__icon">...</svg>
+  <span class="social-share-button__label">Share</span>
 </a>
 ```
 
+An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` element will not be rendered if `:label="false"`.
+
 > **Note**
-> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label; you can use these classes to apply every style according to your design. Or, if you use Tailwind, you can style it by setting classes to the component, that will be applied to the `<a>` element.
+> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label; you can use the elements classes to apply every style according to your design. Or, if you use Tailwind, you can style it by directly applying classes to the component, that will be applied to the `<a>` element.
 > - Custom styles or additional classes can also be used when using the `styled` version.
 > - The only required prop is `network`, other like `styled` or `label` are best set from the module options (see 'Configuration' below)
 > - The component only provides a single share button. As you will typically need to use more of them at once, you should place them inside a wrapper to distribute them according to your design.
-> - In order to avoid duplicate code when using many instances of the component, especially if you need to set many props or classes, a wise approach is to iterate it with `v-for` and an array of the needed networks.
+> - In order to avoid duplicate code when using many instances of the component, especially if you need to customize it, a wise approach is to iterate it with `v-for` and an array of the needed networks.
 
-An example of common use when using i.e. Tailwind could be as follows:
+A common use when using i.e. Tailwind could be as follows:
 
 ```vue
 <div class="flex flex-row gap-2">
@@ -108,7 +110,7 @@ An example of common use when using i.e. Tailwind could be as follows:
 
 ## 🎛️ Configuration
 
-It is possible to customize how this module works from the `socialShare` key in `nuxt.config.ts`:
+Module options can be set from the `socialShare` key in `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
@@ -135,7 +137,7 @@ It can be set also on a single component level via props, but is us usually bett
 - Type: `Boolean`
 - Default: `true`
 
-Whether the "Share" label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
+Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
 
 It can be set also on a single component level via props, but is us usually better to set this from the module options to create your defaults, and override it from props only if needed.
 
@@ -166,7 +168,7 @@ This property should be typically set globally from the module options, it is av
 - Type: `Boolean`
 - Default: `true`
 
-Whether the "Share" label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
+Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
 
 This property should be usually set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
 

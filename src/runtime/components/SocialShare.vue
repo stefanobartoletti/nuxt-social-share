@@ -1,17 +1,17 @@
 <template>
   <a
-    class="share-button"
-    :class="[`network-${network}`, {'share-button-styled': optionStyled}]"
+    class="social-share-button"
+    :class="[`social-share-button--${network}`, {'social-share-button--styled': optionStyled}]"
     :href="socialNetwork.shareUrl"
     target="_blank"
   >
     <Icon
-      class="share-icon"
+      class="social-share-button__icon"
       :icon="socialNetwork.icon"
     />
     <span
       v-if="optionLabel" 
-      class="share-label"
+      class="social-share-button__label"
     >Share</span>
   </a>
 </template>
@@ -71,7 +71,7 @@ const networksMap = {
 const socialNetwork = networksMap[props.network]
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $networks:
   'facebook' #0866FF,
   'twitter' #000000,
@@ -82,20 +82,19 @@ $networks:
   'telegram' #26A5E4,
   'email' #7e7e7e;
 
-.share-button {
+:where(.social-share-button) {
   display: flex;
   gap: 0.5em;
   align-items: center;
   text-decoration: none;
   width: min-content;
-
-  .share-icon {
-    font-size: 1.5em;
-  }
-
 }
 
-.share-button-styled {
+:where(.social-share-button__icon) {
+  font-size: 1.5em;
+}
+
+:where(.social-share-button--styled) {
   font-size: 0.875rem;
   line-height: normal;
   padding: 0.5rem;
@@ -104,7 +103,7 @@ $networks:
   transition: all 0.25s ease-out;
 
   @each $name, $color in $networks {
-    &.network-#{$name} {
+    &.social-share-button--#{$name} {
       background-color: $color;
 
       &:hover {
@@ -112,7 +111,8 @@ $networks:
       }
     }
   }
-  .share-label {
+
+  .social-share-button__label {
     padding: 0 0.5rem;
   }
 }
