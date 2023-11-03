@@ -238,7 +238,7 @@ npm run release
 
 ## 📝 License
 
-[MIT](https://github.com/stefanobartoletti/bricks/blob/master/LICENSE.txt)
+[MIT](https://github.com/stefanobartoletti/nuxt-social-share/blob/main/LICENSE)
 
 © 2023-present [Stefano Bartoletti](https://www.stefanobartoletti.it)
 
