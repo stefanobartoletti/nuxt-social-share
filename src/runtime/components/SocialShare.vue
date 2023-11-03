@@ -103,7 +103,7 @@ $networks:
   transition: all 0.25s ease-out;
 
   @each $name, $color in $networks {
-    &.social-share-button--#{$name} {
+    &:where(.social-share-button--#{$name}) {
       background-color: $color;
 
       &:hover {
@@ -112,7 +112,7 @@ $networks:
     }
   }
 
-  .social-share-button__label {
+  :where(.social-share-button__label) {
     padding: 0 0.5rem;
   }
 }
