@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.1.7
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.6...v0.1.7)
+
+### 🩹 Fixes
+
+- Lower css specificity to allow style override ([5119017](https://github.com/stefanobartoletti/nuxt-social-share/commit/5119017))
+
+### 🏡 Chore
+
+- **release:** V0.1.6 ([cd78496](https://github.com/stefanobartoletti/nuxt-social-share/commit/cd78496))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+
 ## v0.1.6
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.5...v0.1.6)
