@@ -5,6 +5,9 @@
   "repository": "stefanobartoletti/nuxt-social-share",
   "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
