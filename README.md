@@ -272,6 +272,11 @@ npm run test:watch
 npm run release
 ```
 
+## 🤝 Contributing
+
+If you want to contribute you can start by reading the [Contributing guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/master/.github/CONTRIBUTING.md).
+
+
 ## 📝 License
 
 [MIT](https://github.com/stefanobartoletti/nuxt-social-share/blob/main/LICENSE)

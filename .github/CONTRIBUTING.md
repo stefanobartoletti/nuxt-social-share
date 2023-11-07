@@ -16,4 +16,5 @@ To open a bug, open an issue in the "Bug Report" category, making sure to follow
 To submit a pull request, make sure to follow these steps and requirements:
 
 - open a PR's for a single feature or bugfix, multiple modifications of different nature can be submitted with multiple PR's
-- if submitting a new feature, discuss it by opening an issue before even start working on it. This is required to make sure that the new feature is something that is really needed or wanted and thus having it green-lighted, and to receive some feedback and suggestions about how to properly implement it. 
+- if submitting a new feature, discuss it by opening an issue before even start working on it. This is required to make sure that the new feature is something that is really needed or wanted and thus having it green-lighted, and to receive some feedback and suggestions about how to properly implement it.
+- Issues labeled with [`Help Wanted`](https://github.com/stefanobartoletti/nuxt-social-share/labels/help%20wanted), if present, are a good starting point to start cotributing to the project.
