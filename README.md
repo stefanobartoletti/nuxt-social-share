@@ -27,9 +27,10 @@ Simple Social Sharing for Nuxt
 
 ## 🌟 Features
 
-- Provides an easy to use `SocialShare` component
-- Component unstyled by default for easy integration in any design
+- Provides a minimal config `<SocialShare>` component
+- The component is unstyled by default for easy integration in any design
 - Optional styled version, that can still be further customized
+- A `useSocialShare` composable is exposed, to provide even more flexibility if needed
 - Many major social networks supported
 
 ## 🛠️ Quick Setup
@@ -61,15 +62,15 @@ export default defineNuxtConfig({
 
 That's it! You can now use Nuxt Social Share in your Nuxt app ✨
 
-## 🔩 Use
+## 🎨 Using the `<SocialShare>` component
 
-The `SocialShare` component provides a share button for a single social network, that you must select from the `network` prop; you will need to use it as many times as your total needed networks.
+The `<SocialShare>` component provides a share button for a single social network, that you must select with the `network` prop; you will need to use it as many times as your total needed networks.
 
 ```vue
 <!-- Basic use -->
 <SocialShare network="facebook" />
 <SocialShare network="twitter" />
-<SocialShare network="linkdin" />
+<SocialShare network="linkedin" />
 
 <!-- Customization with props -->
 <SocialShare network="facebook" :styled="true" :label="false" />
@@ -87,7 +88,7 @@ The component will render by default the following minimal HTML:
 An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` element will not be rendered if `:label="false"`.
 
 > **Note**
-> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label; you can use the elements classes to apply every style according to your design. Or, if you use Tailwind, you can style it by directly applying classes to the component, that will be applied to the `<a>` element.
+> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label; you can use the elements classes to apply every style according to your design. Or, if you use Tailwind, you can style it by directly applying classes to the component, that will be passed down to the `<a>` element.
 > - Custom styles or additional classes can also be used when using the `styled` version.
 > - The only required prop is `network`, other like `styled` or `label` are best set from the module options (see 'Configuration' below)
 > - The component only provides a single share button. As you will typically need to use more of them at once, you should place them inside a wrapper to distribute them according to your design.
@@ -107,6 +108,82 @@ A common use when using i.e. Tailwind could be as follows:
   />
 </div>
 ```
+
+### Props
+
+#### `network`
+
+- Required: `Yes`
+- Type: `String`
+
+The social network or messaging service where the content should be shared. This is required for the component to work.
+
+A list of the supported networks is available below.
+
+#### `styled`
+
+- Required: `No`
+- Type: `Boolean`
+- Default: `false`
+
+Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true`.
+
+This property should be typically set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
+
+#### `label`
+
+- Required: `No`
+- Type: `Boolean`
+- Default: `true`
+
+Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
+
+This property should be usually set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
+
+#### `url`
+
+- Required: `No`
+- Type: `String`
+- Default: `the current page URL`
+
+The URL that will be shared on the selected social network.
+
+Defaults to the current page URL. On most cases you don't need another value, but if you need to provide a different URL, you can do so with this prop.
+
+## 🔩 Using the `useSocialShare` composable
+
+Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
+
+Like the component, one instance of `useSocialShare` should be used for every needed share.
+
+An options object should be passed as an argument, like in the following example:
+
+```vue
+<script setup>
+// Basic minimal use
+const shareFacebook = useSocialShare({ network: 'facebook' })
+
+// All possible options
+const shareFacebook = useSocialShare({
+  network: 'facebook', // Required
+  url: 'https://www.example.com' // Optional, defaults to current page URL if not provided
+})
+</script>
+```
+
+It will return the following object, e:
+
+```js
+{
+  "name": "facebook", // Name of the selected social network
+  "shareUrl": "https://www.facebook.com/sharer/sharer.php?u=https://www.example.com", // Sharing url
+  "iconName": "ri:facebook-fill", // Icon name from "@iconify/vue" package
+  "color": "#0866FF" // Main brand color of the selected network
+}
+```
+
+You can then use some or all the returned properties, according to your project setup and requirements.
+
 
 ## 🎛️ Configuration
 
@@ -128,7 +205,7 @@ Available options:
 - Type: `Boolean`
 - Default: `false`
 
-Whether the `socialShare` components should be styled or not. It is `false` by default to allow for easier custom styling.
+Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling.
 
 It can be set also on a single component level via props, but is us usually better to set this from the module options to create your defaults, and override it from props only if needed.
 
@@ -137,50 +214,9 @@ It can be set also on a single component level via props, but is us usually bett
 - Type: `Boolean`
 - Default: `true`
 
-Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
+Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
 
 It can be set also on a single component level via props, but is us usually better to set this from the module options to create your defaults, and override it from props only if needed.
-
-## 🎨 Props
-
-### `network`
-
-- Required: `Yes`
-- Type: `String`
-
-The social network or messaging service where the content should be shared. This is the only required prop.
-
-A list of the supported networks is available below.
-
-### `styled`
-
-- Required: `No`
-- Type: `Boolean`
-- Default: `false`
-
-Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true`.
-
-This property should be typically set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
-
-### `label`
-
-- Required: `No`
-- Type: `Boolean`
-- Default: `true`
-
-Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
-
-This property should be usually set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
-
-### `url`
-
-- Required: `No`
-- Type: `String`
-- Default: `the current page URL`
-
-The URL that will be shared on the selected social network.
-
-Defaults to the current page URL. On most cases you don't need another value, but if you need to provide another URL, you can do so with this prop.
 
 ## ↗️ Supported networks
 
@@ -202,7 +238,7 @@ A list of the currently supported networks and of their URL arguments.
 
 > **Important**
 > At the moment only the `url` argument is implemented. More, like `title`, `text` and other, are planned for a future release. 
-> Please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be automatically retrived from Open Graph meta tags, that you always should properly set in your webpages anyway.
+> Anyway, please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be retrived by the social network from Open Graph meta tags, that you always should properly set in your webpages anyway.
 
 ## ✅ Todo
 
