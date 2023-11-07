@@ -48,10 +48,17 @@
         :network="network"
       />
     </div>
+
+    <h2>composable output</h2>
+    <pre>{{ testComposable }}</pre>
   </div>
 </template>
 
 <script setup>
+import { useSocialShare } from '#imports';
+
+const testComposable = useSocialShare({network: 'facebook'})
+
 const testNetworks = [
   'facebook',
   'twitter',
@@ -86,5 +93,12 @@ const testNetworks = [
   padding: 1rem;
   font-size: 1rem;
   border-radius: 0;
+}
+
+pre {
+  background-color: lightgray;
+  padding: 1rem;
+  font-family: monospace;
+  max-width: max-content;
 }
 </style>
