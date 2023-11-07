@@ -5,6 +5,10 @@
   "repository": "stefanobartoletti/nuxt-social-share",
   "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -22,7 +26,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish --access=public && git push --follow-tags",
+    "release": "release-it",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
@@ -38,10 +42,12 @@
     "@nuxt/module-builder": "^0.5.2",
     "@nuxt/schema": "^3.8.0",
     "@nuxt/test-utils": "^3.8.0",
+    "@release-it/conventional-changelog": "^7.0.2",
     "@types/node": "^20.8.10",
     "changelogen": "^0.5.5",
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
+    "release-it": "^16.2.1",
     "sass": "^1.69.5",
     "vitest": "^0.34.6"
   }
