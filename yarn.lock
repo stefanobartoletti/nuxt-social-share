@@ -935,9 +935,9 @@
     untyped "^1.4.0"
 
 "@nuxt/module-builder@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/module-builder/-/module-builder-0.5.2.tgz#4951014b6a72cfc930dc7663067ba2cfa6f0ca1c"
-  integrity sha512-MsnPTsa94VNrzV76RKCDS0C96uaKw9s3EbTtabI/BkAXOD4Ud1w6m0O20XUdI9tmRtE8Kbgyr4XUhD/YB3eeAw==
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@nuxt/module-builder/-/module-builder-0.5.3.tgz#5424753c4a264dc68b83a86af57bda858e26a7a8"
+  integrity sha512-iKQHuZb8/IXzTW2CqrIlsmzBuSaM9vISTGM0+KxbBPSG5JCy5MtWbmxPIw1jgac1g/B2ZkBhOCXOxGTecCHTRQ==
   dependencies:
     citty "^0.1.4"
     consola "^3.2.3"
