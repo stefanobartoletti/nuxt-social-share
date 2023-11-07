@@ -986,7 +986,7 @@
     unimport "^3.4.0"
     untyped "^1.4.0"
 
-"@nuxt/schema@3.8.1", "@nuxt/schema@^3.7.4", "@nuxt/schema@^3.8.0":
+"@nuxt/schema@3.8.1", "@nuxt/schema@^3.7.4", "@nuxt/schema@^3.8.1":
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.8.1.tgz#03b78c0af5fcc6f33eee5964c7ba5508fb4da13c"
   integrity sha512-fSaWRcI/2mUskfTZTGSnH6Ny0x05CRzylbVn6WFV0d6UEKIVy42Qd6n+h7yoFfp4cq4nji6u16PT4SqS1DEhsw==
