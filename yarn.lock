@@ -945,7 +945,7 @@
     pathe "^1.1.1"
     unbuild "^2.0.0"
 
-"@nuxt/schema@3.8.0", "@nuxt/schema@^3.7.4", "@nuxt/schema@^3.8.0":
+"@nuxt/schema@3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.8.0.tgz#0d6f279f4e30b217c3423215753d8fd23878b49d"
   integrity sha512-VEDVeCjdVowhoY5vIBSz94+SSwmM204jN6TNe/ShBJ2d/vZiy9EtLbhOwqaPNFHwnN1fl/XFHThwJiexdB9D1w==
@@ -957,6 +957,22 @@
     pathe "^1.1.1"
     pkg-types "^1.0.3"
     postcss-import-resolver "^2.0.0"
+    std-env "^3.4.3"
+    ufo "^1.3.1"
+    unimport "^3.4.0"
+    untyped "^1.4.0"
+
+"@nuxt/schema@^3.7.4", "@nuxt/schema@^3.8.0":
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.8.1.tgz#03b78c0af5fcc6f33eee5964c7ba5508fb4da13c"
+  integrity sha512-fSaWRcI/2mUskfTZTGSnH6Ny0x05CRzylbVn6WFV0d6UEKIVy42Qd6n+h7yoFfp4cq4nji6u16PT4SqS1DEhsw==
+  dependencies:
+    "@nuxt/ui-templates" "^1.3.1"
+    consola "^3.2.3"
+    defu "^6.1.3"
+    hookable "^5.5.3"
+    pathe "^1.1.1"
+    pkg-types "^1.0.3"
     std-env "^3.4.3"
     ufo "^1.3.1"
     unimport "^3.4.0"
