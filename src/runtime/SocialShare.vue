@@ -7,7 +7,7 @@
   >
     <Icon
       class="social-share-button__icon"
-      :icon="socialNetwork.icon"
+      :icon="socialNetwork.iconName"
     />
     <span
       v-if="optionLabel" 
@@ -18,7 +18,8 @@
 
 <script setup>
 import { Icon } from '@iconify/vue';
-import { useRequestURL, useRuntimeConfig } from '#imports';
+import { useRuntimeConfig } from '#imports';
+import { useSocialShare } from './useSocialShare';
 
 const props = defineProps({
   network: { type: String, required: true },
@@ -31,44 +32,12 @@ const options = useRuntimeConfig().public.socialShare
 
 const optionStyled = props.styled != null ? props.styled : options.styled
 const optionLabel = props.label != null ? props.label : options.label
-const pageUrl = props.url != null ? props.url : useRequestURL().href
 
-const networksMap = {
-  facebook : {
-    shareUrl: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
-    icon: 'ri:facebook-fill'
-  },
-  twitter : {
-    shareUrl: `https://twitter.com/intent/tweet?url=${pageUrl}`,
-    icon: 'ri:twitter-x-fill'
-  },
-  linkedin : {
-    shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
-    icon: 'ri:linkedin-fill'
-  },
-  pinterest : {
-    shareUrl: `https://pinterest.com/pin/create/button/?url=${pageUrl}`,
-    icon: 'jam:pinterest'
-  },
-  pocket : {
-    shareUrl: `https://getpocket.com/edit?url=${pageUrl}`,
-    icon: 'fe:pocket'
-  },
-  whatsapp : {
-    shareUrl: `https://api.whatsapp.com/send?text=${pageUrl}`,
-    icon: 'ri:whatsapp-line'
-  },
-  telegram : {
-    shareUrl: `https://t.me/share/url?url=${pageUrl}`,
-    icon: 'mingcute:telegram-fill'
-  },
-  email : {
-    shareUrl: `mailto:?body=${pageUrl}`,
-    icon: 'ic:round-mail'
-  },
-}
+const socialNetwork = useSocialShare({ 
+  network: props.network, 
+  url: props.url,
+})
 
-const socialNetwork = networksMap[props.network]
 </script>
 
 <style lang="scss">

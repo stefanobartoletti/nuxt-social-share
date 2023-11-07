@@ -27,7 +27,7 @@ export default defineNuxtModule<ModuleOptions>({
     // From the runtime directory
     addComponent({
       name: 'SocialShare', // name of the component to be used in vue templates
-      filePath: resolver.resolve('./runtime/components/SocialShare.vue')
+      filePath: resolver.resolve('./runtime/SocialShare.vue')
     })
 
   }
