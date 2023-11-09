@@ -9,6 +9,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
+  "packageManager": "pnpm@8.10.2",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",

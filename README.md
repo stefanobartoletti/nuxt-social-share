@@ -245,37 +245,17 @@ A list of the currently supported networks and of their URL arguments.
 - [ ] Add support for more major social networks
 - [ ] Add support for more URL arguments: `title`, `text`, etc.
 
-
-## 🧑‍💻 Development
-
-```bash
-# Install dependencies
-npm install
-
-# Generate type stubs
-npm run dev:prepare
-
-# Develop with the playground
-npm run dev
-
-# Build the playground
-npm run dev:build
-
-# Run ESLint
-npm run lint
-
-# Run Vitest
-npm run test
-npm run test:watch
-
-# Release new version
-npm run release
-```
-
 ## 🤝 Contributing
 
-If you want to contribute you can start by reading the [Contributing guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/master/.github/CONTRIBUTING.md).
+> **Note**
+> If you want to contribute you can start by reading the [Contributing guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/master/.github/CONTRIBUTING.md).
+>
 
+- Clone this repository
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
+- Install dependencies using `pnpm install`
+- Run `pnpm dev:prepare` to generate type stubs.
+- Use `pnpm dev` to start [playground](./playground) in development mode.
 
 ## 📝 License
 
