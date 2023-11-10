@@ -3,6 +3,7 @@
     class="social-share-button"
     :class="[`social-share-button--${network}`, {'social-share-button--styled': optionStyled}]"
     :href="socialNetwork.shareUrl"
+    :style="`--color-brand:${socialNetwork.color}`"
     target="_blank"
   >
     <Icon
@@ -37,20 +38,9 @@ const socialNetwork = useSocialShare({
   network: props.network, 
   url: props.url,
 })
-
 </script>
 
 <style lang="scss">
-$networks:
-  'facebook' #0866FF,
-  'twitter' #000000,
-  'linkedin' #0A66C2,
-  'pinterest' #BD081C,
-  'pocket' #EF3F56,
-  'whatsapp' #25D366,
-  'telegram' #26A5E4,
-  'email' #7e7e7e;
-
 :where(.social-share-button) {
   display: flex;
   gap: 0.5em;
@@ -64,21 +54,17 @@ $networks:
 }
 
 :where(.social-share-button--styled) {
+  --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
   font-size: 0.875rem;
   line-height: normal;
   padding: 0.5rem;
   color: white;
   border-radius: 0.25rem;
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;  
+  background-color: var(--color-brand);
 
-  @each $name, $color in $networks {
-    &:where(.social-share-button--#{$name}) {
-      background-color: $color;
-
-      &:hover {
-        background-color: darken($color, 10%);
-      }
-    }
+  &:hover {
+    background-color: var(--color-hover);
   }
 
   :where(.social-share-button__label) {
