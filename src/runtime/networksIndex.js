@@ -6,6 +6,7 @@ import { reddit } from './networks/reddit';
 import { pocket } from './networks/pocket';
 import { whatsapp } from './networks/whatsapp';
 import { telegram } from './networks/telegram';
+import { skype } from './networks/skype';
 import { email } from './networks/email';
 
 export const networksIndex = {
@@ -20,6 +21,7 @@ export const networksIndex = {
   // Instant Messaging
   whatsapp,
   telegram,
+  skype,
   // Other
   email
 }
