@@ -3,6 +3,13 @@
   "version": "0.3.0",
   "description": "Simple Social Sharing for Nuxt",
   "repository": "stefanobartoletti/nuxt-social-share",
+  "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "social-sharing",
+    "social-share"
+  ],
   "license": "MIT",
   "type": "module",
   "publishConfig": {

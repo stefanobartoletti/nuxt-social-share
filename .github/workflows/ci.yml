@@ -31,7 +31,7 @@ jobs:
       - name: 🚧 Set up project
         run: pnpm dev:prepare
 
-      - name: 🛠 Build project
+      - name: 🛠️ Build project
         run: pnpm prepack
 
       - name: ✅ Lint
