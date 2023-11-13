@@ -79,7 +79,7 @@ The `<SocialShare>` component provides a share button for a single social networ
 The component will render by default the following minimal HTML: 
 
 ```html
-<a class="social-share-button social-share-button--{network}">
+<a class="social-share-button social-share-button--{network}" style="--color-brand: /* network brand color */;">
   <svg class="social-share-button__icon">...</svg>
   <span class="social-share-button__label">Share</span>
 </a>
@@ -88,8 +88,10 @@ The component will render by default the following minimal HTML:
 An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` element will not be rendered if `:label="false"`.
 
 > **Note**
-> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label; you can use the elements classes to apply every style according to your design. Or, if you use Tailwind, you can style it by directly applying classes to the component, that will be passed down to the `<a>` element.
-> - Custom styles or additional classes can also be used when using the `styled` version.
+> - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label.
+> - Every button has a `social-share-button--{network}` class and a *local* `--color-brand` CSS variable based on the selected social network; you can use them to customize your styles.
+> - It is also possible to use Tailwind to style the component. Applied classes that will be passed down to the `<a>` element.
+> - These customizations are also possible when using the `styled` version.
 > - The only required prop is `network`, other like `styled` or `label` are best set from the module options (see 'Configuration' below)
 > - The component only provides a single share button. As you will typically need to use more of them at once, you should place them inside a wrapper to distribute them according to your design.
 > - In order to avoid duplicate code when using many instances of the component, especially if you need to customize it, a wise approach is to iterate it with `v-for` and an array of the needed networks.

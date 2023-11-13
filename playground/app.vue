@@ -56,19 +56,11 @@
 
 <script setup>
 import { useSocialShare } from '#imports';
+import { networksIndex } from '../src/runtime/networksIndex';
 
 const testComposable = useSocialShare({network: 'facebook'})
 
-const testNetworks = [
-  'facebook',
-  'twitter',
-  'linkedin',
-  'pinterest',
-  'pocket',
-  'whatsapp',
-  'telegram',
-  'email',
-]
+const testNetworks = Object.keys(networksIndex)
 </script>
 
 
