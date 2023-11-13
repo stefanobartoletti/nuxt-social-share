@@ -1,7 +1,7 @@
 version: 2
 updates:
 # Fetch and update latest `npm` packages
-- package-ecosystem: pnpm
+- package-ecosystem: npm
   directory: '/'
   versioning-strategy: 'increase'
   schedule:
