@@ -1,5 +1,13 @@
 
 
+## [0.3.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.2.0...v0.3.0) (2023-11-13)
+
+
+### Features
+
+* add `reddit` network ([ab2b968](https://github.com/stefanobartoletti/nuxt-social-share/commit/ab2b968b81ca267b78bf74ed9a2ecccd5c6a37c8))
+* add `skype` network ([df43e41](https://github.com/stefanobartoletti/nuxt-social-share/commit/df43e41a8cebde916c67c6311fe75b791ee8e75e))
+
 ## [0.2.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.7...v0.2.0) (2023-11-07)
 
 
