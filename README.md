@@ -11,7 +11,7 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-<img src=".github/preview.png" width="486" />
+<img src=".github/preview.png" width="578" />
 
 Simple Social Sharing for Nuxt
 
