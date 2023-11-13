@@ -230,9 +230,11 @@ A list of the currently supported networks and of their URL arguments.
 | `twitter` | ✔️ |  |
 | `linkedin` | ✔️ |  |
 | `pinterest` | ✔️ |  |
+| `reddit` | ✔️ |  |
 | `pocket` | ✔️ |  |
 | `whatsapp` | ✔️ |  |
 | `telegram` | ✔️ |  |
+| `skype` | ✔️ |  |
 | `email` | ✔️ |  |
 
 > **Note**
@@ -240,12 +242,7 @@ A list of the currently supported networks and of their URL arguments.
 
 > **Important**
 > At the moment only the `url` argument is implemented. More, like `title`, `text` and other, are planned for a future release. 
-> Anyway, please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be retrived by the social network from Open Graph meta tags, that you always should properly set in your webpages anyway.
-
-## ✅ Todo
-
-- [ ] Add support for more major social networks
-- [ ] Add support for more URL arguments: `title`, `text`, etc.
+> Anyway, please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be retrived by most social networks from Open Graph meta tags, that you always should properly set in your webpages anyway.
 
 ## 🤝 Contributing
 
