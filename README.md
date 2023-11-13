@@ -225,17 +225,17 @@ It can be set also on a single component level via props, but is us usually bett
 A list of the currently supported networks and of their URL arguments.
 
 | Social Network | `url` | Notes |
-| --- | --- | --- |
-| `facebook` | ✔️ |  |
-| `twitter` | ✔️ |  |
-| `linkedin` | ✔️ |  |
-| `pinterest` | ✔️ |  |
-| `reddit` | ✔️ |  |
-| `pocket` | ✔️ |  |
-| `whatsapp` | ✔️ |  |
-| `telegram` | ✔️ |  |
-| `skype` | ✔️ |  |
-| `email` | ✔️ |  |
+| -------------- | ----- | ----- |
+| `facebook`     | ✔️     |       |
+| `twitter`      | ✔️     |       |
+| `linkedin`     | ✔️     |       |
+| `pinterest`    | ✔️     |       |
+| `reddit`       | ✔️     |       |
+| `pocket`       | ✔️     |       |
+| `whatsapp`     | ✔️     |       |
+| `telegram`     | ✔️     |       |
+| `skype`        | ✔️     |       |
+| `email`        | ✔️     |       |
 
 > **Note**
 > Currently I have only included networks that I use and that I have personally tested to be working. More are planned to be added, contributions are welcome.
