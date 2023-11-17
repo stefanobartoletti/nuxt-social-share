@@ -1,4 +1,4 @@
-
+# Changelog
 
 ## [0.3.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.2.0...v0.3.0) (2023-11-13)
 
@@ -23,9 +23,6 @@
 * **deps:** use @iconify/vue as primary dep ([189ba16](https://github.com/stefanobartoletti/nuxt-social-share/commit/189ba16fccf7deec3d07e99347adbcc5328a7b07))
 * update readme ([2445c3c](https://github.com/stefanobartoletti/nuxt-social-share/commit/2445c3c554f4132f4312a77f77379b41b0ef556e))
 
-# Changelog
-
-
 ## v0.1.7
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.6...v0.1.7)
@@ -34,52 +31,17 @@
 
 - Lower css specificity to allow style override ([5119017](https://github.com/stefanobartoletti/nuxt-social-share/commit/5119017))
 
-### 🏡 Chore
-
-- **release:** V0.1.6 ([cd78496](https://github.com/stefanobartoletti/nuxt-social-share/commit/cd78496))
-
 ### ❤️ Contributors
 
 - Stefano Bartoletti <bartoletti.stefano@gmail.com>
 
 ## v0.1.6
 
-[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.5...v0.1.6)
-
-### 🏡 Chore
-
-- **release:** V0.1.5 ([8f7f47d](https://github.com/stefanobartoletti/nuxt-social-share/commit/8f7f47d))
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.1...v0.1.6)
 
 ### ❤️ Contributors
 
 - Stefano Bartoletti <bartoletti.stefano@gmail.com>
-
-## v0.1.5
-
-[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.1...v0.1.5)
-
-### 🏡 Chore
-
-- **release:** V0.1.1 ([b9c93e4](https://github.com/stefanobartoletti/nuxt-social-share/commit/b9c93e4))
-- **release:** V0.1.2 ([2d78dc5](https://github.com/stefanobartoletti/nuxt-social-share/commit/2d78dc5))
-- **release:** V0.1.3 ([337ae64](https://github.com/stefanobartoletti/nuxt-social-share/commit/337ae64))
-- **release:** V0.1.4 ([d0a145f](https://github.com/stefanobartoletti/nuxt-social-share/commit/d0a145f))
-
-### ❤️ Contributors
-
-- Stefano Bartoletti <bartoletti.stefano@gmail.com>
-
-## v0.1.4
-
-[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.3...v0.1.4)
-
-## v0.1.3
-
-[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.2...v0.1.3)
-
-## v0.1.2
-
-[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.1.1...v0.1.2)
 
 ## v0.1.1
 
