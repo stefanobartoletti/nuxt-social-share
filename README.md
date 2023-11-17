@@ -7,9 +7,9 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![code quality][code-quality-src]][code-quality-href]
-[![bundle size][bundle-size-src]][bundle-size-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
+<!-- [![bundle size][bundle-size-src]][bundle-size-href] -->
 
 <img src=".github/preview.png" width="578" />
 
@@ -19,7 +19,7 @@ Simple Social Sharing for Nuxt
 
 </div>
 
-> **Important**
+> [!IMPORTANT]
 > This is an early release, changes on its code and on the API are possible until a stable release will be published.
 > Anyway, considering its very simple functionality, it can be already assumed to be safe to use.
 > Feedback, suggestions and contributions by the community are welcome.
@@ -93,7 +93,7 @@ The component will render by default the following minimal HTML:
 
 An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` element will not be rendered if `:label="false"`.
 
-> **Note**
+> [!NOTE]
 > - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label.
 > - Every button has a `social-share-button--{network}` class and a *local* `--color-brand` CSS variable based on the selected social network; you can use them to customize your styles.
 > - It is also possible to use Tailwind to style the component. Applied classes that will be passed down to the `<a>` element.
@@ -119,44 +119,17 @@ A common use when using i.e. Tailwind could be as follows:
 
 ### Props
 
-#### `network`
+| Name | Required | Type | Default | Notes |
+| ---- | -------- | ---- | ------- | ----- |
+| `network` | `Yes` | `String` | none | The social network or messaging service where the content should be shared. This is required for the component to work. A list of the supported networks is available below. |
+| `styled` | `No` | `Boolean` | `false` | Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true` (*).  |
+| `label` | `No` | `Boolean` | `true` | Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*).  |
+| `url` | `No` | `String` | the current page URL | The URL that will be shared on the selected social network. Defaults to the current page address. On most cases you don't need another value, but if you need a different value, you can set it with this prop. |
 
-- Required: `Yes`
-- Type: `String`
 
-The social network or messaging service where the content should be shared. This is required for the component to work.
+> [!TIP]
+> (*) It is also possible to globally set this property from the module options. It is available also as a prop to allow a different behavior on a single instance of the component.
 
-A list of the supported networks is available below.
-
-#### `styled`
-
-- Required: `No`
-- Type: `Boolean`
-- Default: `false`
-
-Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true`.
-
-This property should be typically set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
-
-#### `label`
-
-- Required: `No`
-- Type: `Boolean`
-- Default: `true`
-
-Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
-
-This property should be usually set globally from the module options, it is available as a prop to allow a different behavior on a single instance of the component.
-
-#### `url`
-
-- Required: `No`
-- Type: `String`
-- Default: `the current page URL`
-
-The URL that will be shared on the selected social network.
-
-Defaults to the current page URL. On most cases you don't need another value, but if you need to provide a different URL, you can do so with this prop.
 
 ## 🔩 Using the `useSocialShare` composable
 
@@ -179,7 +152,7 @@ const shareFacebook = useSocialShare({
 </script>
 ```
 
-It will return the following object, e:
+It will return the following object:
 
 ```js
 {
@@ -208,23 +181,14 @@ export default defineNuxtConfig({
 
 Available options:
 
-### `styled` 
+| Name | Type | Default | Notes |
+| ---- | ---- | ------- | ----- |
+| `styled` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
+| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*). |
 
-- Type: `Boolean`
-- Default: `false`
 
-Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling.
-
-It can be set also on a single component level via props, but is us usually better to set this from the module options to create your defaults, and override it from props only if needed.
-
-### `label` 
-
-- Type: `Boolean`
-- Default: `true`
-
-Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed.
-
-It can be set also on a single component level via props, but is us usually better to set this from the module options to create your defaults, and override it from props only if needed.
+> [!TIP]
+> (*) It can be set also on a single component level via props, but it is usually better to set this from the module options to create your defaults, and override it with props only if needed.
 
 ## ↗️ Supported networks
 
@@ -243,16 +207,16 @@ A list of the currently supported networks and of their URL arguments.
 | `skype`        | ✔️     |       |
 | `email`        | ✔️     |       |
 
-> **Note**
+> [!NOTE]
 > Currently I have only included networks that I use and that I have personally tested to be working. More are planned to be added, contributions are welcome.
 
-> **Important**
+> [!IMPORTANT]
 > At the moment only the `url` argument is implemented. More, like `title`, `text` and other, are planned for a future release. 
 > Anyway, please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be retrived by most social networks from Open Graph meta tags, that you always should properly set in your webpages anyway.
 
 ## 🤝 Contributing
 
-> **Note**
+> [!NOTE]
 > If you want to contribute you can start by reading the [Contributing guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/master/.github/CONTRIBUTING.md).
 >
 
