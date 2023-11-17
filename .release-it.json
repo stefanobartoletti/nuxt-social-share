@@ -9,55 +9,24 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
       "header": "# Changelog",
-      "types": [
-        {
-          "type": "feat",
-          "section": "🚀 Features"
-        },
-        {
-          "type": "fix",
-          "section": "🩹 Bug Fixes"
-        },
-        {
-          "type": "docs",
-          "section": "📖 Documentation"
-        },
-        {
-          "type": "chore",
-          "section": "🏡 Chore"
-        },
-        {
-          "type": "ci",
-          "section": "🤖 CI"
-        },
-        {
-          "type": "refactor",
-          "section": "⚙️ Refactor"
-        },
-        {
-          "type": "revert",
-          "section": "🔙 Reverts"
-        },
-        {
-          "type": "test",
-          "section": "🧪 Test"
-        },
-        {
-          "type": "style",
-          "section": "🎨 Code Style"
-        },
-        {
-          "type": "perf",
-          "section": "🏎️ Performance"
-        },
-        {
-          "type": "build",
-          "section": "🛠️ Build"
-        }
-      ]
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat", "section": "🚀 Features" },
+          { "type": "fix", "section": "🩹 Bug Fixes" },
+          { "type": "docs", "section": "📖 Documentation" },
+          { "type": "chore", "section": "🏡 Chore" },
+          { "type": "ci", "section": "🤖 CI" },
+          { "type": "refactor", "section": "⚙️ Refactor" },
+          { "type": "revert", "section": "🔙 Reverts" },
+          { "type": "test", "section": "🧪 Test" },
+          { "type": "style", "section": "🎨 Code Style" },
+          { "type": "perf", "section": "🏎️ Performance" },
+          { "type": "build", "section": "🛠️ Build" }
+        ]
+      }
     }
   },
   "hooks": {
