@@ -79,8 +79,14 @@ The `<SocialShare>` component provides a share button for a single social networ
 The component will render by default the following minimal HTML: 
 
 ```html
-<a class="social-share-button social-share-button--{network}" style="--color-brand: /* network brand color */;">
-  <svg class="social-share-button__icon">...</svg>
+<a 
+  class="social-share-button social-share-button--{network}"
+  href="{share url}"
+  style="--color-brand: {network brand color};"
+  aria-label="Share with {network}"
+  target="_blank"
+>
+  <svg class="social-share-button__icon">{...}</svg>
   <span class="social-share-button__label">Share</span>
 </a>
 ```

@@ -4,6 +4,7 @@
     :class="[`social-share-button--${network}`, {'social-share-button--styled': optionStyled}]"
     :href="socialNetwork.shareUrl"
     :style="`--color-brand:${socialNetwork.color}`"
+    :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
     <Icon
@@ -38,6 +39,9 @@ const socialNetwork = useSocialShare({
   network: props.network, 
   url: props.url,
 })
+
+const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+
 </script>
 
 <style lang="scss">
