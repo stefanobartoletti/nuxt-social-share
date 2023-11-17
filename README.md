@@ -69,7 +69,9 @@ The `<SocialShare>` component provides a share button for a single social networ
 ```vue
 <!-- Basic use -->
 <SocialShare network="facebook" />
+
 <SocialShare network="twitter" />
+
 <SocialShare network="linkedin" />
 
 <!-- Customization with props -->
@@ -154,7 +156,7 @@ const shareFacebook = useSocialShare({
 
 It will return the following object:
 
-```js
+```json
 {
   "name": "facebook", // Name of the selected social network
   "shareUrl": "https://www.facebook.com/sharer/sharer.php?u=https://www.example.com", // Sharing url
@@ -172,7 +174,7 @@ Module options can be set from the `socialShare` key in `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
-  // optional configuration 
+  // optional configuration
   socialShare: {
     // module options
   }

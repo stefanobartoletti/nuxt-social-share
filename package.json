@@ -1,22 +1,22 @@
 {
   "name": "@stefanobartoletti/nuxt-social-share",
+  "type": "module",
   "version": "0.3.0",
+  "packageManager": "pnpm@8.10.2",
   "description": "Simple Social Sharing for Nuxt",
-  "repository": "stefanobartoletti/nuxt-social-share",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
+  "license": "MIT",
+  "repository": "stefanobartoletti/nuxt-social-share",
   "keywords": [
     "nuxt",
     "nuxt-module",
     "social-sharing",
     "social-share"
   ],
-  "license": "MIT",
-  "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "packageManager": "pnpm@8.10.2",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -34,10 +34,10 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "release-it",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
+    "release": "release-it",
     "commitlint": "commitlint --edit",
     "prepare": "husky install"
   },
@@ -50,11 +50,11 @@
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.3",
     "@nuxt/schema": "^3.8.1",
     "@nuxt/test-utils": "^3.8.1",
     "@release-it/conventional-changelog": "^8.0.1",
+    "@stefanobartoletti/eslint-config": "^0.1.1",
     "@types/node": "^20.8.10",
     "changelogen": "^0.5.5",
     "eslint": "^8.53.0",
