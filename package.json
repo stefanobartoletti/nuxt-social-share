@@ -1,22 +1,22 @@
 {
   "name": "@stefanobartoletti/nuxt-social-share",
+  "type": "module",
   "version": "0.3.0",
+  "packageManager": "pnpm@8.10.2",
   "description": "Simple Social Sharing for Nuxt",
-  "repository": "stefanobartoletti/nuxt-social-share",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
+  "license": "MIT",
+  "repository": "stefanobartoletti/nuxt-social-share",
   "keywords": [
     "nuxt",
     "nuxt-module",
     "social-sharing",
     "social-share"
   ],
-  "license": "MIT",
-  "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "packageManager": "pnpm@8.10.2",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",

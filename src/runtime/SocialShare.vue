@@ -1,7 +1,7 @@
 <template>
   <a
     class="social-share-button"
-    :class="[`social-share-button--${network}`, {'social-share-button--styled': optionStyled}]"
+    :class="[`social-share-button--${network}`, { 'social-share-button--styled': optionStyled }]"
     :href="socialNetwork.shareUrl"
     :style="`--color-brand:${socialNetwork.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
@@ -12,16 +12,16 @@
       :icon="socialNetwork.iconName"
     />
     <span
-      v-if="optionLabel" 
+      v-if="optionLabel"
       class="social-share-button__label"
     >Share</span>
   </a>
 </template>
 
 <script setup>
-import { Icon } from '@iconify/vue';
-import { useRuntimeConfig } from '#imports';
-import { useSocialShare } from './useSocialShare';
+import { Icon } from '@iconify/vue'
+import { useSocialShare } from './useSocialShare'
+import { useRuntimeConfig } from '#imports'
 
 const props = defineProps({
   network: { type: String, required: true },
@@ -35,13 +35,12 @@ const options = useRuntimeConfig().public.socialShare
 const optionStyled = props.styled != null ? props.styled : options.styled
 const optionLabel = props.label != null ? props.label : options.label
 
-const socialNetwork = useSocialShare({ 
-  network: props.network, 
+const socialNetwork = useSocialShare({
+  network: props.network,
   url: props.url,
 })
 
 const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
-
 </script>
 
 <style lang="scss">
@@ -64,7 +63,7 @@ const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network
   padding: 0.5rem;
   color: white;
   border-radius: 0.25rem;
-  transition: all 0.25s ease-out;  
+  transition: all 0.25s ease-out;
   background-color: var(--color-brand);
 
   &:hover {
@@ -75,5 +74,4 @@ const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network
     padding: 0 0.5rem;
   }
 }
-
 </style>

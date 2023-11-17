@@ -4,5 +4,5 @@ export default defineNuxtConfig({
     // styled: true,
     // label: false,
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })

@@ -55,14 +55,13 @@
 </template>
 
 <script setup>
-import { useSocialShare } from '#imports';
-import { networksIndex } from '../src/runtime/networksIndex';
+import { networksIndex } from '../src/runtime/networksIndex'
+import { useSocialShare } from '#imports'
 
-const testComposable = useSocialShare({network: 'facebook'})
+const testComposable = useSocialShare({ network: 'facebook' })
 
 const testNetworks = Object.keys(networksIndex)
 </script>
-
 
 <style lang="scss" scoped>
 .container {
