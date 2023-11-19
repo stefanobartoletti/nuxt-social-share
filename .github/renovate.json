@@ -4,6 +4,7 @@
     "config:recommended"
   ],
   "rangeStrategy": "bump",
+  "prHourlyLimit": 0,
   "labels": ["dependencies"],
   "vulnerabilityAlerts": {
     "labels": ["security"],
