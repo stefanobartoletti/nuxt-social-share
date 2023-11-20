@@ -1,5 +1,5 @@
-import nuxt from '@stefanobartoletti/eslint-config/nuxt.js'
+import { nuxt, stefanobartoletti } from '@stefanobartoletti/eslint-config'
 
-export default [
-  ...nuxt,
-]
+export default stefanobartoletti(
+  nuxt,
+)
