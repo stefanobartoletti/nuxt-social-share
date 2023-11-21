@@ -21,18 +21,8 @@
         </div>
 
         <div class="collapse-content">
-          <div class="flex flex-col md:flex-row md:p-8 md:pt-12">
-            <div class="p-4 w-auto md:w-1/2 flex flex-col gap-4">
-              <h3 class="text-lg font-medium">By using props:</h3>
-              <pre class="p-4 border-2 border-base-300 rounded-none">{{ `<SocialShare\n\t:styled="${instance.styled}"\n\t:label="${instance.label}"\n/>` }}</pre>
-              <h3 class="text-lg font-medium">By using options:</h3>
-              <pre class="p-4 border-2 border-base-300 rounded-none">{{ `export default defineNuxtConfig({\n\tsocialShare: {\n\t\tstyled: ${instance.styled},\n\t\tlabel: ${instance.label},\n\t}\n})` }}</pre>
-              <div v-if="instance.note" role="alert" class="alert">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <span>{{ instance.note }}</span>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-2 border-base-300 border-2 rounded-none p-8 justify-center content-center w-auto md:w-1/2" :class="instance.class">
+          <div class="flex flex-col lg:flex-row lg:p-8 lg:pt-12 gap-8">
+            <div class="buttons-container flex flex-wrap gap-2 p-8 justify-center content-center w-auto lg:w-1/2" :class="instance.class">
               <SocialShare
                 v-for="network in testNetworks"
                 :key="network"
@@ -40,6 +30,16 @@
                 :styled="instance.styled"
                 :label="instance.label"
               />
+            </div>
+            <div class="p-4 w-auto lg:w-1/2 flex flex-col gap-4">
+              <h3 class="text-lg font-medium">By using props:</h3>
+              <pre>{{ `<SocialShare\n\t:styled="${instance.styled}"\n\t:label="${instance.label}"\n/>` }}</pre>
+              <h3 class="text-lg font-medium">By using options:</h3>
+              <pre>{{ `export default defineNuxtConfig({\n\tsocialShare: {\n\t\tstyled: ${instance.styled},\n\t\tlabel: ${instance.label},\n\t}\n})` }}</pre>
+              <div v-if="instance.note" role="alert" class="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>{{ instance.note }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -52,15 +52,15 @@
         </div>
 
         <div class="collapse-content">
-          <div class="flex flex-col md:p-8 md:pt-12">
+          <div class="flex flex-col lg:p-8 lg:pt-12">
             <div class="p-4 w-auto  flex flex-col gap-4">
               <h3 class="text-lg font-medium">Usage example:</h3>
-              <pre class="p-4 border-2 border-base-300 rounded-none">{{ `<script setup>\nconst getFacebook = useSocialShare({ network: 'facebook' })\n</script>` }}</pre>
+              <pre>{{ `<script setup>\nconst getFacebook = useSocialShare({ network: 'facebook' })\n</script>` }}</pre>
             </div>
 
             <div class="p-4 w-auto  flex flex-col gap-4">
               <h3 class="text-lg font-medium">Returned object:</h3>
-              <pre class="p-4 border-2 border-base-300 rounded-none overflow-hidden">{{ getFacebook }}</pre>
+              <pre>{{ getFacebook }}</pre>
             </div>
           </div>
         </div>
@@ -118,5 +118,9 @@ const instances = [
     font-size: 1rem;
     border-radius: 0;
   }
+}
+
+pre {
+  @apply bg-slate-600 text-white rounded-md p-4 whitespace-pre-wrap;
 }
 </style>
