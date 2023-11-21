@@ -4,59 +4,42 @@
 name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     tags:
-      - '**'
-
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+      - '*'
 
 jobs:
-
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [18]
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '18'
           cache: pnpm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: nuxt
-
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build Nuxt
-        run: pnpm dev:build --preset=github-pages
+      # Pick your own package manager and build script
+      - run: pnpm install
+      - run: pnpm dev:build --preset=github-pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./playground/.output/public
-
+  # Deployment job
   deploy:
+    # Add a dependency to the build job
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    # Deploy to the github_pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
