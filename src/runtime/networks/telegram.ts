@@ -1,4 +1,6 @@
-export const telegram = {
+import type { Network } from '../types'
+
+export const telegram: Network = {
   name: 'telegram',
   shareUrl: 'https://t.me/share/url?url=[u]',
   iconName: 'mingcute:telegram-fill',

@@ -1,3 +1,5 @@
+import type { NetworksIndex } from './types'
+
 import { facebook } from './networks/facebook'
 import { twitter } from './networks/twitter'
 import { linkedin } from './networks/linkedin'
@@ -9,7 +11,7 @@ import { telegram } from './networks/telegram'
 import { skype } from './networks/skype'
 import { email } from './networks/email'
 
-export const networksIndex = {
+export const networksIndex: NetworksIndex = {
   // Social Networks
   facebook,
   twitter,

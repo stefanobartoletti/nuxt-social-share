@@ -1,4 +1,6 @@
-export const email = {
+import type { Network } from '../types'
+
+export const email: Network = {
   name: 'email',
   shareUrl: 'mailto:?body=[u]',
   iconName: 'ic:round-mail',

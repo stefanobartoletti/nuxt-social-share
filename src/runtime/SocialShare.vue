@@ -25,15 +25,15 @@ import { useRuntimeConfig } from '#imports'
 
 const props = defineProps({
   network: { type: String, required: true },
-  styled: { type: Boolean, default: null },
-  label: { type: Boolean, default: null },
-  url: { type: String, default: null },
+  styled: { type: Boolean, default: undefined },
+  label: { type: Boolean, default: undefined },
+  url: { type: String, default: undefined },
 })
 
 const options = useRuntimeConfig().public.socialShare
 
-const optionStyled = props.styled != null ? props.styled : options.styled
-const optionLabel = props.label != null ? props.label : options.label
+const optionStyled = props.styled !== undefined ? props.styled : options.styled
+const optionLabel = props.label !== undefined ? props.label : options.label
 
 const socialNetwork = useSocialShare({
   network: props.network,
