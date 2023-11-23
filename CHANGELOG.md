@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.5.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.4.0...v0.5.0) (2023-11-23)
+
+
+### 🚀 Features
+
+* add more URL args to newtorks ([a565fea](https://github.com/stefanobartoletti/nuxt-social-share/commit/a565feaca441bab12c26cdfe22d948fd7deb97b6))
+
+
+### 🩹 Bug Fixes
+
+* use shallow copy of networks index ([21d4b9d](https://github.com/stefanobartoletti/nuxt-social-share/commit/21d4b9d5a9d1bdf6472e735dd031f1f79e7a21e4))
+
+
+### 📖 Documentation
+
+* update playground example page ([83f2209](https://github.com/stefanobartoletti/nuxt-social-share/commit/83f220905a1eae9e804d691d1a89904e02c31a7c))
+* update playground page ([69d0349](https://github.com/stefanobartoletti/nuxt-social-share/commit/69d034933ab88ac2f553b99cba5e335504f7f3df))
+* update readme with new features ([210c878](https://github.com/stefanobartoletti/nuxt-social-share/commit/210c878df7be294ad4efa7ea8fd9f2754efe42a0))
+
+
+### 🏡 Chore
+
+* update dev dependencies ([40ec3b8](https://github.com/stefanobartoletti/nuxt-social-share/commit/40ec3b8243f18ba94602f9f9a8b0c93b884874af))
+
+
+### 🤖 CI
+
+* update deploy action ([4cf5b63](https://github.com/stefanobartoletti/nuxt-social-share/commit/4cf5b636fd61bf331e9fd6fdc6d1322fd433328b))
+
+
+### ⚙️ Refactor
+
+* migrate to typescript ([e9578eb](https://github.com/stefanobartoletti/nuxt-social-share/commit/e9578eb5e66992c02ecf5ed676c0f0e4f62c5f71))
+
 ## [0.4.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.3.0...v0.4.0) (2023-11-21)
 
 
