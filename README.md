@@ -127,6 +127,10 @@ A common use when using i.e. Tailwind could be as follows:
 | `styled` | `No` | `Boolean` | `false` | Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true` (*).  |
 | `label` | `No` | `Boolean` | `true` | Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*).  |
 | `url` | `No` | `String` | the current page URL | The URL that will be shared on the selected social network. Defaults to the current page address. On most cases you don't need another value, but if you need a different value, you can set it with this prop. |
+| `title` | `No` | `String` | none | Title used as a parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
+| `user` | `No` | `String` | none | Username used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
+| `hashtags` | `No` | `String` | none | Hashtags used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
+| `image` | `No` | `String` | none | Image path used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
 
 
 > [!TIP]
@@ -148,8 +152,12 @@ const shareFacebook = useSocialShare({ network: 'facebook' })
 
 // All possible options
 const shareFacebook = useSocialShare({
-  network: 'facebook', // Required
-  url: 'https://www.example.com' // Optional, defaults to current page URL if not provided
+  network: 'facebook', // Required!
+  url: 'https://www.example.com', // Optional, defaults to current page URL if not provided
+  title: 'My Custom Title', // Optional, see the "Supported Networks" table below
+  user: 'twitter_user', // Optional, see the "Supported Networks" table below
+  hashtags: 'list,of,hashtags', // Optional, see the "Supported Networks" table below
+  image: 'https://www.example.com/path/to/image.jpg', // Optional, see the "Supported Networks" table below
 })
 </script>
 ```
@@ -194,27 +202,31 @@ Available options:
 
 ## ↗️ Supported networks
 
-A list of the currently supported networks and of their URL arguments.
+A list of the currently supported networks and of their URL parameters
 
-| Social Network | `url` | Notes |
-| -------------- | ----- | ----- |
-| `facebook`     | ✔️     |       |
-| `twitter`      | ✔️     |       |
-| `linkedin`     | ✔️     |       |
-| `pinterest`    | ✔️     |       |
-| `reddit`       | ✔️     |       |
-| `pocket`       | ✔️     |       |
-| `whatsapp`     | ✔️     |       |
-| `telegram`     | ✔️     |       |
-| `skype`        | ✔️     |       |
-| `email`        | ✔️     |       |
+parameters can be used by passing the respective prop in the component or in the composable. Passing props to a network that does not support it won't have any effect.
+
+| Social Network | `url` | `title` | `user` | `hashtags` | `image` | Notes       |
+| -------------- | ----- | ------- | ------ | ---------- | ------- | ----------- |
+| `facebook`     | ✅    | ❌      | ❌     | ❌         | ❌      |             |
+| `twitter`      | ✅    | ✔️      | ✔️     | ✔️         | ❌      | `user` is the X username mentioned in the post. `hashtags` is string, use a "comma separate values" format to pass multiple values |
+| `linkedin`     | ✅    | ❌      | ❌     | ❌         | ❌      |             |
+| `pinterest`    | ✅    | ✔️      | ❌     | ❌         | ✔️      |             |
+| `reddit`       | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `pocket`       | ✅    | ❌      | ❌     | ❌         | ❌      |             |
+| `whatsapp`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `telegram`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `skype`        | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `email`        | ✅    | ✔️      | ❌     | ❌         | ❌      | `title` is used in the subject, `url` in the body of the email |
+
+✅ = Supported, has a default value if not provided  
+✔️ = Supported, it won't be used int the final sharing url if not provided  
+❌ = Not supported 
 
 > [!NOTE]
-> Currently I have only included networks that I use and that I have personally tested to be working. More are planned to be added, contributions are welcome.
-
-> [!IMPORTANT]
-> At the moment only the `url` argument is implemented. More, like `title`, `text` and other, are planned for a future release. 
-> Anyway, please note that only `url` is strictly required for the sharing to work. When not explicity set, other metadata will be retrived by most social networks from Open Graph meta tags, that you always should properly set in your webpages anyway.
+> Currently I have only included networks that I personally use and that I have tested to be working.
+> 
+> Contributions to add more networks are welcome.
 
 ## 🤝 Contributing
 
