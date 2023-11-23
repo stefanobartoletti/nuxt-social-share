@@ -1,18 +1,18 @@
 <template>
   <a
     class="social-share-button"
-    :class="[`social-share-button--${network}`, { 'social-share-button--styled': optionStyled }]"
-    :href="socialNetwork.shareUrl"
-    :style="`--color-brand:${socialNetwork.color}`"
+    :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
+    :href="selectedNework.shareUrl"
+    :style="`--color-brand:${selectedNework.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
     <Icon
       class="social-share-button__icon"
-      :icon="socialNetwork.iconName"
+      :icon="selectedNework.iconName"
     />
     <span
-      v-if="optionLabel"
+      v-if="isLabeled"
       class="social-share-button__label"
     >Share</span>
   </a>
@@ -28,16 +28,24 @@ const props = defineProps({
   styled: { type: Boolean, default: undefined },
   label: { type: Boolean, default: undefined },
   url: { type: String, default: undefined },
+  title: { type: String, default: undefined },
+  user: { type: String, default: undefined },
+  hashtags: { type: String, default: undefined },
+  image: { type: String, default: undefined },
 })
 
 const options = useRuntimeConfig().public.socialShare
 
-const optionStyled = props.styled !== undefined ? props.styled : options.styled
-const optionLabel = props.label !== undefined ? props.label : options.label
+const isStyled = props.styled !== undefined ? props.styled : options.styled
+const isLabeled = props.label !== undefined ? props.label : options.label
 
-const socialNetwork = useSocialShare({
+const selectedNework = useSocialShare({
   network: props.network,
   url: props.url,
+  title: props.title,
+  user: props.user,
+  hashtags: props.hashtags,
+  image: props.image,
 })
 
 const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)

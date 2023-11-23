@@ -14,7 +14,7 @@
 
   <main class="container py-16">
     <div class="join join-vertical">
-      <div v-for="instance in instances" :key="instance" class="collapse collapse-arrow join-item border border-base-300">
+      <div v-for="(instance, index) in instances" :key="index" class="collapse collapse-arrow join-item border border-base-300">
         <input type="radio" name="accordion" />
         <div class="collapse-title text-xl font-medium bg-base-200 rounded-none">
           <h2>{{ instance.title }}</h2>
