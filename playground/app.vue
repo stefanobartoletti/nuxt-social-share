@@ -23,18 +23,27 @@
 
         <div class="collapse-content">
           <div class="flex flex-col lg:flex-row lg:p-8 lg:pt-12 gap-8">
-            <div class="buttons-container flex flex-wrap gap-2 p-8 justify-center content-center w-auto lg:w-1/2" :class="instance.class">
-              <SocialShare
-                v-for="network in testNetworks"
-                :key="network"
-                :network="network"
-                :styled="instance.styled"
-                :label="instance.label"
-              />
+            <div class="w-auto lg:w-1/2 flex flex-col justify-center content-center">
+              <div class="buttons-container flex flex-wrap gap-2 p-8 pb-4 justify-center content-center " :class="instance.class">
+                <SocialShare
+                  v-for="network in testNetworks"
+                  :key="network"
+                  :network="network"
+                  :styled="instance.styled"
+                  :label="instance.label"
+                />
+              </div>
+              <div class="buttons-container flex flex-wrap gap-2 p-8 pt-4 justify-center content-center " :class="instance.class">
+                <BrowserShare
+                  :styled="instance.styled"
+                  :label="instance.label"
+                />
+              </div>
             </div>
             <div class="p-4 w-auto lg:w-1/2 flex flex-col gap-4">
               <h3 class="text-lg font-medium">By using props:</h3>
               <pre>{{ `<SocialShare\n\t:styled="${instance.styled}"\n\t:label="${instance.label}"\n/>` }}</pre>
+              <pre>{{ `<BrowserShare\n\t:styled="${instance.styled}"\n\t:label="${instance.label}"\n/>` }}</pre>
               <h3 class="text-lg font-medium">By using options:</h3>
               <pre>{{ `export default defineNuxtConfig({\n\tsocialShare: {\n\t\tstyled: ${instance.styled},\n\t\tlabel: ${instance.label},\n\t}\n})` }}</pre>
               <div v-if="instance.note" role="alert" class="alert">

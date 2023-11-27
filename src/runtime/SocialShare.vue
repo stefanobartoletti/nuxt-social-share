@@ -52,34 +52,5 @@ const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network
 </script>
 
 <style lang="scss">
-:where(.social-share-button) {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  text-decoration: none;
-  width: min-content;
-}
-
-:where(.social-share-button__icon) {
-  font-size: 1.5em;
-}
-
-:where(.social-share-button--styled) {
-  --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
-  font-size: 0.875rem;
-  line-height: normal;
-  padding: 0.5rem;
-  color: white;
-  border-radius: 0.25rem;
-  transition: all 0.25s ease-out;
-  background-color: var(--color-brand);
-
-  &:hover {
-    background-color: var(--color-hover);
-  }
-
-  :where(.social-share-button__label) {
-    padding: 0 0.5rem;
-  }
-}
+@import 'style.scss';
 </style>

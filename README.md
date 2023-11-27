@@ -27,9 +27,10 @@ Simple Social Sharing for Nuxt
 
 ## 🌟 Features
 
-- Provides a minimal config `<SocialShare>` component
-- The component is unstyled by default for easy integration in any design
-- Optional styled version, that can still be further customized
+- Provides a minimal config `<SocialShare>` main component
+- Provides an additional `<BrowserShare>` component that uses OS integrated sharing tool
+- The components are unstyled by default for easy integration in any design
+- Optional styled versions, that can still be further customized
 - A `useSocialShare` composable is exposed, to provide even more flexibility if needed
 - Many major social networks supported
 
@@ -136,14 +137,34 @@ A common use when using i.e. Tailwind could be as follows:
 > [!TIP]
 > (*) It is also possible to globally set this property from the module options. It is available also as a prop to allow a different behavior on a single instance of the component.
 
+## 🎨 Using the `<BrowserShare>` component
+
+The additional `<BrowserShare>` component provides a share button that does not use a share URL like `<SocialShare>`, but leverages the *Web Share API* by using the `useShare` composable from [VueUse](https://vueuse.org/core/useShare/)
+
+`<BrowserShare>` can be used in a similar way of `<SocialShare>`, with some important notes:
+
+- The `network` prop is not necessary and should not be used.
+- The only supported props are `styled`, `label` and `title` (all of them optional)
+- It respects values set in module options for  `styled` and `label` settings
+
+```vue
+<!-- Basic use -->
+<BrowserShare />
+
+<!-- All props -->
+<BrowserShare :styled="true" :label="false" title="My Custom Title" />
+```
+
+> [!IMPORTANT]
+> *Nuxt Social Share* only verifies if the browser supports the API before rendering the component, but it does not otherwise impose any decision to the deveoper. It is up to you to set the conditions where this component should be used or displayed (i.e. if on desktop or mabile, with certain resolutions or OS, etc.)
+>
+> The `useSocialShare` composable only provides data used by `<SocialShare>`. `<BrowserShare>` works in a different way and it is based on `useShare` from [VueUse](https://vueuse.org/core/useShare/).
+
 
 ## 🔩 Using the `useSocialShare` composable
 
-Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
+Using the customizable `<SocialShare>` component should cover almost every use case, but if needed the `useSocialShare` composable is available for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
 
-Like the component, one instance of `useSocialShare` should be used for every needed share.
-
-An options object should be passed as an argument, like in the following example:
 
 ```vue
 <script setup>
@@ -193,8 +214,8 @@ Available options:
 
 | Name | Type | Default | Notes |
 | ---- | ---- | ------- | ----- |
-| `styled` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
-| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*). |
+| `styled` | `Boolean` | `false` | Whether the `<SocialShare>` and `<BrowserShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
+| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>`  and `<BrowserShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*). |
 
 
 > [!TIP]

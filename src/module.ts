@@ -30,6 +30,11 @@ export default defineNuxtModule<ModuleOptions>({
       filePath: resolver.resolve('./runtime/SocialShare.vue'),
     })
 
+    addComponent({
+      name: 'BrowserShare', // name of the component to be used in vue templates
+      filePath: resolver.resolve('./runtime/BrowserShare.vue'),
+    })
+
     addImports({
       name: 'useSocialShare',
       from: resolver.resolve('./runtime/useSocialShare'),
