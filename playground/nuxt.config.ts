@@ -8,5 +8,7 @@ export default defineNuxtConfig({
     // label: false,
   },
   devtools: { enabled: true },
-  ssr: false,
+  app: {
+    baseURL: '/nuxt-social-share/',
+  },
 })
