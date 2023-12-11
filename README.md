@@ -24,7 +24,6 @@ Simple Social Sharing for Nuxt
 > Anyway, considering its very simple functionality, it can be already assumed to be safe to use.
 > Feedback, suggestions and contributions by the community are welcome.
 
-
 ## 🌟 Features
 
 - Provides a minimal config `<SocialShare>` component
@@ -78,10 +77,10 @@ The `<SocialShare>` component provides a share button for a single social networ
 <SocialShare network="facebook" :styled="true" :label="false" />
 ```
 
-The component will render by default the following minimal HTML: 
+The component will render by default the following minimal HTML:
 
 ```html
-<a 
+<a
   class="social-share-button social-share-button--{network}"
   href="{share url}"
   style="--color-brand: {network brand color};"
@@ -132,10 +131,8 @@ A common use when using i.e. Tailwind could be as follows:
 | `hashtags` | `No` | `String` | none | Hashtags used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
 | `image` | `No` | `String` | none | Image path used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
 
-
 > [!TIP]
 > (*) It is also possible to globally set this property from the module options. It is available also as a prop to allow a different behavior on a single instance of the component.
-
 
 ## 🔩 Using the `useSocialShare` composable
 
@@ -175,7 +172,6 @@ It will return the following object:
 
 You can then use some or all the returned properties, according to your project setup and requirements.
 
-
 ## 🎛️ Configuration
 
 Module options can be set from the `socialShare` key in `nuxt.config.ts`:
@@ -195,7 +191,6 @@ Available options:
 | ---- | ---- | ------- | ----- |
 | `styled` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
 | `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*). |
-
 
 > [!TIP]
 > (*) It can be set also on a single component level via props, but it is usually better to set this from the module options to create your defaults, and override it with props only if needed.
@@ -219,13 +214,13 @@ parameters can be used by passing the respective prop in the component or in the
 | `skype`        | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `email`        | ✅    | ✔️      | ❌     | ❌         | ❌      | `title` is used in the subject, `url` in the body of the email |
 
-✅ = Supported, has a default value if not provided  
-✔️ = Supported, it won't be used int the final sharing url if not provided  
-❌ = Not supported 
+✅ = Supported, has a default value if not provided
+✔️ = Supported, it won't be used int the final sharing url if not provided
+❌ = Not supported
 
 > [!NOTE]
 > Currently I have only included networks that I personally use and that I have tested to be working.
-> 
+>
 > Contributions to add more networks are welcome.
 
 ## 🤝 Contributing
