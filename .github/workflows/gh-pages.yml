@@ -23,7 +23,7 @@ jobs:
       - run: pnpm install
       - run: pnpm dev:generate --preset=github-pages
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./playground/.output/public
   # Deployment job
