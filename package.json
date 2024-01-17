@@ -57,7 +57,7 @@
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@stefanobartoletti/eslint-config": "^1.2.1",
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.11.5",
     "changelogen": "^0.5.5",
     "daisyui": "^4.6.0",
     "eslint": "^8.56.0",
