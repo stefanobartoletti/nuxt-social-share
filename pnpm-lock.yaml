@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^3.10.0
     version: 3.10.0(h3@1.10.0)(rollup@3.29.4)(vite@5.0.5)(vitest@1.2.2)(vue-router@4.2.5)(vue@3.3.8)
   '@nuxtjs/tailwindcss':
-    specifier: ^6.11.1
-    version: 6.11.1(rollup@3.29.4)
+    specifier: ^6.11.2
+    version: 6.11.2(rollup@3.29.4)
   '@release-it/conventional-changelog':
     specifier: ^8.0.1
     version: 8.0.1(release-it@17.0.3)
@@ -1832,8 +1832,8 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxtjs/tailwindcss@6.11.1(rollup@3.29.4):
-    resolution: {integrity: sha512-6VY4Y6Ntjqx9cw9biBYOjKEhg3M0VFy1FqOAu1CCfdJr26p8XBztaiHS538Zy2nKEqH7MP/Jpi2+8RgfO2m+pA==}
+  /@nuxtjs/tailwindcss@6.11.2(rollup@3.29.4):
+    resolution: {integrity: sha512-06e8t9ia6Ru/RPMATuhGwi16rMYeZPseXiI4QmRDk/IkvluU60GxhLZOjdUIa+U7DVCECgDsRNEo/rD8/1sMKQ==}
     dependencies:
       '@nuxt/kit': 3.9.3(rollup@3.29.4)
       autoprefixer: 10.4.17(postcss@8.4.33)
