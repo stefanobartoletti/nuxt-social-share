@@ -59,7 +59,7 @@
     "@stefanobartoletti/eslint-config": "^1.2.2",
     "@types/node": "^20.11.10",
     "changelogen": "^0.5.5",
-    "daisyui": "^4.6.0",
+    "daisyui": "^4.6.1",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "nuxt": "^3.8.2",
