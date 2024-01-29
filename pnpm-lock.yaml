@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   husky:
-    specifier: ^8.0.3
-    version: 8.0.3
+    specifier: ^9.0.7
+    version: 9.0.7
   nuxt:
     specifier: ^3.8.2
     version: 3.8.2(@types/node@20.11.10)(eslint@8.56.0)(rollup@3.29.4)(sass@1.70.0)(typescript@5.3.2)(vite@5.0.5)
@@ -6433,9 +6433,9 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.7:
+    resolution: {integrity: sha512-vWdusw+y12DUEeoZqW1kplOFqk3tedGV8qlga8/SF6a3lOiWLqGZZQvfWvY0fQYdfiRi/u1DFNpudTSV9l1aCg==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: true
 
