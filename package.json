@@ -40,7 +40,7 @@
     "test:watch": "vitest watch",
     "release": "release-it",
     "commitlint": "commitlint --edit",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.1",
@@ -61,7 +61,7 @@
     "changelogen": "^0.5.5",
     "daisyui": "^4.6.1",
     "eslint": "^8.56.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "nuxt": "^3.8.2",
     "release-it": "^17.0.3",
     "sass": "^1.70.0",
