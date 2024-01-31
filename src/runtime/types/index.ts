@@ -16,7 +16,10 @@ export interface Network {
     hashtags?: string
     image?: string
   }
-  iconName: string
+  icon: {
+    viewBox: string
+    path: string
+  }
   color: string
 };
 

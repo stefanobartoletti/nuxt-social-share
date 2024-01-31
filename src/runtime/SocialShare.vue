@@ -7,10 +7,9 @@
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
-    <Icon
-      class="social-share-button__icon"
-      :icon="selectedNework.iconName"
-    />
+    <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
+      <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
+    </svg>
     <span
       v-if="isLabeled"
       class="social-share-button__label"
@@ -19,7 +18,6 @@
 </template>
 
 <script setup>
-import { Icon } from '@iconify/vue'
 import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
