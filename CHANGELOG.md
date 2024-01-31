@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.1...v0.5.2) (2024-01-31)
+
+
+### 📖 Documentation
+
+* update docs ([69590f3](https://github.com/stefanobartoletti/nuxt-social-share/commit/69590f3b77f06bf487a5b03f9582c20b5a22dfbf))
+
 ## [0.5.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.0...v0.5.1) (2024-01-31)
 
 
