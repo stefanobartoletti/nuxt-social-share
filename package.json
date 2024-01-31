@@ -40,7 +40,7 @@
     "test:watch": "vitest watch",
     "release": "release-it",
     "commitlint": "commitlint --edit",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.1",
