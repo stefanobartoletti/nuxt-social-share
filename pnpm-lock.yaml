@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@nuxt/kit':
-    specifier: ^3.10.0
+    specifier: ^3.10.3
     version: 3.10.3(rollup@3.29.4)
   defu:
     specifier: ^6.1.4
@@ -26,7 +26,7 @@ devDependencies:
     specifier: ^0.5.5
     version: 0.5.5(@nuxt/kit@3.10.3)(nuxi@3.10.1)(sass@1.71.1)(typescript@5.3.3)
   '@nuxt/schema':
-    specifier: ^3.10.0
+    specifier: ^3.10.3
     version: 3.10.3(rollup@3.29.4)
   '@nuxt/test-utils':
     specifier: ^3.11.0
