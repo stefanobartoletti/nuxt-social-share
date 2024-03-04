@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.2...v0.5.3) (2024-03-04)
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update nuxt monorepo to ^3.10.3 ([443321d](https://github.com/stefanobartoletti/nuxt-social-share/commit/443321d1df551d2352710ca974002336b3d34551))
+
 ## [0.5.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.1...v0.5.2) (2024-01-31)
 
 
