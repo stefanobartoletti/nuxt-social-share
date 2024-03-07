@@ -1,8 +1,6 @@
+<picture><img src=".github/nuxt-social-share-cover.png" /></picture>
+
 <div align="center">
-
-<img src=".github/nuxt-social-share.svg" width="128" />
-
-# Nuxt Social Share
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -11,18 +9,13 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 <!-- [![bundle size][bundle-size-src]][bundle-size-href] -->
 
-<img src=".github/preview.png" width="578" />
+<picture><img src=".github/nuxt-social-share-preview.png" width="578" /></picture>
 
-Simple Social Sharing for Nuxt
+Simple Social Sharing for Nuxt 3
 
 [Release Notes](/CHANGELOG.md)
 
 </div>
-
-> [!IMPORTANT]
-> This is an early release, changes on its code and on the API are possible until a stable release will be published.
-> Anyway, considering its very simple functionality, it can be already assumed to be safe to use.
-> Feedback, suggestions and contributions by the community are welcome.
 
 ## 🌟 Features
 
@@ -161,7 +154,7 @@ const shareFacebook = useSocialShare({
 
 It will return the following object:
 
-```json
+```jsonc
 {
   "name": "facebook", // Name of the selected social network
   "shareUrl": "https://www.facebook.com/sharer/sharer.php?u=https://www.example.com", // Sharing url
