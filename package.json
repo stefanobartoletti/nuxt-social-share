@@ -47,8 +47,8 @@
     "defu": "^6.1.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "@commitlint/config-conventional": "^19.0.3",
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.3",
