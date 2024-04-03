@@ -30,12 +30,7 @@ Simple Social Sharing for Nuxt 3
 1. Add `@stefanobartoletti/nuxt-social-share` dependency to your project
 
 ```bash
-# pnpm
-pnpm add -D @stefanobartoletti/nuxt-social-share
-# yarn
-yarn add --dev @stefanobartoletti/nuxt-social-share
-# npm
-npm install --save-dev @stefanobartoletti/nuxt-social-share
+npx nuxi@latest module add nuxt-social-share
 ```
 
 2. Add `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`
