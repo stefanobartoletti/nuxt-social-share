@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^8.0.1
     version: 8.0.1(release-it@17.1.1)
   '@stefanobartoletti/eslint-config':
-    specifier: ^1.2.4
-    version: 1.2.4(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.4)(vitest@1.4.0)
+    specifier: ^1.2.5
+    version: 1.2.5(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.4)(vitest@1.4.0)
   '@types/node':
     specifier: ^20.12.4
     version: 20.12.4
@@ -2599,8 +2599,8 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
-  /@stefanobartoletti/eslint-config@1.2.4(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.4)(vitest@1.4.0):
-    resolution: {integrity: sha512-MqFE6gLrlkvSk9gQD335wnsuOuQmfZaczN/AHfhQstYN8Pw60MnNuKsvq3Yq1BxlbmKK5wwpcX7ITzJhpiWqMw==}
+  /@stefanobartoletti/eslint-config@1.2.5(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.4)(vitest@1.4.0):
+    resolution: {integrity: sha512-H72tJpnAKGpkqtjlLAOQKsqlaFQqdR6bOMVvDifz01MIldQGj5gZAuXPou90Gml/9Wq4iF9L6Do6LAe6WZmHsA==}
     peerDependencies:
       eslint: 8.x
     dependencies:
