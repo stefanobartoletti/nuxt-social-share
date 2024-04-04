@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.5](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.4...v0.5.5) (2024-04-04)
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update nuxtjs monorepo to ^3.11.1 ([ad8ac2c](https://github.com/stefanobartoletti/nuxt-social-share/commit/ad8ac2c57bf2e0914b08d2ff5c83fd7a4471bf2e))
+
+
+### 📖 Documentation
+
+* **fix:** add note for optional configuration ([97dc465](https://github.com/stefanobartoletti/nuxt-social-share/commit/97dc4652abcd320b7d2e87d4857dde6d13b05bf1))
+* update readme ([ec9195f](https://github.com/stefanobartoletti/nuxt-social-share/commit/ec9195fb75e4b744d11a462328b8c740ac611293))
+* use new `nuxi module add` command in installation ([dcbcb10](https://github.com/stefanobartoletti/nuxt-social-share/commit/dcbcb1034d74e47aebb717b8f6e8fef1be95c0fa))
+
 ## [0.5.4](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.3...v0.5.4) (2024-03-04)
 
 
