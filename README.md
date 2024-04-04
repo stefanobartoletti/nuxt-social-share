@@ -33,14 +33,15 @@ Simple Social Sharing for Nuxt 3
 npx nuxi@latest module add nuxt-social-share
 ```
 
-2. Add `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`
+2. Nuxi should have already added `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`, if not add it manually:
 
 ```js
 export default defineNuxtConfig({
+  // module added by Nuxi
   modules: [
     '@stefanobartoletti/nuxt-social-share'
   ],
-  // optional configuration
+  // optional configuration, should be added manually
   socialShare: {
     // module options
   }
