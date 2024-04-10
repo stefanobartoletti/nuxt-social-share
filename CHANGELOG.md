@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.5...v0.6.0) (2024-04-10)
+
+
+### 🚀 Features
+
+* **network:** add Bluesky network ([847a083](https://github.com/stefanobartoletti/nuxt-social-share/commit/847a0837d368bb8f7acb46b98abbd4e2ea8e5b70))
+* **network:** add Line network ([cdd8798](https://github.com/stefanobartoletti/nuxt-social-share/commit/cdd8798aa7d3c1090d35fb90fcd896aea5311c9e))
+
+
+### 📖 Documentation
+
+* update docs ([bf59320](https://github.com/stefanobartoletti/nuxt-social-share/commit/bf593206f971b99564de9fa864ea4aefa9370ae8))
+
 ## [0.5.5](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.4...v0.5.5) (2024-04-04)
 
 
