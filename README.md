@@ -200,6 +200,7 @@ parameters can be used by passing the respective prop in the component or in the
 | `linkedin`     | ✅    | ❌      | ❌     | ❌         | ❌      |             |
 | `pinterest`    | ✅    | ✔️      | ❌     | ❌         | ✔️      |             |
 | `reddit`       | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `line`         | ✅    | ❌      | ❌     | ❌         | ❌      |             |
 | `pocket`       | ✅    | ❌      | ❌     | ❌         | ❌      |             |
 | `whatsapp`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `telegram`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
