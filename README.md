@@ -9,7 +9,7 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 <!-- [![bundle size][bundle-size-src]][bundle-size-href] -->
 
-<picture><img src=".github/nuxt-social-share-preview.png" width="578" /></picture>
+<picture><img src=".github/nuxt-social-share-preview.png" width="577" /></picture>
 
 Simple Social Sharing for Nuxt 3
 
@@ -215,7 +215,7 @@ parameters can be used by passing the respective prop in the component or in the
 > [!NOTE]
 > Currently I have only included networks that I personally use and that I have tested to be working.
 >
-> Contributions to add more networks are welcome.
+> Contributions to add more networks are welcome, but keep in mind that PR will be accepted only for networks that have a documentation available in English among other languages.
 
 ## 🤝 Contributing
 
