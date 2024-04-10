@@ -30,22 +30,18 @@ Simple Social Sharing for Nuxt 3
 1. Add `@stefanobartoletti/nuxt-social-share` dependency to your project
 
 ```bash
-# pnpm
-pnpm add -D @stefanobartoletti/nuxt-social-share
-# yarn
-yarn add --dev @stefanobartoletti/nuxt-social-share
-# npm
-npm install --save-dev @stefanobartoletti/nuxt-social-share
+npx nuxi@latest module add nuxt-social-share
 ```
 
-2. Add `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`
+2. Nuxi should have already added `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`, if not add it manually:
 
 ```js
 export default defineNuxtConfig({
+  // module added by Nuxi
   modules: [
     '@stefanobartoletti/nuxt-social-share'
   ],
-  // optional configuration
+  // optional configuration, should be added manually
   socialShare: {
     // module options
   }
@@ -209,6 +205,7 @@ parameters can be used by passing the respective prop in the component or in the
 | `whatsapp`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `telegram`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `skype`        | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
+| `line`         | ✅    | ❌      | ❌     | ❌         | ❌      |             |
 | `email`        | ✅    | ✔️      | ❌     | ❌         | ❌      | `title` is used in the subject, `url` in the body of the email |
 
 ✅ = Supported, has a default value if not provided

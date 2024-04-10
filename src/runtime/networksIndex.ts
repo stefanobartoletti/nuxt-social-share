@@ -5,12 +5,13 @@ import { twitter } from './networks/twitter'
 import { linkedin } from './networks/linkedin'
 import { pinterest } from './networks/pinterest'
 import { reddit } from './networks/reddit'
+import { bluesky } from './networks/bluesky'
 import { pocket } from './networks/pocket'
 import { whatsapp } from './networks/whatsapp'
 import { telegram } from './networks/telegram'
 import { skype } from './networks/skype'
+import { line } from './networks/line'
 import { email } from './networks/email'
-import { bluesky } from './networks/bluesky'
 
 export const networksIndex: NetworksIndex = {
   // Social Networks
@@ -26,6 +27,7 @@ export const networksIndex: NetworksIndex = {
   whatsapp,
   telegram,
   skype,
+  line,
   // Other
   email,
 }
