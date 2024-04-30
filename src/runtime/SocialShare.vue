@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+import { computed } from "vue"
 import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
@@ -35,7 +36,7 @@ const props = defineProps({
 const options = useRuntimeConfig().public.socialShare
 
 const isStyled = props.styled !== undefined ? props.styled : options.styled
-const isLabeled = props.label !== undefined ? props.label : options.label
+const isLabeled = computed(() => props.label !== undefined ? props.label : options.label)
 
 const selectedNework = useSocialShare({
   network: props.network,
