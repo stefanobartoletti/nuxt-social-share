@@ -28,7 +28,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   const argHashtags = (selectedNework.value.args?.hashtags && hashtags) ? selectedNework.value.args?.hashtags : ''
   const argImage = (selectedNework.value.args?.image && image) ? selectedNework.value.args?.image : ''
 
-  let fullUrl = `${shareUrl}${argTitle}${argUser}${argHashtags}${argImage}`
+  let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
   // Replace placeholders with actual values
   fullUrl = fullUrl
     .replace(/\[u\]/i, pageUrl)
