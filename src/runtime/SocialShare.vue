@@ -1,24 +1,32 @@
 <template>
   <a
     class="social-share-button"
-    :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
-    :href="selectedNework.shareUrl"
+    :class="[
+      `social-share-button--${network}`,
+      { 'social-share-button--styled': isStyled },
+    ]"
+    :href="fullUrl"
     :style="`--color-brand:${selectedNework.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
-    <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
+    <svg
+      class="social-share-button__icon"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+      width="1em"
+      height="1em"
+      :viewBox="`${selectedNework.icon.viewBox}`"
+    >
       <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
     </svg>
-    <span
-      v-if="isLabeled"
-      class="social-share-button__label"
-    >Share</span>
+    <span v-if="isLabeled" class="social-share-button__label">Share</span>
   </a>
 </template>
 
 <script setup>
-import { computed } from "vue"
+import { computed, toRefs } from 'vue'
 import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
@@ -33,21 +41,28 @@ const props = defineProps({
   image: { type: String, default: undefined },
 })
 
+const { url } = toRefs(props)
+
 const options = useRuntimeConfig().public.socialShare
 
 const isStyled = props.styled !== undefined ? props.styled : options.styled
-const isLabeled = computed(() => props.label !== undefined ? props.label : options.label)
+const isLabeled = computed(() =>
+  props.label !== undefined ? props.label : options.label,
+)
 
 const selectedNework = useSocialShare({
   network: props.network,
-  url: props.url,
+  url: url.value,
   title: props.title,
   user: props.user,
   hashtags: props.hashtags,
   image: props.image,
 })
 
-const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+const fullUrl = computed(() => selectedNework.value.updateUrl(url.value))
+
+const capitalizedNetwork
+  = props.network.charAt(0).toUpperCase() + props.network.slice(1)
 </script>
 
 <style lang="scss">

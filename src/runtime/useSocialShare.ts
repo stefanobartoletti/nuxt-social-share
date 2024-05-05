@@ -18,27 +18,32 @@ export function useSocialShare(options: Options = defaultOptions) {
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNework = ref({ ...networksIndex[network] })
 
-  // Set default value for url if not provided from options
-  const pageUrl = url !== undefined ? url : useRequestURL().href
+  const updateUrl = (_url: string): string => {
+    // Set default value for url if not provided from options
+    const pageUrl = _url !== undefined ? _url : useRequestURL().href
 
-  // Build full share raw url
-  const shareUrl = selectedNework.value.shareUrl
-  const argTitle = (selectedNework.value.args?.title && title) ? selectedNework.value.args?.title : ''
-  const argUser = (selectedNework.value.args?.user && user) ? selectedNework.value.args?.user : ''
-  const argHashtags = (selectedNework.value.args?.hashtags && hashtags) ? selectedNework.value.args?.hashtags : ''
-  const argImage = (selectedNework.value.args?.image && image) ? selectedNework.value.args?.image : ''
+    // Build full share raw url
+    const shareUrl = networksIndex[network].shareUrl
+    const argTitle = (networksIndex[network].args?.title && title) ? networksIndex[network].args?.title : ''
+    const argUser = (networksIndex[network].args?.user && user) ? networksIndex[network].args?.user : ''
+    const argHashtags = (networksIndex[network].args?.hashtags && hashtags) ? networksIndex[network].args?.hashtags : ''
+    const argImage = (networksIndex[network].args?.image && image) ? networksIndex[network].args?.image : ''
 
-  let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
-  // Replace placeholders with actual values
-  fullUrl = fullUrl
-    .replace(/\[u\]/i, pageUrl)
-    .replace(/\[t\]/i, title || '')
-    .replace(/\[uid\]/i, user || '')
-    .replace(/\[h\]/i, hashtags || '')
-    .replace(/\[i\]/i, image || '')
+    let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
+
+    // Replace placeholders with actual values
+    fullUrl = fullUrl
+      .replace(/\[u\]/i, pageUrl)
+      .replace(/\[t\]/i, title || '')
+      .replace(/\[uid\]/i, user || '')
+      .replace(/\[h\]/i, hashtags || '')
+      .replace(/\[i\]/i, image || '')
+    return fullUrl
+  }
 
   // Rebuild selectedNework object
-  selectedNework.value.shareUrl = fullUrl
+  selectedNework.value.shareUrl = updateUrl(url)
+  selectedNework.value.updateUrl = updateUrl
   delete selectedNework.value.args
 
   return selectedNework
