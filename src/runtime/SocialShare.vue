@@ -5,7 +5,7 @@
       `social-share-button--${network}`,
       { 'social-share-button--styled': isStyled },
     ]"
-    :href="fullUrl"
+    :href="selectedNework.shareUrl"
     :style="`--color-brand:${selectedNework.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { computed, toRefs } from 'vue'
+import { computed, toRefs, watch } from 'vue'
 import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
@@ -59,10 +59,12 @@ const selectedNework = useSocialShare({
   image: props.image,
 })
 
-const fullUrl = computed(() => selectedNework.value.updateUrl(url.value))
-
 const capitalizedNetwork
   = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+
+watch(url, (newValue) => {
+  selectedNework.value.updateUrl(newValue)
+})
 </script>
 
 <style lang="scss">

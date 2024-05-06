@@ -161,13 +161,13 @@
                 Change url
               </button>
               <h3 class="text-lg font-medium">Usage example (component):</h3>
-              <pre>{{ `<script setup>
+              <pre>{{ `<script setup lang="ts">
 const url = ref<string | undefined>(undefined)
 url.value = "https://www.example.com"
 </script>\n<template>\n<SocialShare :url="url" />\n</template>` }}</pre>
               <h3 class="text-lg font-medium">Usage example (composable):</h3>
               <pre>{{ `<script setup>\nconst getNetwork = useSocialShare({ url: undefined })
-getNetwork.value.shareUrl = getNetwork.value.updateUrl("new url")\n</script>` }}</pre>
+getNetwork.value.updateUrl("new url")\n</script>` }}</pre>
 
               <div v-if="urlInstance.note" role="alert" class="alert">
                 <svg

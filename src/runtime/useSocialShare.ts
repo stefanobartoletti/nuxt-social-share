@@ -18,7 +18,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNework = ref({ ...networksIndex[network] })
 
-  const updateUrl = (_url: string): string => {
+  const updateUrl = (_url: string): void => {
     // Set default value for url if not provided from options
     const pageUrl = _url !== undefined ? _url : useRequestURL().href
 
@@ -29,20 +29,19 @@ export function useSocialShare(options: Options = defaultOptions) {
     const argHashtags = (networksIndex[network].args?.hashtags && hashtags) ? networksIndex[network].args?.hashtags : ''
     const argImage = (networksIndex[network].args?.image && image) ? networksIndex[network].args?.image : ''
 
-    let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
+    const fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
     // Replace placeholders with actual values
-    fullUrl = fullUrl
+    selectedNework.value.shareUrl = fullUrl
       .replace(/\[u\]/i, pageUrl)
       .replace(/\[t\]/i, title || '')
       .replace(/\[uid\]/i, user || '')
       .replace(/\[h\]/i, hashtags || '')
       .replace(/\[i\]/i, image || '')
-    return fullUrl
   }
 
   // Rebuild selectedNework object
-  selectedNework.value.shareUrl = updateUrl(url)
+  updateUrl(url)
   selectedNework.value.updateUrl = updateUrl
   delete selectedNework.value.args
 
