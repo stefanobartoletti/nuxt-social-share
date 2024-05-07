@@ -124,6 +124,41 @@ A common use when using i.e. Tailwind could be as follows:
 > [!TIP]
 > (*) It is also possible to globally set this property from the module options. It is available also as a prop to allow a different behavior on a single instance of the component.
 
+### Slots
+
+It is possible to customize the button's label by using the default `slot`. By default the component renders a simple *"Share"* label, but this can be customized to display something else:
+
+```vue
+<!-- Custom label, renders the network name -->
+<SocialShare
+  v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+  :key="network"
+  :network="network"
+>
+{{ network }}
+</SocialShare>
+```
+
+> [!NOTE]
+> The slot is still affected by the `label` setting, either being provided by the module options or by the component prop. If set to `false`, no label will be rendered, even if a custom value is provided in the slot.
+
+### Localization
+
+The <SocialShare> comes with two strings localized by default in English: the rendered label inside the button, and the value of the `aria-label` attribute used for accessibility purposes.
+
+It is very easy to customize and localize both these strings, by using both the default slot and providing an `aria-label` attribute that will override the default value:
+
+```vue
+<SocialShare
+  v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+  :key="network"
+  :network="network"
+  :aria-label="`Condividi con ${network}`"
+>
+Condividi
+</SocialShare>
+```
+
 ## 🔩 Using the `useSocialShare` composable
 
 Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
