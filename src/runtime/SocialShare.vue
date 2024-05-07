@@ -10,10 +10,9 @@
     <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
       <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
     </svg>
-    <span
-      v-if="isLabeled"
-      class="social-share-button__label"
-    >Share</span>
+    <span v-if="isLabeled" class="social-share-button__label">
+      <slot>Share</slot>
+    </span>
   </a>
 </template>
 
