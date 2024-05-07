@@ -11,7 +11,6 @@
       </div>
     </div>
   </header>
-
   <main class="container py-16">
     <div class="join join-vertical">
       <!-- Instances -->
@@ -20,7 +19,6 @@
         <div class="collapse-title text-xl font-medium bg-base-200 rounded-none">
           <h2>{{ instance.title }}</h2>
         </div>
-
         <div class="collapse-content">
           <div class="flex flex-col lg:flex-row lg:p-8 lg:pt-12 gap-8">
             <div class="buttons-container flex flex-wrap gap-2 p-8 justify-center content-center w-auto lg:w-1/2" :class="instance.class">
@@ -45,21 +43,18 @@
           </div>
         </div>
       </div>
-
       <!-- Composable -->
       <div class="collapse collapse-arrow join-item border border-base-300">
         <input type="radio" name="accordion" />
         <div class="collapse-title text-xl font-medium bg-base-200 rounded-none">
           <h2>Composable</h2>
         </div>
-
         <div class="collapse-content">
           <div class="flex flex-col lg:p-8 lg:pt-12">
             <div class="p-4 w-auto  flex flex-col gap-4">
               <h3 class="text-lg font-medium">Usage example:</h3>
               <pre>{{ `<script setup>\nconst getFacebook = useSocialShare({ network: 'facebook' })\n</script>` }}</pre>
             </div>
-
             <div class="p-4 w-auto  flex flex-col gap-4">
               <h3 class="text-lg font-medium">Returned object:</h3>
               <pre>{{ getFacebook }}</pre>
@@ -73,11 +68,10 @@
         <div class="collapse-title text-xl font-medium bg-base-200 rounded-none">
           <h2>Complete share URLs when using all Props</h2>
         </div>
-
         <div class="collapse-content">
           <div class="flex flex-col  lg:p-8 lg:pt-12">
             <div class="p-4 w-auto flex flex-col gap-8">
-              <div v-for="item in getAllNetworks()" :key="item" class="" :url="item">
+              <div v-for="item in allNetworks" :key="item" class="" :url="item">
                 <p>{{ item.value.name }}</p>
                 <pre>{{ item.value.shareUrl }}</pre>
               </div>
@@ -129,22 +123,18 @@ const instances = [
   },
 ]
 
-const getAllNetworks = () => {
-  const allNetworks = []
+const allNetworks = []
 
-  testNetworks.forEach((el) => {
-    allNetworks.push(useSocialShare({
-      network: el,
-      url: 'https://www.example.com/',
-      title: 'Test Title',
-      user: 'test_user',
-      hashtags: 'test,hashtags',
-      image: 'https://www.example.com/image.jpg',
-    }))
-  })
-
-  return allNetworks
-}
+testNetworks.forEach((el) => {
+  allNetworks.push(useSocialShare({
+    network: el,
+    url: 'https://www.example.com/',
+    title: 'Test Title',
+    user: 'test_user',
+    hashtags: 'test,hashtags',
+    image: 'https://www.example.com/image.jpg',
+  }))
+})
 </script>
 
 <style lang="scss">
