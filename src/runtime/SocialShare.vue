@@ -7,11 +7,15 @@
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
-    <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
-      <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
-    </svg>
+    <template v-if="hasIcon">
+      <slot name="icon">
+        <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
+          <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
+        </svg>
+      </slot>
+    </template>
     <span v-if="isLabeled" class="social-share-button__label">
-      <slot>Share</slot>
+      <slot name="label">Share</slot>
     </span>
   </a>
 </template>
@@ -24,6 +28,7 @@ const props = defineProps({
   network: { type: String, required: true },
   styled: { type: Boolean, default: undefined },
   label: { type: Boolean, default: undefined },
+  icon: { type: Boolean, default: undefined },
   url: { type: String, default: undefined },
   title: { type: String, default: undefined },
   user: { type: String, default: undefined },
@@ -35,6 +40,7 @@ const options = useRuntimeConfig().public.socialShare
 
 const isStyled = props.styled !== undefined ? props.styled : options.styled
 const isLabeled = props.label !== undefined ? props.label : options.label
+const hasIcon = props.icon !== undefined ? props.icon : options.icon
 
 const selectedNework = useSocialShare({
   network: props.network,

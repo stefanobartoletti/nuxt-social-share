@@ -5,6 +5,7 @@ import { defu } from 'defu'
 export interface ModuleOptions {
   styled?: boolean
   label?: boolean
+  icon?: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -16,6 +17,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     styled: false,
     label: true,
+    icon: true,
   },
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
