@@ -171,7 +171,7 @@ Works nicely with the [NuxtIcon](https://github.com/nuxt-modules/icon) module, i
 
 ### Localization
 
-The <SocialShare> comes with two strings localized by default in English: the rendered label inside the button, and the value of the `aria-label` attribute used for accessibility purposes.
+The `<SocialShare>` comes with two strings localized by default in English: the rendered label inside the button, and the value of the `aria-label` attribute used for accessibility purposes.
 
 It is very easy to customize and localize both these strings, by using both the `label` slot and providing an `aria-label` attribute that will override the default value:
 
@@ -188,7 +188,7 @@ It is very easy to customize and localize both these strings, by using both the 
 
 ## 🔩 Using the `useSocialShare` composable
 
-Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
+Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is also used internally to create the `<SocialShare>` components.
 
 Like the component, one instance of `useSocialShare` should be used for every needed share.
 
