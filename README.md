@@ -13,7 +13,8 @@
 
 Simple Social Sharing for Nuxt 3
 
-[Release Notes](/CHANGELOG.md)
+[Release Notes](/CHANGELOG.md) |
+[Demo](https://stefanobartoletti.github.io/nuxt-social-share/)
 
 </div>
 
@@ -228,6 +229,7 @@ parameters can be used by passing the respective prop in the component or in the
 - Install dependencies using `pnpm install`
 - Run `pnpm dev:prepare` to generate type stubs.
 - Use `pnpm dev` to start [playground](./playground) in development mode.
+- Lint any new edit by running `pnpm lint --fix`
 
 ## 📝 License
 
