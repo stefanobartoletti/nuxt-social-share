@@ -25,8 +25,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(@unocss/reset@0.59.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.14.0))(vue@3.4.21(typescript@5.4.4)))(nuxt@3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.7)(@unocss/reset@0.59.0)(encoding@0.1.13)(eslint@9.1.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.14.0))(vue@3.4.21(typescript@5.4.4)))(ioredis@5.3.2)(meow@12.1.1)(optionator@0.9.3)(rollup@4.14.0)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.4)(unocss@0.59.0(postcss@8.4.38)(rollup@4.14.0)(vite@5.2.8(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3)))(vite@5.2.8(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3)))(rollup@4.14.0)(unocss@0.59.0(postcss@8.4.38)(rollup@4.14.0)(vite@5.2.8(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3)))(vite@5.2.8(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3))(vue@3.4.21(typescript@5.4.4))
       '@nuxt/module-builder':
-        specifier: ^0.5.5
-        version: 0.5.5(@nuxt/kit@3.11.2(rollup@4.14.0))(nuxi@3.11.1)(sass@1.75.0)(typescript@5.4.4)
+        specifier: ^0.6.0
+        version: 0.6.0(@nuxt/kit@3.11.2(rollup@4.14.0))(nuxi@3.11.1)(sass@1.75.0)(typescript@5.4.4)
       '@nuxt/schema':
         specifier: ^3.11.2
         version: 3.11.2(rollup@4.14.0)
@@ -135,9 +135,6 @@ packages:
 
   '@antfu/install-pkg@0.3.3':
     resolution: {integrity: sha512-nHHsk3NXQ6xkCfiRRC8Nfrg8pU5kkr3P3Y9s9dKqiuRmBD0Yap7fymNDjGFKeWhZQHqqbCS5CfeMy9wtExM24w==}
-
-  '@antfu/utils@0.7.7':
-    resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
 
   '@antfu/utils@0.7.8':
     resolution: {integrity: sha512-rWQkqXRESdjXtc+7NRfK9lASQjpXJu1ayp7qi1d23zZorY+wBHVLHHoVcMsEnkqEBWTFqbztO7/QdJFzyEcLTg==}
@@ -905,12 +902,12 @@ packages:
     resolution: {integrity: sha512-yiYKP0ZWMW7T3TCmsv4H8+jEsB/nFriRAR8bKoSqSV9bkVYWPE36sf7JDux30dQ91jSlQG6LQkB3vCHYTS2cIg==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@nuxt/module-builder@0.5.5':
-    resolution: {integrity: sha512-ifFfwA1rbSXSae25RmqA2kAbV3xoShZNrq1yK8VXB/EnIcDn4WiaYR1PytaSxIt5zsvWPn92BJXiIUBiMQZ0hw==}
+  '@nuxt/module-builder@0.6.0':
+    resolution: {integrity: sha512-d/sn+6n23qB+yGuItNvGnNlPpDzwcsW6riyISdo4H2MO/3TWFsIzB5+JZK104t0G6ftxB71xWHmBBYEdkXOhVw==}
     hasBin: true
     peerDependencies:
-      '@nuxt/kit': ^3.8.2
-      nuxi: ^3.10.0
+      '@nuxt/kit': ^3.11.2
+      nuxi: ^3.11.1
 
   '@nuxt/schema@3.11.2':
     resolution: {integrity: sha512-Z0bx7N08itD5edtpkstImLctWMNvxTArsKXzS35ZuqyAyKBPcRjO1CU01slH0ahO30Gg9kbck3/RKNZPwfOjJg==}
@@ -6407,8 +6404,6 @@ snapshots:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
 
-  '@antfu/utils@0.7.7': {}
-
   '@antfu/utils@0.7.8': {}
 
   '@babel/code-frame@7.24.2':
@@ -7001,7 +6996,7 @@ snapshots:
       debug: 4.3.4
       kolorist: 1.8.0
       local-pkg: 0.5.0
-      mlly: 1.6.1
+      mlly: 1.7.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7288,14 +7283,16 @@ snapshots:
       - rollup
       - supports-color
 
-  '@nuxt/module-builder@0.5.5(@nuxt/kit@3.11.2(rollup@4.14.0))(nuxi@3.11.1)(sass@1.75.0)(typescript@5.4.4)':
+  '@nuxt/module-builder@0.6.0(@nuxt/kit@3.11.2(rollup@4.14.0))(nuxi@3.11.1)(sass@1.75.0)(typescript@5.4.4)':
     dependencies:
       '@nuxt/kit': 3.11.2(rollup@4.14.0)
       citty: 0.1.6
       consola: 3.2.3
-      mlly: 1.6.1
+      defu: 6.1.4
+      mlly: 1.7.0
       nuxi: 3.11.1
       pathe: 1.1.2
+      pkg-types: 1.1.1
       unbuild: 2.0.0(sass@1.75.0)(typescript@5.4.4)
     transitivePeerDependencies:
       - sass
@@ -10067,7 +10064,7 @@ snapshots:
   externality@1.0.2:
     dependencies:
       enhanced-resolve: 5.16.0
-      mlly: 1.6.1
+      mlly: 1.7.0
       pathe: 1.1.2
       ufo: 1.5.3
 
@@ -11023,7 +11020,7 @@ snapshots:
       h3: 1.11.1
       http-shutdown: 1.2.2
       jiti: 1.21.0
-      mlly: 1.6.1
+      mlly: 1.7.0
       node-forge: 1.3.1
       pathe: 1.1.2
       std-env: 3.7.0
@@ -11288,7 +11285,7 @@ snapshots:
       fs-extra: 11.2.0
       globby: 13.2.2
       jiti: 1.21.0
-      mlly: 1.6.1
+      mlly: 1.7.0
       mri: 1.2.0
       pathe: 1.1.2
       postcss: 8.4.38
@@ -11983,7 +11980,7 @@ snapshots:
   pkg-types@1.1.0:
     dependencies:
       confbox: 0.1.7
-      mlly: 1.6.1
+      mlly: 1.7.0
       pathe: 1.1.2
 
   pkg-types@1.1.1:
@@ -13151,9 +13148,9 @@ snapshots:
       jiti: 1.21.0
       magic-string: 0.30.9
       mkdist: 1.4.0(sass@1.75.0)(typescript@5.4.4)
-      mlly: 1.6.1
+      mlly: 1.7.0
       pathe: 1.1.2
-      pkg-types: 1.0.3
+      pkg-types: 1.1.1
       pretty-bytes: 6.1.1
       rollup: 3.29.4
       rollup-plugin-dts: 6.1.0(rollup@3.29.4)(typescript@5.4.4)
@@ -13170,7 +13167,7 @@ snapshots:
       '@antfu/utils': 0.7.8
       defu: 6.1.4
       jiti: 1.21.0
-      mlly: 1.6.1
+      mlly: 1.7.0
 
   uncrypto@0.1.3: {}
 
@@ -13340,9 +13337,9 @@ snapshots:
     dependencies:
       knitwork: 1.1.0
       magic-string: 0.30.9
-      mlly: 1.6.1
+      mlly: 1.7.0
       pathe: 1.1.2
-      pkg-types: 1.1.0
+      pkg-types: 1.1.1
       unplugin: 1.10.1
 
   update-browserslist-db@1.0.13(browserslist@4.23.0):
