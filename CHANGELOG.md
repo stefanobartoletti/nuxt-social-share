@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.7.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0-dev.0...v0.7.0) (2024-05-14)
+
+## [0.7.0-dev.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.6.1...v0.7.0-dev.0) (2024-05-07)
+
+
+### 🚀 Features
+
+* add conditional icon & slot ([160df54](https://github.com/stefanobartoletti/nuxt-social-share/commit/160df5488a3cfead4d54f0edb242359c3857048f))
+* add slot for custom label ([8516d5f](https://github.com/stefanobartoletti/nuxt-social-share/commit/8516d5fe0798cb0e631cff8ce6cad7f3d0232547))
+
+
+### 📖 Documentation
+
+* add demo link ([fd910f1](https://github.com/stefanobartoletti/nuxt-social-share/commit/fd910f18ca203d57476aa7f4d7e830a700878808))
+* add documentation for slot and localization ([6c8a1cc](https://github.com/stefanobartoletti/nuxt-social-share/commit/6c8a1cc05848da42c87fba8fb0e4a077896fbfa4))
+* add documentation for the icon slot ([17254c8](https://github.com/stefanobartoletti/nuxt-social-share/commit/17254c8e022595a6954a5b03db2e81fe4ff3aff8))
+* update contributing guidelines ([d13422e](https://github.com/stefanobartoletti/nuxt-social-share/commit/d13422e366acb3e9bb89e69c5af95fa39b04960f))
+
 ## [0.6.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.6.0...v0.6.1) (2024-04-22)
 
 ## [0.6.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.5.5...v0.6.0) (2024-04-10)

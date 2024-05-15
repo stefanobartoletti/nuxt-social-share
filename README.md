@@ -82,7 +82,7 @@ The component will render by default the following minimal HTML:
 </a>
 ```
 
-An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` element will not be rendered if `:label="false"`.
+An additional `social-share-button--styled` class will be added to the `<a>` element if `:styled="true"`, while the `<span>` and `<svg>` elements will be rendered conditionally according to the `label` and `icon` props.
 
 > [!NOTE]
 > - The component comes unstyled by default, only providing some minimal flex properties to correctly align icon and label.
@@ -114,8 +114,9 @@ A common use when using i.e. Tailwind could be as follows:
 | ---- | -------- | ---- | ------- | ----- |
 | `network` | `Yes` | `String` | none | The social network or messaging service where the content should be shared. This is required for the component to work. A list of the supported networks is available below. |
 | `styled` | `No` | `Boolean` | `false` | Whether the component should be styled or not. It is `false` by default to allow for easier custom styling. Additional customization is possible also when set to `true` (*).  |
-| `label` | `No` | `Boolean` | `true` | Whether the text label should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*).  |
-| `url` | `No` | `String` | the current page URL | The URL that will be shared on the selected social network. Defaults to the current page address. On most cases you don't need another value, but if you need a different value, you can set it with this prop. |
+| `label` | `No` | `Boolean` | `true` | Whether the text label should be rendered or not (*).  |
+| `icon` | `No` | `Boolean` | `true` | Whether the icon should be rendered or not (*).  |
+| `url` | `No` | `String` | the current page URL | The URL that will be shared on the selected social network. Defaults to the current page address. On most cases you don't need another value, but if you need to change it, you can set it with this prop. |
 | `title` | `No` | `String` | none | Title used as a parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
 | `user` | `No` | `String` | none | Username used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
 | `hashtags` | `No` | `String` | none | Hashtags used as parameter of the sharing URL in supported networks. Optional, see the "Supported Networks" table below |
@@ -124,9 +125,70 @@ A common use when using i.e. Tailwind could be as follows:
 > [!TIP]
 > (*) It is also possible to globally set this property from the module options. It is available also as a prop to allow a different behavior on a single instance of the component.
 
+### Slots
+
+The `<SocialShare>` component comes with two named slots, that can be used respectively to customize the label or the icon. These slots can be used alone or together.
+
+> [!NOTE]
+> These slots are still affected by respective `label` and `icon` settings, either being provided by the module options or by the component props. If set to `false`, no label or icon will be rendered, even if a custom value is provided in the respective slots.
+
+#### `label`
+
+Used to customize the button's label. Optional, defaults to *"Share"* if not provided.
+
+Example:
+
+```vue
+<!-- Custom label, renders the network name -->
+<SocialShare
+  v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+  :key="network"
+  :network="network"
+>
+  <template #label>{{ network }}</template>
+</SocialShare>
+```
+
+#### `icon`
+
+Used to customize the button's icon. Useful when another icon style is required. Optional, defaults to the internal style icons if not provided. Both a raw `svg` or a custom component can be used.
+
+Works nicely with the [NuxtIcon](https://github.com/nuxt-modules/icon) module, if used.
+
+```vue
+<!-- Custom icon -->
+<SocialShare
+  v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+  :key="network"
+  :network="network"
+>
+  <!-- Either with a custom SVG ... -->
+  <template #icon><svg>{...}</svg></template>
+  <!-- ... OR with a component, i.e. from NuxtIcon -->
+  <template #icon><Icon name="mdi:${network}" /></template>
+</SocialShare>
+```
+
+### Localization
+
+The `<SocialShare>` comes with two strings localized by default in English: the rendered label inside the button, and the value of the `aria-label` attribute used for accessibility purposes.
+
+It is very easy to customize and localize both these strings, by using both the `label` slot and providing an `aria-label` attribute that will override the default value:
+
+```vue
+<SocialShare
+  v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
+  :key="network"
+  :network="network"
+  :aria-label="`Condividi con ${network}`"
+>
+  <template #label>Condividi</template>
+</SocialShare>
+```
+
 ## 🔩 Using the `useSocialShare` composable
 
-Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is used internally to create the `<SocialShare>` components.
+Using the customizable component should cover almost every use case, but if needed the `useSocialShare` composable can be directly accessed for even more flexibility. This composable is also used internally to create the `<SocialShare>` components.
 
 Like the component, one instance of `useSocialShare` should be used for every needed share.
 
@@ -183,7 +245,8 @@ Available options:
 | Name | Type | Default | Notes |
 | ---- | ---- | ------- | ----- |
 | `styled` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
-| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not. It is `true` by default, when set to `false` only the icon will be displayed (*). |
+| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not (*). |
+| `icon`  | `Boolean` | `true`  | Whether the icon in the `<SocialShare>` components should be rendered or not (*). |
 
 > [!TIP]
 > (*) It can be set also on a single component level via props, but it is usually better to set this from the module options to create your defaults, and override it with props only if needed.
@@ -214,8 +277,6 @@ parameters can be used by passing the respective prop in the component or in the
 ❌ = Not supported
 
 > [!NOTE]
-> Currently I have only included networks that I personally use and that I have tested to be working.
->
 > Contributions to add more networks are welcome, but keep in mind that PR will be accepted only for networks that have a documentation available in English among other languages.
 
 ## 🤝 Contributing
