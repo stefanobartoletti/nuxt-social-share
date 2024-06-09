@@ -1,4 +1,4 @@
-name: 'Close stale issues and PRs'
+name: Close stale issues and PRs
 on:
   schedule:
     - cron: '30 1 * * *'
@@ -14,12 +14,12 @@ jobs:
       - uses: actions/stale@v9
         with:
           # Issues
-          stale-issue-message: 'This issue has been inactive for 60 days. It will be closed in 7 days if no further activity occurs.'
-          close-issue-message: 'This issue has been closed due to inactivity. Please feel free to reopen it if needed.'
+          stale-issue-message: This issue has been inactive for 60 days. It will be closed in 7 days if no further activity occurs.
+          close-issue-message: This issue has been closed due to inactivity. Please feel free to reopen it if needed.
           exempt-issue-labels: 'dependencies,help-wanted'
-          stale-issue-label: 'stale'
+          stale-issue-label: stale
           # Pull requests
-          stale-pr-message: 'This PR has been inactive for 60 days. It will be closed in 7 days if no further activity occurs.'
-          close-pr-message: 'This PR has been closed due to inactivity. Please feel free to reopen it if needed.'
-          exempt-pr-labels: 'dependencies'
-          stale-pr-label: 'stale'
+          stale-pr-message: This PR has been inactive for 60 days. It will be closed in 7 days if no further activity occurs.
+          close-pr-message: This PR has been closed due to inactivity. Please feel free to reopen it if needed.
+          exempt-pr-labels: dependencies
+          stale-pr-label: stale
