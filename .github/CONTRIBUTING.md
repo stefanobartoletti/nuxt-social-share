@@ -4,12 +4,13 @@ There are some guidelines that should be followed to ensure an easier management
 
 ## Reporting a bug
 
-To open a bug, open an issue in the "Bug Report" category, making sure to follow these steps:
+To open a bug, open a [new issue](https://github.com/stefanobartoletti/nuxt-social-share/issues/new/choose) in the "Bug Report" category, making sure to follow these steps:
 
-- make sure that you have correctly set and used the module and its functionalities according to th documentation in the readme
-- search on the existing issues, your problem may have already be answered or even solved
-- describe your issue in a clear and detailed way
-- use English in your reports
+- make sure that you have correctly set and used the module and its functionalities according to the [documentation](https://github.com/stefanobartoletti/nuxt-social-share?tab=readme-ov-file) in the readme
+- search on the existing issues, to prevent opening a duplicate. Your problem may have already be answered or even solved
+- describe your issue in a clear, detailed and understandable way
+- provide a Minimal Reproduction of your issue
+- always use English in your reports
 
 ## Submitting a Pull Request
 

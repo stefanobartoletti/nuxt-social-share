@@ -1,0 +1,70 @@
+name: 🐞 Bug Report
+description: Report a bug to help improve this project
+title: ''
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing this bug report! Please take some moments to understand how to provide correct information and context and describe the issue in a concise, understandable and reproducible way.
+        The more clear and detailed you are, the easier and quicker it will be to find a solution!
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Please take a moment to familiarize yourself with this project scope and standards
+      options:
+        - label: I have read the [Documentation](https://github.com/stefanobartoletti/nuxt-social-share?tab=readme-ov-file) and I understand how to correctly use this module.
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/main/.github/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow this project's [Code of Conduct](https://github.com/stefanobartoletti/nuxt-social-share?tab=coc-ov-file)
+          required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Paste here the output of `npx nuxi@latest info`
+      placeholder: Nuxt project info
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: reproduction-link
+    attributes:
+      label: Minimal reproduction link
+      description: |
+        Please provide a link to a minimal reproduction of the issue. Some common ways to provide it are a minimal demo on platforms such as CodeSandbox or StackBlitz or a GitHub repository. Do NOT post here links to full live websites or production environments.
+        **This step is required**, unless you are absolutely sure that the provided information is enough to understand the problem. If not provided, it may be required later if the issue is not clear enough.
+        **If the issue is not described clearly and cannot be reproduced, it may be closed**.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug/issue
+      description: Please provide a clear, concise and understandable description of the bug or issue you are facing. Thanks!
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browsers
+      description: If the issue is browser-specific, please select the browser(s) you are experiencing the issue on.
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Brave
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Optional if provided reproduction. Please do not to insert an image but copy paste the log text.
+      render: shell
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: If there is any additional information that you consuder relevant, please provide it here.
