@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1-beta.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.0...v0.7.1-beta.1) (2024-06-13)
+
+
+### 🩹 Bug Fixes
+
+* fix generate url function ([65c2b80](https://github.com/stefanobartoletti/nuxt-social-share/commit/65c2b80d86a602e749ce6ae2751ad446e840046f))
+
 ## [0.7.1-beta.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0...v0.7.1-beta.0) (2024-06-13)
 
 
