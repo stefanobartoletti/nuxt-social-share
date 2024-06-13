@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1-beta.3](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.2...v0.7.1-beta.3) (2024-06-13)
+
+
+### 🩹 Bug Fixes
+
+* use client location ([f8b95d3](https://github.com/stefanobartoletti/nuxt-social-share/commit/f8b95d37e3e3b7c76cc0fb992b079516b0eb49d6))
+
 ## [0.7.1-beta.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.1...v0.7.1-beta.2) (2024-06-13)
 
 ## [0.7.1-beta.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.0...v0.7.1-beta.1) (2024-06-13)
