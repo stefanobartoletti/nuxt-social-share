@@ -52,6 +52,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   const route = useRoute()
 
   watch(route, () => {
+    console.log('route changed', route.fullPath)
     createFullUrl()
   })
 
