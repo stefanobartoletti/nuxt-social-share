@@ -39,6 +39,7 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "release": "release-it",
+    "release:beta": "release-it --no-git.requireBranch --preRelease=beta",
     "commitlint": "commitlint --edit",
     "prepare": "husky"
   },
