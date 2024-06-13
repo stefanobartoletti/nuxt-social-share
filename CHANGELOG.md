@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1-beta.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0...v0.7.1-beta.0) (2024-06-13)
+
+
+### 🩹 Bug Fixes
+
+* update shareurl on route change ([d75dede](https://github.com/stefanobartoletti/nuxt-social-share/commit/d75dede3fe29d258519f398d065daa6a88550097))
+
 ## [0.7.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0-dev.0...v0.7.0) (2024-05-14)
 
 ## [0.7.0-dev.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.6.1...v0.7.0-dev.0) (2024-05-07)
