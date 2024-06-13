@@ -16,20 +16,20 @@ export function useSocialShare(options: Options = defaultOptions) {
   const { network, url, title, user, hashtags, image } = options
 
   // Get network. Using a shallow copy to avoid mutating the original object
-  const selectedNework = ref()
+  const selectedNetwork = ref({ ...networksIndex[network] })
+  const shareNetwork = ref(selectedNetwork.value)
+  const route = useRoute()
 
-  const createFullUrl = () => {
-    selectedNework.value = { ...networksIndex[network] }
-
+  const generateShareUrl = () => {
     // Set default value for url if not provided from options
     const pageUrl = computed(() => url !== undefined ? url : useRequestURL().href)
 
     // Build full share raw url
-    const shareUrl = selectedNework.value.shareUrl
-    const argTitle = (selectedNework.value.args?.title && title) ? selectedNework.value.args?.title : ''
-    const argUser = (selectedNework.value.args?.user && user) ? selectedNework.value.args?.user : ''
-    const argHashtags = (selectedNework.value.args?.hashtags && hashtags) ? selectedNework.value.args?.hashtags : ''
-    const argImage = (selectedNework.value.args?.image && image) ? selectedNework.value.args?.image : ''
+    const shareUrl = selectedNetwork.value.shareUrl
+    const argTitle = (selectedNetwork.value.args?.title && title) ? selectedNetwork.value.args?.title : ''
+    const argUser = (selectedNetwork.value.args?.user && user) ? selectedNetwork.value.args?.user : ''
+    const argHashtags = (selectedNetwork.value.args?.hashtags && hashtags) ? selectedNetwork.value.args?.hashtags : ''
+    const argImage = (selectedNetwork.value.args?.image && image) ? selectedNetwork.value.args?.image : ''
 
     let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
@@ -41,20 +41,13 @@ export function useSocialShare(options: Options = defaultOptions) {
       .replace(/\[h\]/i, hashtags || '')
       .replace(/\[i\]/i, image || '')
 
-    // Rebuild selectedNework object
-    selectedNework.value.shareUrl = fullUrl
-    delete selectedNework.value.args
+    return fullUrl
   }
 
-  createFullUrl()
-
-  // Update URL on route change
-  const route = useRoute()
-
   watch(route, () => {
-    console.log('route changed', route.fullPath)
-    createFullUrl()
-  })
+    shareNetwork.value.shareUrl = generateShareUrl()
+    delete shareNetwork.value.args
+  }, { immediate: true })
 
-  return selectedNework
+  return shareNetwork
 }

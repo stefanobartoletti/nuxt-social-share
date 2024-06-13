@@ -2,15 +2,15 @@
   <a
     class="social-share-button"
     :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
-    :href="selectedNework.shareUrl"
-    :style="`--color-brand:${selectedNework.color}`"
+    :href="shareNetwork.shareUrl"
+    :style="`--color-brand:${shareNetwork.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
     target="_blank"
   >
     <template v-if="hasIcon">
       <slot name="icon">
-        <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNework.icon.viewBox}`">
-          <path fill="currentColor" :d="`${selectedNework.icon.path}`" />
+        <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${shareNetwork.icon.viewBox}`">
+          <path fill="currentColor" :d="`${shareNetwork.icon.path}`" />
         </svg>
       </slot>
     </template>
@@ -42,7 +42,7 @@ const isStyled = props.styled !== undefined ? props.styled : options.styled
 const isLabeled = props.label !== undefined ? props.label : options.label
 const hasIcon = props.icon !== undefined ? props.icon : options.icon
 
-const selectedNework = useSocialShare({
+const shareNetwork = useSocialShare({
   network: props.network,
   url: props.url,
   title: props.title,
