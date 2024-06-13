@@ -17,12 +17,12 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNetwork = ref({ ...networksIndex[network] })
-  const shareNetwork = ref(selectedNetwork.value)
+  const shareNetwork = ref()
   const route = useRoute()
 
   const generateShareUrl = () => {
     // Set default value for url if not provided from options
-    const pageUrl = computed(() => url !== undefined ? url : useRequestURL().href)
+    const pageUrl = computed(() => url !== undefined ? url : `${useRequestURL().origin}${route.fullPath}`)
 
     // Build full share raw url
     const shareUrl = selectedNetwork.value.shareUrl
@@ -45,7 +45,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   }
 
   watch(route, () => {
-    shareNetwork.value.shareUrl = generateShareUrl()
+    shareNetwork.value = { ...selectedNetwork.value, shareUrl: generateShareUrl() }
     delete shareNetwork.value.args
   }, { immediate: true })
 
