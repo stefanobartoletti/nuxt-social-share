@@ -22,7 +22,9 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   const generateShareUrl = () => {
     // Set default value for url if not provided from options
-    const pageUrl = computed(() => url !== undefined ? url : `${useRequestURL().origin}${route.fullPath}`)
+    const href = process.client ? window.location.href : useRequestURL().href
+
+    const pageUrl = computed(() => url !== undefined ? url : href)
 
     // Build full share raw url
     const shareUrl = selectedNetwork.value.shareUrl
