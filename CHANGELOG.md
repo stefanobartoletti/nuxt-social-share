@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.7.1-beta.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.1...v0.7.1-beta.2) (2024-06-13)
+
 ## [0.7.1-beta.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1-beta.0...v0.7.1-beta.1) (2024-06-13)
 
 
