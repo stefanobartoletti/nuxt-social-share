@@ -1,6 +1,15 @@
-import { nuxt, stefanobartoletti } from '@stefanobartoletti/eslint-config'
+import { stefanobartoletti, vue } from '@stefanobartoletti/eslint-config'
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 
-export default stefanobartoletti(
-  {}, // Options, required
-  nuxt,
-)
+export default createConfigForNuxt({
+  features: {
+    standalone: false,
+  },
+})
+
+  .prepend(
+    stefanobartoletti(
+      {},
+      vue,
+    ),
+  )
