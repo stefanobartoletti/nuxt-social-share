@@ -1,7 +1,10 @@
 <template>
   <a
     class="social-share-button"
-    :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
+    :class="[
+      `social-share-button--${network}`,
+      { 'social-share-button--styled': isStyled },
+    ]"
     :href="selectedNework.shareUrl"
     :style="`--color-brand:${selectedNework.color}`"
     :aria-label="`Share with ${capitalizedNetwork}`"
@@ -21,6 +24,7 @@
 </template>
 
 <script setup>
+import { computed, toRefs, watch } from 'vue'
 import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
@@ -36,22 +40,33 @@ const props = defineProps({
   image: { type: String, default: undefined },
 })
 
+const { url } = toRefs(props)
+
 const options = useRuntimeConfig().public.socialShare
 
 const isStyled = props.styled !== undefined ? props.styled : options.styled
-const isLabeled = props.label !== undefined ? props.label : options.label
+
+const isLabeled = computed(() =>
+  props.label !== undefined ? props.label : options.label,
+)
 const hasIcon = props.icon !== undefined ? props.icon : options.icon
+
 
 const selectedNework = useSocialShare({
   network: props.network,
-  url: props.url,
+  url: url.value,
   title: props.title,
   user: props.user,
   hashtags: props.hashtags,
   image: props.image,
 })
 
-const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+const capitalizedNetwork
+  = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+
+watch(url, (newValue) => {
+  selectedNework.value.updateUrl(newValue)
+})
 </script>
 
 <style lang="scss">
