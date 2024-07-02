@@ -19,7 +19,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   const selectedNework = ref({ ...networksIndex[network] })
 
   // Set default value for url if not provided from options
-  const pageUrl = url !== undefined ? url : useRequestURL().href
+  const pageUrl = url !== undefined ? new URL(url).href : useRequestURL().href
 
   // Build full share raw url
   const shareUrl = selectedNework.value.shareUrl
