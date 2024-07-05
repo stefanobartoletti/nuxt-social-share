@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0-beta.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1...v1.0.0-beta.0) (2024-07-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* add required `baseUrl` module option
+
+### 🩹 Bug Fixes
+
+* add required `baseUrl` module option ([118d48f](https://github.com/stefanobartoletti/nuxt-social-share/commit/118d48fb3b9902f8f7b5f65f48e312d40f62da85))
+* fix variable name typo ([c525788](https://github.com/stefanobartoletti/nuxt-social-share/commit/c5257886852268e0b1a14e6dd8998ec84e12d8f2))
+
 ## [0.7.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0...v0.7.1) (2024-07-05)
 
 
