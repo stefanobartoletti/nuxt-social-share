@@ -25,10 +25,12 @@ import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
 const props = defineProps({
-  network: { type: String, required: true },
+  // Style props
   styled: { type: Boolean, default: undefined },
   label: { type: Boolean, default: undefined },
   icon: { type: Boolean, default: undefined },
+  // Data props
+  network: { type: String, required: true },
   url: { type: String, default: undefined },
   title: { type: String, default: undefined },
   user: { type: String, default: undefined },
