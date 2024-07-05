@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0...v0.7.1) (2024-07-05)
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update lockfile ([fc32523](https://github.com/stefanobartoletti/nuxt-social-share/commit/fc32523606dd8ca0ee94e4f466f8a5317d5a3068))
+* **deps:** update nuxtjs monorepo to ^3.12.3 ([5c2e0a9](https://github.com/stefanobartoletti/nuxt-social-share/commit/5c2e0a9c39e21f80af30d62e7a25dfdc35efdfc8))
+
 ## [0.7.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0-dev.0...v0.7.0) (2024-05-14)
 
 ## [0.7.0-dev.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.6.1...v0.7.0-dev.0) (2024-05-07)
