@@ -3,6 +3,7 @@ import { defu } from 'defu'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
+  baseUrl?: string
   styled?: boolean
   label?: boolean
   icon?: boolean
@@ -15,6 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
+    baseUrl: '',
     styled: false,
     label: true,
     icon: true,

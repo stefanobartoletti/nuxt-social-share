@@ -1,7 +1,7 @@
 import type { Options } from './types/'
 
 import { networksIndex } from './networksIndex'
-import { ref, useRequestURL } from '#imports'
+import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
 
 const defaultOptions = {
   network: '',
@@ -14,12 +14,25 @@ const defaultOptions = {
 
 export function useSocialShare(options: Options = defaultOptions) {
   const { network, url, title, user, hashtags, image } = options
+  const moduleOptions = useRuntimeConfig().public.socialShare
 
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNetwork = ref({ ...networksIndex[network] })
 
   // Set default value for url if not provided from options
-  const pageUrl = url !== undefined ? url : useRequestURL().href
+
+  const pageUrl = computed(() => {
+    if (url !== undefined) {
+      return url
+    }
+
+    if (moduleOptions.baseUrl !== '') {
+      const baseUrl = moduleOptions.baseUrl.replace(/\/$/, '')
+      return `${baseUrl}${useRoute().fullPath}`
+    }
+
+    return ''
+  })
 
   // Build full share raw url
   const shareUrl = selectedNetwork.value.shareUrl
@@ -32,7 +45,7 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   // Replace placeholders with actual values
   fullUrl = fullUrl
-    .replace(/\[u\]/i, pageUrl)
+    .replace(/\[u\]/i, pageUrl.value)
     .replace(/\[t\]/i, title || '')
     .replace(/\[uid\]/i, user || '')
     .replace(/\[h\]/i, hashtags || '')

@@ -26,7 +26,7 @@ Simple Social Sharing for Nuxt 3
 - A `useSocialShare` composable is exposed, to provide even more flexibility if needed
 - Many major social networks supported
 
-## 🛠️ Quick Setup
+## 🛠️ Setup & Configuraton
 
 1. Add `@stefanobartoletti/nuxt-social-share` dependency to your project
 
@@ -42,14 +42,32 @@ export default defineNuxtConfig({
   modules: [
     '@stefanobartoletti/nuxt-social-share'
   ],
-  // optional configuration, should be added manually
+})
+```
+
+3. Configure the module options to your needs:
+
+```ts
+export default defineNuxtConfig({
+  // configuration options
   socialShare: {
-    // module options
+    baseUrl: 'https://www.yoursite.com' // required!
+    // other optional module options
   }
 })
 ```
 
-That's it! You can now use Nuxt Social Share in your Nuxt app ✨
+Available options:
+
+| Name | Required | Type | Default | Notes |
+| ---- | -------- | ---- | ------- | ----- |
+| `baseUrl` | `Yes` | `String` | `''` | This is the base URL of your website, likely the address of the homepage. **It is required**, all URLs to be shared will be built as relative paths to this. |
+| `styled` | `No` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*). |
+| `label`  | `No` | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not (*). |
+| `icon`  | `No` | `Boolean` | `true`  | Whether the icon in the `<SocialShare>` components should be rendered or not (*). |
+
+> [!TIP]
+> (*) It can be set also on a single component level via props, but it is usually better to set this from the module options to create your defaults, and override it with props only if needed.
 
 ## 🎨 Using the `<SocialShare>` component
 
@@ -226,30 +244,6 @@ It will return the following object:
 ```
 
 You can then use some or all the returned properties, according to your project setup and requirements.
-
-## 🎛️ Configuration
-
-Module options can be set from the `socialShare` key in `nuxt.config.ts`:
-
-```ts
-export default defineNuxtConfig({
-  // optional configuration
-  socialShare: {
-    // module options
-  }
-})
-```
-
-Available options:
-
-| Name | Type | Default | Notes |
-| ---- | ---- | ------- | ----- |
-| `styled` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*).                                      |
-| `label`  | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not (*). |
-| `icon`  | `Boolean` | `true`  | Whether the icon in the `<SocialShare>` components should be rendered or not (*). |
-
-> [!TIP]
-> (*) It can be set also on a single component level via props, but it is usually better to set this from the module options to create your defaults, and override it with props only if needed.
 
 ## ↗️ Supported networks
 
