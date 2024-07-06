@@ -18,6 +18,7 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNetwork = ref({ ...networksIndex[network] })
+  const route = useRoute()
 
   // Set default value for url if not provided from options
 
@@ -28,31 +29,36 @@ export function useSocialShare(options: Options = defaultOptions) {
 
     if (moduleOptions.baseUrl !== '') {
       const baseUrl = moduleOptions.baseUrl.replace(/\/$/, '')
-      return `${baseUrl}${useRoute().fullPath}`
+      return `${baseUrl}${route.fullPath}`
     }
 
     return ''
   })
 
-  // Build full share raw url
-  const shareUrl = selectedNetwork.value.shareUrl
-  const argTitle = (selectedNetwork.value.args?.title && title) ? selectedNetwork.value.args?.title : ''
-  const argUser = (selectedNetwork.value.args?.user && user) ? selectedNetwork.value.args?.user : ''
-  const argHashtags = (selectedNetwork.value.args?.hashtags && hashtags) ? selectedNetwork.value.args?.hashtags : ''
-  const argImage = (selectedNetwork.value.args?.image && image) ? selectedNetwork.value.args?.image : ''
+  const fullShareUrl = computed(() => {
+    // Build full share raw url
+    const shareUrl = selectedNetwork.value.shareUrl
+    const argTitle = (selectedNetwork.value.args?.title && title) ? selectedNetwork.value.args?.title : ''
+    const argUser = (selectedNetwork.value.args?.user && user) ? selectedNetwork.value.args?.user : ''
+    const argHashtags = (selectedNetwork.value.args?.hashtags && hashtags) ? selectedNetwork.value.args?.hashtags : ''
+    const argImage = (selectedNetwork.value.args?.image && image) ? selectedNetwork.value.args?.image : ''
 
-  let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
+    let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
-  // Replace placeholders with actual values
-  fullUrl = fullUrl
-    .replace(/\[u\]/i, pageUrl.value)
-    .replace(/\[t\]/i, title || '')
-    .replace(/\[uid\]/i, user || '')
-    .replace(/\[h\]/i, hashtags || '')
-    .replace(/\[i\]/i, image || '')
+    // Replace placeholders with actual values
+    fullUrl = fullUrl
+      .replace(/\[u\]/i, pageUrl.value)
+      .replace(/\[t\]/i, title || '')
+      .replace(/\[uid\]/i, user || '')
+      .replace(/\[h\]/i, hashtags || '')
+      .replace(/\[i\]/i, image || '')
 
-  // Rebuild selectedNetwork object
-  selectedNetwork.value.shareUrl = fullUrl
+    return fullUrl
+  })
+
+  // Update shareNetwork object
+
+  selectedNetwork.value.shareUrl = fullShareUrl.value
   delete selectedNetwork.value.args
 
   return selectedNetwork
