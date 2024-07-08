@@ -24,12 +24,11 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   const pageUrl = computed(() => {
     if (url !== undefined) {
-      return url
+      return new URL(url).href
     }
 
     if (moduleOptions.baseUrl !== '') {
-      const baseUrl = moduleOptions.baseUrl.replace(/\/$/, '')
-      return `${baseUrl}${route.fullPath}`
+      return new URL(route.fullPath, moduleOptions.baseUrl).href
     }
 
     return ''
