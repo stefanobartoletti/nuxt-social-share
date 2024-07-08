@@ -61,7 +61,7 @@ Available options:
 
 | Name | Required | Type | Default | Notes |
 | ---- | -------- | ---- | ------- | ----- |
-| `baseUrl` | `Yes` | `String` | `''` | This is the base URL of your website, likely the address of the homepage. **It is required**, all URLs to be shared will be built as relative paths to this. |
+| `baseUrl` | `Yes` | `String` | `''` | This is the base URL of your website, likely the address of the homepage. **It is required**, all URLs to be shared will be built as relative paths to this. You can also use an enviromment variable. |
 | `styled` | `No` | `Boolean` | `false` | Whether the `<SocialShare>` components should be styled or not. It is `false` by default to allow for easier custom styling (*). |
 | `label`  | `No` | `Boolean` | `true`  | Whether the text label in the `<SocialShare>` components should be rendered or not (*). |
 | `icon`  | `No` | `Boolean` | `true`  | Whether the icon in the `<SocialShare>` components should be rendered or not (*). |
