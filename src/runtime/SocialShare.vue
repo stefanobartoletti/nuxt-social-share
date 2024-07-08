@@ -25,10 +25,12 @@ import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
 
 const props = defineProps({
-  network: { type: String, required: true },
+  // Style props
   styled: { type: Boolean, default: undefined },
   label: { type: Boolean, default: undefined },
   icon: { type: Boolean, default: undefined },
+  // Data props
+  network: { type: String, required: true },
   url: { type: String, default: undefined },
   title: { type: String, default: undefined },
   user: { type: String, default: undefined },
@@ -36,11 +38,11 @@ const props = defineProps({
   image: { type: String, default: undefined },
 })
 
-const options = useRuntimeConfig().public.socialShare
+const moduleOptions = useRuntimeConfig().public.socialShare
 
-const isStyled = props.styled !== undefined ? props.styled : options.styled
-const isLabeled = props.label !== undefined ? props.label : options.label
-const hasIcon = props.icon !== undefined ? props.icon : options.icon
+const isStyled = props.styled !== undefined ? props.styled : moduleOptions.styled
+const isLabeled = props.label !== undefined ? props.label : moduleOptions.label
+const hasIcon = props.icon !== undefined ? props.icon : moduleOptions.icon
 
 const selectedNetwork = useSocialShare({
   network: props.network,

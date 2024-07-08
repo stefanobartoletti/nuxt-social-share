@@ -12,4 +12,11 @@ export default createConfigForNuxt({
       {},
       vue,
     ),
+    {
+      files: ['playground/{pages,layouts}/*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off',
+
+      },
+    },
   )

@@ -7,6 +7,8 @@ export default defineNuxtConfig({
   socialShare: {
     // styled: true,
     // label: false,
+    // icon: false,
+    baseUrl: 'https://stefanobartoletti.github.io/nuxt-social-share/',
   },
 
   devtools: { enabled: true },

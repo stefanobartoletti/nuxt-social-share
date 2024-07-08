@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.0.0-beta.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2024-07-08)
+
+
+### 🩹 Bug Fixes
+
+* use URL constructors to return URLs ([b665186](https://github.com/stefanobartoletti/nuxt-social-share/commit/b665186144ff2d875e11ace387a8aa692d8a2643))
+
+
+### 📖 Documentation
+
+* add note abuout using env variable ([22867b5](https://github.com/stefanobartoletti/nuxt-social-share/commit/22867b5f0d0c563da3314f78443f5afd84c3a663))
+
+
+### ⚙️ Refactor
+
+* build shareurl as computed property ([2c49e06](https://github.com/stefanobartoletti/nuxt-social-share/commit/2c49e06c6a7d19e0e87a8f8cce354ea9a57fcafb))
+
+## [1.0.0-beta.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.1...v1.0.0-beta.0) (2024-07-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* add required `baseUrl` module option
+
+### 🩹 Bug Fixes
+
+* add required `baseUrl` module option ([118d48f](https://github.com/stefanobartoletti/nuxt-social-share/commit/118d48fb3b9902f8f7b5f65f48e312d40f62da85))
+* fix variable name typo ([c525788](https://github.com/stefanobartoletti/nuxt-social-share/commit/c5257886852268e0b1a14e6dd8998ec84e12d8f2))
+
 ## [0.7.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v0.7.0...v0.7.1) (2024-07-05)
 
 
