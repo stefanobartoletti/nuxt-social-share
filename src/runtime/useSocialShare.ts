@@ -1,7 +1,7 @@
 import type { Options } from './types/'
 
 import { networksIndex } from './networksIndex'
-import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
+import { computed, ref, useNuxtApp, useRequestEvent, useRoute, useRuntimeConfig } from '#imports'
 
 const defaultOptions = {
   network: '',
@@ -27,8 +27,14 @@ export function useSocialShare(options: Options = defaultOptions) {
       return new URL(url).href
     }
 
-    if (moduleOptions.baseUrl !== '') {
-      return new URL(route.fullPath, moduleOptions.baseUrl).href
+    const nuxtApp = useNuxtApp()
+    const baseUrl = moduleOptions.baseUrl ?? (
+      import.meta.server
+        ? useRequestEvent(nuxtApp)?.node.req.headers.origin ?? ''
+        : typeof window !== 'undefined' ? window.location.origin : ''
+    )
+    if (baseUrl !== '') {
+      return new URL(route.fullPath, baseUrl).href
     }
 
     return ''

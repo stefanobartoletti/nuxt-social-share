@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    baseUrl: '',
+    baseUrl: undefined,
     styled: false,
     label: true,
     icon: true,
