@@ -61,7 +61,7 @@
     "@types/node": "^20.14.11",
     "changelogen": "^0.5.5",
     "daisyui": "^4.12.10",
-    "eslint": "^9.7.0",
+    "eslint": "^9.9.1",
     "husky": "^9.1.1",
     "nuxt": "^3.12.4",
     "release-it": "^17.6.0",
