@@ -56,7 +56,7 @@ const selectedNetwork = useSocialShare({
 const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
 </script>
 
-<style lang="scss">
+<style>
 :where(.social-share-button) {
   display: flex;
   gap: 0.5em;

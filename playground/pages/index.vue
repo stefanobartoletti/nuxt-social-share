@@ -73,7 +73,7 @@ const instances = [
 ]
 </script>
 
-<style lang="scss">
+<style>
 .square {
   gap: 0rem;
 

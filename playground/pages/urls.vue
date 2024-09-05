@@ -43,7 +43,7 @@ testNetworks.forEach((el) => {
 })
 </script>
 
-<style lang="scss">
+<style>
 .square {
   gap: 0rem;
 

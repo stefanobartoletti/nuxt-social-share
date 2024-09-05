@@ -31,7 +31,7 @@ import { useSocialShare } from '#imports'
 const getFacebook = useSocialShare({ network: 'facebook' })
 </script>
 
-<style lang="scss">
+<style>
 .square {
   gap: 0rem;
 
