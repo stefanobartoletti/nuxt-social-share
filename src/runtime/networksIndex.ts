@@ -11,6 +11,7 @@ import { whatsapp } from './networks/whatsapp'
 import { telegram } from './networks/telegram'
 import { skype } from './networks/skype'
 import { line } from './networks/line'
+import { viber } from './networks/viber'
 import { email } from './networks/email'
 
 export const networksIndex: NetworksIndex = {
@@ -28,6 +29,7 @@ export const networksIndex: NetworksIndex = {
   telegram,
   skype,
   line,
+  viber,
   // Other
   email,
 }
