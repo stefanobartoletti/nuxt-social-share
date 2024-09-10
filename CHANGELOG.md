@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.0.1...v1.1.0) (2024-09-10)
+
+
+### 🚀 Features
+
+* add support for Viber network ([d932772](https://github.com/stefanobartoletti/nuxt-social-share/commit/d93277298cce41813ca86c932e0d7eac153bc935))
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update nuxtjs monorepo to ^3.13.1 ([ea0fed1](https://github.com/stefanobartoletti/nuxt-social-share/commit/ea0fed1c984c58f8e71ac5b0842bc95f71ff1d20))
+
+
+### ⚙️ Refactor
+
+* remove unneeded sass dependency ([e4ea60c](https://github.com/stefanobartoletti/nuxt-social-share/commit/e4ea60c665c4709e9158cbef0af2bc563221d28a))
+
 ## [1.0.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.0.0...v1.0.1) (2024-08-28)
 
 
