@@ -62,7 +62,7 @@
     "changelogen": "^0.5.5",
     "daisyui": "^4.12.10",
     "eslint": "^9.10.0",
-    "husky": "^9.1.5",
+    "husky": "^9.1.6",
     "nuxt": "^3.13.1",
     "release-it": "^17.6.0",
     "vitest": "^2.0.5"
