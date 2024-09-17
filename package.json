@@ -52,7 +52,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@nuxt/devtools": "^1.4.2",
     "@nuxt/eslint-config": "^0.5.6",
-    "@nuxt/module-builder": "^0.8.3",
+    "@nuxt/module-builder": "^0.8.4",
     "@nuxt/schema": "^3.13.1",
     "@nuxt/test-utils": "^3.14.2",
     "@nuxtjs/tailwindcss": "^6.12.1",
