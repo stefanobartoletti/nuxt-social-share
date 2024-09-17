@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.0...v1.1.1) (2024-09-17)
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update nuxtjs monorepo to ^3.13.2 ([#243](https://github.com/stefanobartoletti/nuxt-social-share/issues/243)) ([de5156a](https://github.com/stefanobartoletti/nuxt-social-share/commit/de5156a39d02a7d027fc133c0cd4e2e05bada28f))
+* update "line" share URL ([bea0495](https://github.com/stefanobartoletti/nuxt-social-share/commit/bea049537758fa942c962ef544dccf4d5b77ebeb))
+* use URL constructor to return share URL ([8d5dcae](https://github.com/stefanobartoletti/nuxt-social-share/commit/8d5dcaed8ed7e351fdb03ccc2ad6eebc5b5de2c2))
+
 ## [1.1.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.0.1...v1.1.0) (2024-09-10)
 
 
