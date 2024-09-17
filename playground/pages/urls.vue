@@ -24,8 +24,8 @@
 </template>
 
 <script setup>
-import { networksIndex } from '../../src/runtime/networksIndex'
 import { useSocialShare } from '#imports'
+import { networksIndex } from '../../src/runtime/networksIndex'
 
 const testNetworks = Object.keys(networksIndex)
 

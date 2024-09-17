@@ -21,8 +21,8 @@
 </template>
 
 <script setup>
-import { useSocialShare } from './useSocialShare'
 import { useRuntimeConfig } from '#imports'
+import { useSocialShare } from './useSocialShare'
 
 const props = defineProps({
   // Style props
