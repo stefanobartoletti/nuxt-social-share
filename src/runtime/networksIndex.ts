@@ -1,18 +1,18 @@
 import type { NetworksIndex } from './types'
 
+import { bluesky } from './networks/bluesky'
+import { email } from './networks/email'
 import { facebook } from './networks/facebook'
-import { twitter } from './networks/twitter'
+import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
 import { pinterest } from './networks/pinterest'
-import { reddit } from './networks/reddit'
-import { bluesky } from './networks/bluesky'
 import { pocket } from './networks/pocket'
-import { whatsapp } from './networks/whatsapp'
-import { telegram } from './networks/telegram'
+import { reddit } from './networks/reddit'
 import { skype } from './networks/skype'
-import { line } from './networks/line'
+import { telegram } from './networks/telegram'
+import { twitter } from './networks/twitter'
 import { viber } from './networks/viber'
-import { email } from './networks/email'
+import { whatsapp } from './networks/whatsapp'
 
 export const networksIndex: NetworksIndex = {
   // Social Networks

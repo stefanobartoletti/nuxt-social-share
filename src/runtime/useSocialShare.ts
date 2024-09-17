@@ -1,7 +1,7 @@
 import type { Options } from './types/'
 
-import { networksIndex } from './networksIndex'
 import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
+import { networksIndex } from './networksIndex'
 
 const defaultOptions = {
   network: '',
