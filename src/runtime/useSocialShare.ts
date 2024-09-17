@@ -52,7 +52,7 @@ export function useSocialShare(options: Options = defaultOptions) {
       .replace(/\[h\]/i, hashtags || '')
       .replace(/\[i\]/i, image || '')
 
-    return fullUrl
+    return new URL(fullUrl).href
   })
 
   // Update shareNetwork object
