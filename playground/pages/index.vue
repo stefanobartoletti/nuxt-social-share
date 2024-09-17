@@ -16,6 +16,7 @@
                 :network="network"
                 :styled="instance.styled"
                 :label="instance.label"
+                title="My custom title"
               />
             </div>
             <div class="p-4 w-auto lg:w-1/2 flex flex-col gap-4">

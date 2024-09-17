@@ -263,7 +263,7 @@ parameters can be used by passing the respective prop in the component or in the
 | `whatsapp`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `telegram`     | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `skype`        | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
-| `line`         | ✅    | ❌      | ❌     | ❌         | ❌      |             |
+| `line`         | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `viber`        | ✅    | ✔️      | ❌     | ❌         | ❌      |             |
 | `email`        | ✅    | ✔️      | ❌     | ❌         | ❌      | `title` is used in the subject, `url` in the body of the email |
 

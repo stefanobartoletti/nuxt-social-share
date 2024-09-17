@@ -2,7 +2,10 @@ import type { Network } from '../types'
 
 export const line: Network = {
   name: 'line',
-  shareUrl: 'https://line.me/R/share?text=[u]',
+  shareUrl: 'https://social-plugins.line.me/lineit/share?url=[u]',
+  args: {
+    title: '&text=[t]',
+  },
   icon: {
     // iconify: ri:line-fill
     viewBox: '0 0 24 24',
