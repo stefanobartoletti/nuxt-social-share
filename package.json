@@ -59,7 +59,7 @@
     "@release-it/conventional-changelog": "^8.0.2",
     "@stefanobartoletti/eslint-config": "^3.0.3",
     "@types/node": "^20.16.7",
-    "changelogen": "^0.5.5",
+    "changelogen": "^0.5.7",
     "daisyui": "^4.12.10",
     "eslint": "^9.11.1",
     "husky": "^9.1.6",
