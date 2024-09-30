@@ -34,7 +34,7 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        'icon': 'i-heroicons-globe-alt',
+        'icon': 'i-lucide-globe',
         'to': 'https://www.stefanobartoletti.it',
         'target': '_blank',
         'aria-label': 'Stefano Bartoletti Website',
@@ -66,13 +66,13 @@ export default defineAppConfig({
       edit: 'https://github.com/stefanobartoletti/nuxt-social-share/edit/main/docs/content',
       links: [
         {
-          icon: 'i-heroicons-star',
+          icon: 'i-lucide-star',
           label: 'Star on GitHub',
           to: 'https://github.com/stefanobartoletti/nuxt-social-share',
           target: '_blank',
         },
         {
-          icon: 'i-heroicons-globe-alt',
+          icon: 'i-lucide-globe',
           label: 'Author\'s Website',
           to: 'https://www.stefanobartoletti.it',
           target: '_blank',

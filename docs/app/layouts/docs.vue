@@ -17,3 +17,9 @@ import type { NavItem } from '@nuxt/content'
 
 const navigation = inject<Ref<NavItem[]>>('navigation')
 </script>
+
+<style>
+    table {
+  display: table !important;
+}
+</style>

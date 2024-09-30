@@ -60,7 +60,7 @@ defineOgImage({
 const headline = computed(() => findPageHeadline(page.value))
 
 const links = computed(() => [toc?.bottom?.edit && {
-  icon: 'i-heroicons-pencil-square',
+  icon: 'i-lucide-edit',
   label: 'Edit this page',
   to: `${toc.bottom.edit}/${page?.value?._file}`,
   target: '_blank',
