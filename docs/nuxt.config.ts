@@ -29,7 +29,6 @@ export default defineNuxtConfig({
     // process.env.URL provided by Netlify
     url: process.env.URL || 'http://localhost:3000',
     name: 'Nuxt Social Share',
-    trailingSlash: true,
   },
 
   app: {
