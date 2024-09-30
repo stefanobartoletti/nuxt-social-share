@@ -72,6 +72,18 @@ export default defineAppConfig({
           target: '_blank',
         },
         {
+          icon: 'i-lucide-scroll-text',
+          label: 'Changelog',
+          to: 'https://github.com/stefanobartoletti/nuxt-social-share/blob/main/CHANGELOG.md',
+          target: '_blank',
+        },
+        {
+          icon: 'i-lucide-package',
+          label: 'Releases',
+          to: 'https://github.com/stefanobartoletti/nuxt-social-share/releases',
+          target: '_blank',
+        },
+        {
           icon: 'i-lucide-globe',
           label: 'Author\'s Website',
           to: 'https://www.stefanobartoletti.it',
