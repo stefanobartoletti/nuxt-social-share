@@ -25,6 +25,19 @@ export default defineNuxtConfig({
     }
   },
 
+  site: {
+    // process.env.URL provided by Netlify
+    url: process.env.URL || 'http://localhost:3000'
+  },
+
+  app: {
+    head: {
+      meta: [
+        process.env.GOOGLE_VERIFICATION ? { name: 'google-site-verification', content: process.env.GOOGLE_VERIFICATION } : false
+      ]
+    }
+  },
+
   colorMode: {
     disableTransition: true
   },
