@@ -2,7 +2,7 @@ title: Nuxt Social Share
 description: Simple Social Sharing for Nuxt 3
 navigation: false
 hero:
-  title: Easy social sharing for your [Nuxt Sites]{.text-primary}
+  title: Simple social sharing for your [Nuxt Sites]{.text-primary}
   description: Add simple social sharing buttons to your Nuxt 3 sites and apps, with a minimal config <SocialShare> component.
   orientation: horizontal
   links:
@@ -28,33 +28,28 @@ hero:
 features:
   title: Powerful, customizable and easy to use
   items:
-    - title: Nuxt 3
-      description: Powered by Nuxt 3 for optimal performances and SEO.
+    - title: Based on Nuxt
+      description: As simple to use and as intuitive as Nuxt and Vue
       icon: i-simple-icons-nuxtdotjs
-      to: 'https://nuxt.com'
-      target: _blank
-    - title: Markdown
-      description: Write your pages with MDC thanks to Nuxt Content.
-      icon: i-simple-icons-markdown
-      to: 'https://content.nuxt.com'
-      target: _blank
-    - title: Nuxt UI
-      description: Offers a very large set of full customizable components.
-      icon: i-heroicons-sparkles-20-solid
-      to: 'https://ui.nuxt.com'
-      target: _blank
-    - title: TypeScript
-      description: A fully typed development experience.
-      icon: i-simple-icons-typescript
-      to: 'https://www.typescriptlang.org'
-      target: _blank
-    - title: Nuxt Studio
-      description: Supported by Nuxt Studio for fast updates and previews.
-      icon: i-simple-icons-nuxtdotjs
-      to: 'https://nuxt.studio'
-      target: _blank
-    - title: Search
-      description: A full-text search modal empowered by Fuse.js.
-      icon: i-heroicons-magnifying-glass-20-solid
-      to: 'https://ui.nuxt.com/pro/components/docs/docs-search'
+      to: /getting-started
+    - title: Simple yet powerful
+      description: Flexible and customizable, with a minimal config
+      icon: i-lucide-component
+      to: /usage/component
+    - title: Designer Friendly
+      description: Created with custom styling in mind, for easy intergation in any UI 
+      icon: i-lucide-palette
+      to: /examples/styling
+    - title: Many Networks supported
+      description: Supports sharing on all major social networks
+      icon: i-lucide-users
+      to: /usage/supported-networks
+    - title: Easily translatable
+      description: Very easy to localize in any language
+      icon: i-lucide-languages
+      to: /examples/localization
+    - title: Open Source
+      description: You can contribute to this project on GitHub.
+      icon: i-lucide-code-xml
+      to: 'https://github.com/stefanobartoletti/nuxt-social-share'
       target: _blank
