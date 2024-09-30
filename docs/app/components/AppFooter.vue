@@ -1,7 +1,3 @@
-<script setup lang="ts">
-const { footer } = useAppConfig()
-</script>
-
 <template>
   <UFooter>
     <template #left>
@@ -21,3 +17,7 @@ const { footer } = useAppConfig()
     </template>
   </UFooter>
 </template>
+
+<script setup lang="ts">
+const { footer } = useAppConfig()
+</script>

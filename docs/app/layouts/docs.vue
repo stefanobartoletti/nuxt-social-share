@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
-
-const navigation = inject<Ref<NavItem[]>>('navigation')
-</script>
-
 <template>
   <UContainer>
     <UPage>
@@ -13,7 +7,13 @@ const navigation = inject<Ref<NavItem[]>>('navigation')
         </UAside>
       </template>
 
-      <slot />
+      <slot></slot>
     </UPage>
   </UContainer>
 </template>
+
+<script setup lang="ts">
+import type { NavItem } from '@nuxt/content'
+
+const navigation = inject<Ref<NavItem[]>>('navigation')
+</script>

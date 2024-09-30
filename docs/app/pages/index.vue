@@ -1,15 +1,3 @@
-<script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
-
-useSeoMeta({
-  titleTemplate: '',
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description
-})
-</script>
-
 <template>
   <div>
     <ULandingHero
@@ -32,7 +20,7 @@ useSeoMeta({
             <span
               class="absolute inset-0"
               aria-hidden="true"
-            />
+            ></span>
           </NuxtLink>
 
           {{ page.hero.headline.label }}
@@ -69,3 +57,15 @@ useSeoMeta({
     </ULandingSection>
   </div>
 </template>
+
+<script setup lang="ts">
+const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+
+useSeoMeta({
+  titleTemplate: '',
+  title: page.value.title,
+  ogTitle: page.value.title,
+  description: page.value.description,
+  ogDescription: page.value.description,
+})
+</script>

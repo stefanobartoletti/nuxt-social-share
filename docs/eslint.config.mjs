@@ -1,6 +1,15 @@
-// @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
+import { stefanobartoletti, vue } from '@stefanobartoletti/eslint-config'
 
-export default withNuxt(
-  // Your custom configs here
-)
+export default createConfigForNuxt({
+  features: {
+    standalone: false,
+  },
+})
+
+  .prepend(
+    stefanobartoletti(
+      {},
+      vue,
+    ),
+  )

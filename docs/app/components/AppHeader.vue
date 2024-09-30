@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
-
-const navigation = inject<NavItem[]>('navigation', [])
-
-const { header } = useAppConfig()
-</script>
-
 <template>
   <UHeader>
     <template #logo>
@@ -51,3 +43,11 @@ const { header } = useAppConfig()
     </template>
   </UHeader>
 </template>
+
+<script setup lang="ts">
+import type { NavItem } from '@nuxt/content'
+
+const navigation = inject<NavItem[]>('navigation', [])
+
+const { header } = useAppConfig()
+</script>

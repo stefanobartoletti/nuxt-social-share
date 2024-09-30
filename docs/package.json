@@ -1,7 +1,7 @@
 {
   "name": "nuxt-social-share-docs",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
     "@nuxthq/studio": "^2.1.1",
+    "@stefanobartoletti/eslint-config": "^3.0.3",
     "eslint": "^9.10.0",
     "vue-tsc": "^2.1.6"
   }

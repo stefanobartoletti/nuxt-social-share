@@ -1,20 +1,3 @@
-<script setup lang="ts">
-defineOptions({
-  inheritAttrs: false
-})
-
-defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
   <div class="w-full h-full flex flex-col justify-center text-center bg-slate-900 p-8">
     <div class="relative">
@@ -27,3 +10,20 @@ defineProps({
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineOptions({
+  inheritAttrs: false,
+})
+
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+})
+</script>
