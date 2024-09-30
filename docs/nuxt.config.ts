@@ -28,6 +28,8 @@ export default defineNuxtConfig({
   site: {
     // process.env.URL provided by Netlify
     url: process.env.URL || 'http://localhost:3000',
+    name: 'Nuxt Social Share',
+    trailingSlash: true,
   },
 
   app: {
@@ -36,6 +38,12 @@ export default defineNuxtConfig({
         process.env.GOOGLE_VERIFICATION ? { name: 'google-site-verification', content: process.env.GOOGLE_VERIFICATION } : false,
       ],
     },
+  },
+
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/urls',
+    ],
   },
 
   colorMode: {
