@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
-    'nuxt-og-image',
+    '@nuxtjs/seo',
   ],
 
   hooks: {
@@ -58,15 +58,6 @@ export default defineNuxtConfig({
 
   future: {
     compatibilityVersion: 4,
-  },
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs',
-      },
-    },
   },
 
   compatibilityDate: '2024-07-11',
