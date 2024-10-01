@@ -14,9 +14,9 @@ export default defineAppConfig({
   },
   header: {
     logo: {
-      alt: '',
-      light: '',
-      dark: '',
+      alt: 'Nuxt Social Share',
+      light: '/logo-light.svg',
+      dark: '/logo-dark.svg',
     },
     search: true,
     colorMode: true,
