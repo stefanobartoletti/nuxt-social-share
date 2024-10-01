@@ -69,6 +69,12 @@ export default defineNuxtConfig({
     strict: false,
   },
 
+  posthog: {
+    clientOptions: {
+      persistence: 'memory',
+    },
+  },
+
   future: {
     compatibilityVersion: 4,
   },
