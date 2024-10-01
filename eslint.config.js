@@ -9,7 +9,9 @@ export default createConfigForNuxt({
 
   .prepend(
     stefanobartoletti(
-      {},
+      {
+        ignores: ['docs/**/*'],
+      },
       vue,
     ),
     {
