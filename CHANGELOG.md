@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.1...v1.1.2) (2024-10-01)
+
+
+### 🩹 Bug Fixes
+
+* update x/twitter share url ([ce0e4ff](https://github.com/stefanobartoletti/nuxt-social-share/commit/ce0e4ff4aa0a54b5627aa930d3102675339a5095))
+
+
+### 📖 Documentation
+
+* add documentation site ([a6c4552](https://github.com/stefanobartoletti/nuxt-social-share/commit/a6c4552653464e7b20f93bd7623fc72be68a5b29))
+* fix opengraph image ([3d3204f](https://github.com/stefanobartoletti/nuxt-social-share/commit/3d3204f0b2590acaa8a23175eb31c8686e83ea6a))
+* update readme ([e67fc6f](https://github.com/stefanobartoletti/nuxt-social-share/commit/e67fc6f83ccaf5ed1897c3cc64ff652fcbbd7bdc))
+
 ## [1.1.1](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.0...v1.1.1) (2024-09-17)
 
 
