@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '../src/module',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -47,6 +48,10 @@ export default defineNuxtConfig({
 
   colorMode: {
     disableTransition: true,
+  },
+
+  socialShare: {
+    baseUrl: process.env.URL || 'http://localhost:3000',
   },
 
   routeRules: {

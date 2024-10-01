@@ -16,8 +16,10 @@
       <template #title>
         <MDC :value="page.hero.title" />
       </template>
-
-      <MDC :value="page.hero.code" class="prose prose-primary dark:prose-invert mx-auto" />
+      <div class="flex flex-col gap-4">
+        <MDC :value="page.hero.code" class="prose prose-primary dark:prose-invert mx-auto" />
+        <ShareButtons />
+      </div>
     </ULandingHero>
 
     <ULandingSection :title="page.features.title" :links="page.features.links">
