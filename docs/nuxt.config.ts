@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/seo',
+    'nuxt-posthog',
   ],
 
   hooks: {
