@@ -28,9 +28,12 @@ export default defineNuxtConfig({
   },
 
   site: {
-    // process.env.URL provided by Netlify
-    url: process.env.URL || 'http://localhost:3000',
+    // environment variables provided by Netlify
+    url: process.env.BRANCH === 'release' ? process.env.URL : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     name: 'Nuxt Social Share',
+    indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
+    trailingSlash: true,
+    defaultLocale: 'en',
   },
 
   app: {
