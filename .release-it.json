@@ -1,6 +1,6 @@
 {
   "git": {
-    "requireBranch": "main",
+    "requireBranch": "release",
     "commitMessage": "chore: release v${version}"
   },
   "github": {
@@ -24,7 +24,8 @@
     }
   },
   "hooks": {
-    "before:init": ["pnpm run lint"],
-    "after:bump": "pnpm run prepack"
+    "before:init": ["pnpm run lint", "git merge main"],
+    "after:bump": "pnpm run prepack",
+    "after:release": ["git checkout main", "git merge release", "git push", "git push --tags"]
   }
 }
