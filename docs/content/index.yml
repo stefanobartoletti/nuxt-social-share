@@ -1,9 +1,9 @@
 title: Nuxt Social Share
-description: Simple Social Sharing for Nuxt 3
+description: Simple social sharing for your Nuxt Sites
 navigation: false
 hero:
   title: Simple social sharing for your [Nuxt Sites]{.text-primary}
-  description: Add simple social sharing buttons to your Nuxt 3 sites and apps, with a minimal config <SocialShare> component.
+  description: Add simple social sharing buttons to your Nuxt sites and apps, with a minimal config <SocialShare> component.
   orientation: horizontal
   links:
     - label: Getting started

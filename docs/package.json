@@ -3,13 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "build": "nuxt build",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.6",
@@ -23,10 +19,7 @@
     "nuxt-posthog": "^1.5.4"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.7",
     "@nuxthq/studio": "^2.1.1",
-    "@stefanobartoletti/eslint-config": "^3.0.3",
-    "eslint": "^9.11.1",
     "vue-tsc": "^2.1.6"
   }
 }
