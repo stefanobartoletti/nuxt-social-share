@@ -5,19 +5,16 @@ export default createConfigForNuxt({
   features: {
     standalone: false,
   },
+  dirs: {
+    src: [
+      './docs/app',
+      './playground',
+    ],
+  },
 })
   .prepend(
     stefanobartoletti(
       {},
       vue,
     ),
-    {
-      files: [
-        '**/error.vue',
-        '**/{pages,layouts}/*.vue',
-      ],
-      rules: {
-        'vue/multi-word-component-names': 'off',
-      },
-    },
   )
