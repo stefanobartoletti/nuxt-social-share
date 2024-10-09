@@ -12,6 +12,7 @@ module.exports = {
   },
   content: [
     'storyblok/**/*.{vue,js}',
+    '../node_modules/@nuxt/ui-pro/modules/pro/runtime/components/global/**/*.vue',
   ],
   plugins: [
     require('daisyui'),
