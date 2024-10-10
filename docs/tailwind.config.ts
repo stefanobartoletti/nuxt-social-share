@@ -4,6 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 export default <Partial<Config>>{
   content: [
     './app/**/*.{js,jsx,ts,tsx,vue}',
+    '../node_modules/@nuxt/ui-pro/modules/pro/runtime/components/global/**/*.vue',
   ],
   theme: {
     extend: {
