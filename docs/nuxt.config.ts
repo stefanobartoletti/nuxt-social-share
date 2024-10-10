@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 
   uiPro: {
     license: 'oss',
+    content: true,
   },
 
   modules: [
