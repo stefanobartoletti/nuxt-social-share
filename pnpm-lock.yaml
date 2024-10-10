@@ -43,8 +43,8 @@ importers:
         specifier: ^8.0.2
         version: 8.0.2(release-it@17.6.0(typescript@5.6.2))
       '@stefanobartoletti/eslint-config':
-        specifier: ^3.0.4
-        version: 3.0.4(@typescript-eslint/utils@8.8.0(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2))(@vue/compiler-sfc@3.5.10)(eslint@9.11.1(jiti@2.1.1))(tailwindcss@3.4.13)(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.10)(terser@5.34.1))
+        specifier: ^3.0.5
+        version: 3.0.5(@typescript-eslint/utils@8.8.0(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2))(@vue/compiler-sfc@3.5.10)(eslint@9.11.1(jiti@2.1.1))(tailwindcss@3.4.13)(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.10)(terser@5.34.1))
       '@types/node':
         specifier: ^20.16.10
         version: 20.16.10
@@ -1910,10 +1910,10 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@stefanobartoletti/eslint-config@3.0.4':
-    resolution: {integrity: sha512-+5ZnaDHygPgoqFpdjIsMEkhVHeQf80yODrOK9PPxEGgLrqurL/sUa8IA9Wmoj35qstkfkyJwq5dh/myympLWUQ==}
+  '@stefanobartoletti/eslint-config@3.0.5':
+    resolution: {integrity: sha512-umShwgiCjDmsNDYUZLiqpG7Az+w/E5e9NihvYgzTj7DdifPFHHZvkQK88TAU2sAcse14VLizmE9TmKco9PS2Ig==}
     peerDependencies:
-      eslint: '>=9.11.1'
+      eslint: '>=9.12.0'
 
   '@stylistic/eslint-plugin@2.8.0':
     resolution: {integrity: sha512-Ufvk7hP+bf+pD35R/QfunF793XlSRIC7USr3/EdgduK9j13i2JjmsM0LUz3/foS+jDYp2fzyWZA9N44CPur0Ow==}
@@ -3548,8 +3548,8 @@ packages:
     peerDependencies:
       eslint: '>=8.44.0'
 
-  eslint-plugin-tailwindcss@3.17.4:
-    resolution: {integrity: sha512-gJAEHmCq2XFfUP/+vwEfEJ9igrPeZFg+skeMtsxquSQdxba9XRk5bn0Bp9jxG1VV9/wwPKi1g3ZjItu6MIjhNg==}
+  eslint-plugin-tailwindcss@3.17.5:
+    resolution: {integrity: sha512-8Mi7p7dm+mO1dHgRHHFdPu4RDTBk69Cn4P0B40vRQR+MrguUpwmKwhZy1kqYe3Km8/4nb+cyrCF+5SodOEmaow==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       tailwindcss: ^3.4.0
@@ -9267,12 +9267,12 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@stefanobartoletti/eslint-config@3.0.4(@typescript-eslint/utils@8.8.0(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2))(@vue/compiler-sfc@3.5.10)(eslint@9.11.1(jiti@2.1.1))(tailwindcss@3.4.13)(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.10)(terser@5.34.1))':
+  '@stefanobartoletti/eslint-config@3.0.5(@typescript-eslint/utils@8.8.0(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2))(@vue/compiler-sfc@3.5.10)(eslint@9.11.1(jiti@2.1.1))(tailwindcss@3.4.13)(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.10)(terser@5.34.1))':
     dependencies:
       '@antfu/eslint-config': 3.7.3(@typescript-eslint/utils@8.8.0(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2))(@vue/compiler-sfc@3.5.10)(eslint-plugin-format@0.1.2(eslint@9.11.1(jiti@2.1.1)))(eslint@9.11.1(jiti@2.1.1))(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.10)(terser@5.34.1))
       eslint: 9.11.1(jiti@2.1.1)
       eslint-plugin-format: 0.1.2(eslint@9.11.1(jiti@2.1.1))
-      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.13)
+      eslint-plugin-tailwindcss: 3.17.5(tailwindcss@3.4.13)
     transitivePeerDependencies:
       - '@eslint-react/eslint-plugin'
       - '@prettier/plugin-xml'
@@ -11220,7 +11220,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13):
+  eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.13):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.47
