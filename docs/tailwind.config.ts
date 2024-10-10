@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
+  mode: 'jit',
   content: [
     './app/**/*.{js,jsx,ts,tsx,vue}',
     '../node_modules/@nuxt/ui-pro/modules/pro/runtime/components/global/**/*.vue',
