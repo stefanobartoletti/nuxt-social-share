@@ -19,7 +19,7 @@ hero:
   code: |
     ```vue [app.vue]
     <SocialShare
-      v-for="network in ['facebook', 'twitter', 'linkedin', '...']"
+      v-for="network in ['facebook', 'x', 'linkedin', '...']"
       :key="network"
       :network="network"
       :styled="true"

@@ -10,14 +10,14 @@ import { pocket } from './networks/pocket'
 import { reddit } from './networks/reddit'
 import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
-import { twitter } from './networks/twitter'
 import { viber } from './networks/viber'
 import { whatsapp } from './networks/whatsapp'
+import { x } from './networks/x'
 
 export const networksIndex: NetworksIndex = {
   // Social Networks
   facebook,
-  twitter,
+  x,
   linkedin,
   pinterest,
   reddit,

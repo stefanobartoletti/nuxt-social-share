@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
-export const twitter: Network = {
-  name: 'twitter',
+export const x: Network = {
+  name: 'x',
   shareUrl: 'https://x.com/intent/post?url=[u]',
   args: {
     title: '&text=[t]',
