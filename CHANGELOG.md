@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.4](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.2...v1.1.4) (2024-10-18)
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update dependency @iconify-json/lucide to ^1.2.10 ([#272](https://github.com/stefanobartoletti/nuxt-social-share/issues/272)) ([da4a967](https://github.com/stefanobartoletti/nuxt-social-share/commit/da4a96786a37526413b3b4c7de5f0ae7f22bd94d))
+* **deps:** update dependency @iconify-json/lucide to ^1.2.7 ([#261](https://github.com/stefanobartoletti/nuxt-social-share/issues/261)) ([6989b8a](https://github.com/stefanobartoletti/nuxt-social-share/commit/6989b8ac3808849d65652fda17cd99cf90b0496c))
+* **deps:** update dependency @iconify-json/lucide to ^1.2.8 ([#267](https://github.com/stefanobartoletti/nuxt-social-share/issues/267)) ([bcc70b6](https://github.com/stefanobartoletti/nuxt-social-share/commit/bcc70b628af5dce6cad9e171fc66820e7ef6d5fb))
+* **deps:** update dependency @iconify-json/simple-icons to ^1.2.7 ([#251](https://github.com/stefanobartoletti/nuxt-social-share/issues/251)) ([3d72958](https://github.com/stefanobartoletti/nuxt-social-share/commit/3d729586366fa5ee1161d1b89dc9bb79037b6d5a))
+* **deps:** update dependency @iconify-json/simple-icons to ^1.2.8 ([#273](https://github.com/stefanobartoletti/nuxt-social-share/issues/273)) ([b4ba07f](https://github.com/stefanobartoletti/nuxt-social-share/commit/b4ba07f0d3aa0c5859625f8318891b2879833302))
+* **deps:** update dependency @nuxt/content to ^2.13.4 ([#277](https://github.com/stefanobartoletti/nuxt-social-share/issues/277)) ([37acf76](https://github.com/stefanobartoletti/nuxt-social-share/commit/37acf7608f90583e92a65ed4fff86f700e8444a9))
+* **deps:** update dependency @nuxt/fonts to ^0.10.0 ([#254](https://github.com/stefanobartoletti/nuxt-social-share/issues/254)) ([7d210cc](https://github.com/stefanobartoletti/nuxt-social-share/commit/7d210cc01bc806a115cc2f9bd524f11dcbac035f))
+* **deps:** update dependency @nuxt/image to ^1.8.1 ([#260](https://github.com/stefanobartoletti/nuxt-social-share/issues/260)) ([7786303](https://github.com/stefanobartoletti/nuxt-social-share/commit/7786303b4916f0e8bbb6d8a065c305c7a6702665))
+* **deps:** update dependency @nuxt/ui-pro to ^1.4.4 ([#268](https://github.com/stefanobartoletti/nuxt-social-share/issues/268)) ([bc47b63](https://github.com/stefanobartoletti/nuxt-social-share/commit/bc47b6391e5b82e3a3e805f231348d4174173360))
+
 ## [1.1.2](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.1...v1.1.2) (2024-10-01)
 
 
