@@ -14,7 +14,7 @@ import { viber } from './networks/viber'
 import { whatsapp } from './networks/whatsapp'
 import { x } from './networks/x'
 
-export const networksIndex: NetworksIndex = {
+export const networksBase: NetworksIndex = {
   // Social Networks
   facebook,
   x,
@@ -32,4 +32,13 @@ export const networksIndex: NetworksIndex = {
   viber,
   // Other
   email,
+}
+
+export const networksAlias: NetworksIndex = {
+  twitter: x,
+}
+
+export const networksIndex: NetworksIndex = {
+  ...networksBase,
+  ...networksAlias,
 }

@@ -53,7 +53,7 @@ const selectedNetwork = useSocialShare({
   image: props.image,
 })
 
-const capitalizedNetwork = props.network.charAt(0).toUpperCase() + props.network.slice(1)
+const capitalizedNetwork = selectedNetwork.value.name.charAt(0).toUpperCase() + props.network.slice(1)
 </script>
 
 <style>

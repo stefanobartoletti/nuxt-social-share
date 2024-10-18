@@ -38,9 +38,9 @@
 </template>
 
 <script setup>
-import { networksIndex } from '../../src/runtime/networksIndex'
+import { networksBase } from '../../src/runtime/networksIndex'
 
-const testNetworks = Object.keys(networksIndex)
+const testNetworks = Object.keys(networksBase)
 
 const instances = [
   {
