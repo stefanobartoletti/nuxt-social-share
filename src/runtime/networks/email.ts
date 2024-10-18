@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const email: Network = {
-  name: 'email',
+  name: 'Email',
   shareUrl: 'mailto:?body=[u]',
   args: {
     title: '&subject=[t]',

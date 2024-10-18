@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const telegram: Network = {
-  name: 'telegram',
+  name: 'Telegram',
   shareUrl: 'https://t.me/share/url?url=[u]',
   args: {
     title: '&text=[t]',

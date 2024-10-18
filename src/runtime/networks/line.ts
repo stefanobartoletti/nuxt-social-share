@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const line: Network = {
-  name: 'line',
+  name: 'LINE',
   shareUrl: 'https://social-plugins.line.me/lineit/share?url=[u]',
   args: {
     title: '&text=[t]',

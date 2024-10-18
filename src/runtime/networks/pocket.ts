@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const pocket: Network = {
-  name: 'pocket',
+  name: 'Pocket',
   shareUrl: 'https://getpocket.com/edit?url=[u]',
   icon: {
     // iconify: fe:pocket

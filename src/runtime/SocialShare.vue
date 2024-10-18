@@ -4,7 +4,7 @@
     :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
     :href="selectedNetwork.shareUrl"
     :style="`--color-brand:${selectedNetwork.color}`"
-    :aria-label="`Share with ${capitalizedNetwork}`"
+    :aria-label="`Share with ${selectedNetwork.name}`"
     target="_blank"
   >
     <template v-if="hasIcon">
@@ -52,8 +52,6 @@ const selectedNetwork = useSocialShare({
   hashtags: props.hashtags,
   image: props.image,
 })
-
-const capitalizedNetwork = selectedNetwork.value.name.charAt(0).toUpperCase() + props.network.slice(1)
 </script>
 
 <style>

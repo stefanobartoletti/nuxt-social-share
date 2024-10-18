@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const bluesky: Network = {
-  name: 'bluesky',
+  name: 'Bluesky',
   shareUrl: 'https://bsky.app/intent/compose?text=[u]',
   icon: {
     // iconify: ri:bluesky-fill
