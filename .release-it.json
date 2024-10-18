@@ -24,7 +24,7 @@
     }
   },
   "hooks": {
-    "before:init": ["pnpm run lint", "git merge main"],
+    "before:init": ["pnpm i", "pnpm run lint", "git merge main"],
     "after:bump": "pnpm run prepack",
     "after:release": ["git checkout main", "git merge release", "git push", "git push --tags"]
   }
