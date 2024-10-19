@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.4...v1.1.5) (2024-10-19)
+
+
+### 🩹 Bug Fixes
+
+* fix build script ([db18f2e](https://github.com/stefanobartoletti/nuxt-social-share/commit/db18f2e9bbb3bcaa2dec1165842536ecd6e7809a))
+
 ## [1.1.4](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.2...v1.1.4) (2024-10-18)
 
 
