@@ -9,8 +9,6 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 <!-- [![bundle size][bundle-size-src]][bundle-size-href] -->
 
-<picture><img src=".github/nuxt-social-share-preview.png" width="577" /></picture>
-
 Simple social sharing for your Nuxt Sites
 
 [Documentation][docs-site] |
@@ -26,37 +24,6 @@ Simple social sharing for your Nuxt Sites
 - Optional styled version, that can still be further customized
 - A `useSocialShare` composable is exposed, to provide even more flexibility if needed
 - Many major social networks supported
-
-## 🛠️ Quick Start
-
-1. Add `@stefanobartoletti/nuxt-social-share` dependency to your project
-
-```bash
-npx nuxi@latest module add nuxt-social-share
-```
-
-2. Nuxi should have already added `@stefanobartoletti/nuxt-social-share` to the `modules` section of `nuxt.config.ts`, if not add it manually:
-
-```js
-export default defineNuxtConfig({
-  // module added by Nuxi
-  modules: [
-    '@stefanobartoletti/nuxt-social-share'
-  ],
-})
-```
-
-3. Configure the module options to your needs:
-
-```ts
-export default defineNuxtConfig({
-  // configuration options
-  socialShare: {
-    baseUrl: 'https://www.yoursite.com' // required!
-    // other optional module options
-  }
-})
-```
 
 ## 📖 Documentation
 
