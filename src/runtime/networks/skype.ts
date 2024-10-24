@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const skype: Network = {
-  name: 'skype',
+  name: 'Skype',
   shareUrl: 'https://web.skype.com/share?url=[u]',
   args: {
     title: '&text=[t]',

@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const facebook: Network = {
-  name: 'facebook',
+  name: 'Facebook',
   shareUrl: 'https://www.facebook.com/sharer/sharer.php?u=[u]',
   icon: {
     // iconify: ri:facebook-fill

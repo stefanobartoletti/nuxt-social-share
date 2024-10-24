@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const linkedin: Network = {
-  name: 'linkedin',
+  name: 'LinkedIn',
   shareUrl: 'https://www.linkedin.com/sharing/share-offsite/?url=[u]',
   icon: {
     // iconify: ri:linkedin-fill

@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const whatsapp: Network = {
-  name: 'whatsapp',
+  name: 'WhatsApp',
   shareUrl: 'https://api.whatsapp.com/send?text=[u]',
   args: {
     title: '%20[t]',

@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const reddit: Network = {
-  name: 'reddit',
+  name: 'Reddit',
   shareUrl: 'https://www.reddit.com/submit?url=[u]',
   args: {
     title: '&title=[t]',

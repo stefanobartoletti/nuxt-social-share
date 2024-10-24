@@ -1,7 +1,7 @@
 import type { Network } from '../types'
 
 export const viber: Network = {
-  name: 'viber',
+  name: 'Viber',
   shareUrl: 'viber://forward?text=[u]',
   args: {
     title: '%20[t]',
