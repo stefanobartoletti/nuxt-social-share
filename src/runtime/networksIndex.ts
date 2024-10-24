@@ -10,6 +10,7 @@ import { pocket } from './networks/pocket'
 import { reddit } from './networks/reddit'
 import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
+import { threads } from './networks/threads'
 import { viber } from './networks/viber'
 import { whatsapp } from './networks/whatsapp'
 import { x } from './networks/x'
@@ -22,6 +23,7 @@ export const networksBase: NetworksIndex = {
   pinterest,
   reddit,
   bluesky,
+  threads,
   // Read it later
   pocket,
   // Instant Messaging
