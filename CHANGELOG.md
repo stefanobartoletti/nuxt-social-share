@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.2.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.5...v1.2.0) (2024-10-24)
+
+
+### 🚀 Features
+
+* add `threads` network ([14ac26c](https://github.com/stefanobartoletti/nuxt-social-share/commit/14ac26c847871a45f3e21e732b66627b6d9b2f94))
+* add support for network aliases (i.e. `twitter` for `x`) ([c84d2c8](https://github.com/stefanobartoletti/nuxt-social-share/commit/c84d2c8406edb203e02123a8e361cbe88c25276e))
+* migrate `twitter` network to `x` ([b42e70f](https://github.com/stefanobartoletti/nuxt-social-share/commit/b42e70f20c5763b64af2cd10b746b6b6c0b62c86))
+
+
+### 🩹 Bug Fixes
+
+* **deps:** update dependency @iconify-json/simple-icons to ^1.2.9 ([#286](https://github.com/stefanobartoletti/nuxt-social-share/issues/286)) ([f2c25af](https://github.com/stefanobartoletti/nuxt-social-share/commit/f2c25af32e4667a9940daff333b32930d69e852c))
+* **deps:** update dependency @nuxt/fonts to ^0.10.1 ([#288](https://github.com/stefanobartoletti/nuxt-social-share/issues/288)) ([2369273](https://github.com/stefanobartoletti/nuxt-social-share/commit/2369273e5abdb53fa2723658750aec2af101e5d4))
+* **deps:** update dependency @nuxt/fonts to ^0.10.2 ([#291](https://github.com/stefanobartoletti/nuxt-social-share/issues/291)) ([da56e8a](https://github.com/stefanobartoletti/nuxt-social-share/commit/da56e8a7909ce449bd66d4f8829cc507823ddf52))
+
+
+### ⚙️ Refactor
+
+* fix network names and remove unneeded capitalization function ([32d10df](https://github.com/stefanobartoletti/nuxt-social-share/commit/32d10dff52f7722117e7de4f9805c66685be0f49))
+
 ## [1.1.5](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.4...v1.1.5) (2024-10-19)
 
 
