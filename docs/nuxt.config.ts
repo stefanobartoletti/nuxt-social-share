@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/seo',
-    'nuxt-posthog',
   ],
 
   hooks: {
@@ -72,9 +71,10 @@ export default defineNuxtConfig({
     strict: false,
   },
 
-  posthog: {
-    clientOptions: {
-      persistence: 'memory',
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: process.env.POSTHOG_API_KEY,
+      posthogHost: process.env.POSTHOG_API_HOST,
     },
   },
 
