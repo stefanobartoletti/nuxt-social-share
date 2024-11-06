@@ -19,7 +19,7 @@
     "posthog-js": "^1.181.0"
   },
   "devDependencies": {
-    "@nuxthq/studio": "^2.1.1",
+    "@nuxthq/studio": "^2.2.1",
     "vue-tsc": "^2.1.6"
   }
 }
