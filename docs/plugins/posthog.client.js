@@ -1,3 +1,5 @@
+/* eslint no-undef: 0 */
+
 import posthog from 'posthog-js'
 
 export default defineNuxtPlugin(() => {
