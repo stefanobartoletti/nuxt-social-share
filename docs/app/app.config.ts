@@ -57,6 +57,12 @@ export default defineAppConfig({
         'target': '_blank',
         'aria-label': 'Stefano Bartoletti on X',
       },
+      {
+        'icon': 'i-simple-icons-bluesky',
+        'to': 'https://bsky.app/profile/stefanobartoletti.it',
+        'target': '_blank',
+        'aria-label': 'Stefano Bartoletti on Bluesky',
+      },
     ],
   },
   toc: {
