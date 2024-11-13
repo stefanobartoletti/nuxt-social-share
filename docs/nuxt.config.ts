@@ -71,6 +71,10 @@ export default defineNuxtConfig({
     strict: false,
   },
 
+  plugins: [
+    './plugins/posthog.client.js',
+  ],
+
   runtimeConfig: {
     public: {
       posthogPublicKey: process.env.POSTHOG_API_KEY,
