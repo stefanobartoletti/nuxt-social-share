@@ -97,8 +97,8 @@ importers:
         specifier: ^3.14.159
         version: 3.14.159(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue-tsc@2.1.10(typescript@5.6.3))
       posthog-js:
-        specifier: ^1.184.0
-        version: 1.184.0
+        specifier: ^1.193.1
+        version: 1.193.1
     devDependencies:
       '@nuxthq/studio':
         specifier: ^2.2.1
@@ -5639,8 +5639,8 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
-  posthog-js@1.184.0:
-    resolution: {integrity: sha512-SYnvdIsLXnq4/+IgxlRGrSfD+RbTETHAExNWZqXJ04HMXKWfYefXP3Z3WjxCrRA7TkSo7BCJxbxqtYZfgUp75w==}
+  posthog-js@1.193.1:
+    resolution: {integrity: sha512-I783S90qrRs/10YPvHYxQo4zdfTvgiyHzrMghBMyRGeeTXiDnHQh6tM8Xux2a5qOAO/Yp5HXgvvDwa96abQxSg==}
 
   preact@10.24.3:
     resolution: {integrity: sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA==}
@@ -14798,7 +14798,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  posthog-js@1.184.0:
+  posthog-js@1.193.1:
     dependencies:
       core-js: 3.39.0
       fflate: 0.4.8

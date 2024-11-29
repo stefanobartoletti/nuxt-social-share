@@ -16,7 +16,7 @@
     "@nuxt/ui-pro": "^1.5.0",
     "@nuxtjs/seo": "2.0.0-rc.23",
     "nuxt": "^3.14.159",
-    "posthog-js": "^1.184.0"
+    "posthog-js": "^1.193.1"
   },
   "devDependencies": {
     "@nuxthq/studio": "^2.2.1",
