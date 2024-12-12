@@ -1,5 +1,40 @@
 # Changelog
 
+## <small>1.2.1 (2024-12-12)</small>
+
+* chore: clean readme ([bcf81b7](https://github.com/stefanobartoletti/nuxt-social-share/commit/bcf81b7))
+* chore(deps): pin typescript version to prevent build errors ([42160c3](https://github.com/stefanobartoletti/nuxt-social-share/commit/42160c3))
+* chore(deps): reorganize playground deps ([24fc942](https://github.com/stefanobartoletti/nuxt-social-share/commit/24fc942))
+* chore(deps): update commitlint monorepo to ^19.6.0 (#311) ([faa357f](https://github.com/stefanobartoletti/nuxt-social-share/commit/faa357f)), closes [#311](https://github.com/stefanobartoletti/nuxt-social-share/issues/311)
+* chore(deps): update dependency @nuxt/devtools to ^1.6.3 (#312) ([f4ac839](https://github.com/stefanobartoletti/nuxt-social-share/commit/f4ac839)), closes [#312](https://github.com/stefanobartoletti/nuxt-social-share/issues/312)
+* chore(deps): update dependency @nuxt/eslint-config to ^0.6.1 (#296) ([f0b9beb](https://github.com/stefanobartoletti/nuxt-social-share/commit/f0b9beb)), closes [#296](https://github.com/stefanobartoletti/nuxt-social-share/issues/296)
+* chore(deps): update dependency @nuxt/eslint-config to ^0.7.3 (#309) ([d7f9abe](https://github.com/stefanobartoletti/nuxt-social-share/commit/d7f9abe)), closes [#309](https://github.com/stefanobartoletti/nuxt-social-share/issues/309)
+* chore(deps): update dependency @nuxt/test-utils to ^3.15.1 (#321) ([2a31bf8](https://github.com/stefanobartoletti/nuxt-social-share/commit/2a31bf8)), closes [#321](https://github.com/stefanobartoletti/nuxt-social-share/issues/321)
+* chore(deps): update dependency @release-it/conventional-changelog to v9 (#287) ([0341af0](https://github.com/stefanobartoletti/nuxt-social-share/commit/0341af0)), closes [#287](https://github.com/stefanobartoletti/nuxt-social-share/issues/287)
+* chore(deps): update dependency @stefanobartoletti/eslint-config to ^3.0.8 (#307) ([01b6e96](https://github.com/stefanobartoletti/nuxt-social-share/commit/01b6e96)), closes [#307](https://github.com/stefanobartoletti/nuxt-social-share/issues/307)
+* chore(deps): update dependency @types/node to ^22.10.2 (#322) ([3b85c23](https://github.com/stefanobartoletti/nuxt-social-share/commit/3b85c23)), closes [#322](https://github.com/stefanobartoletti/nuxt-social-share/issues/322)
+* chore(deps): update dependency @types/node to v22 (#303) ([a401703](https://github.com/stefanobartoletti/nuxt-social-share/commit/a401703)), closes [#303](https://github.com/stefanobartoletti/nuxt-social-share/issues/303)
+* chore(deps): update dependency daisyui to ^4.12.14 (#299) ([d127243](https://github.com/stefanobartoletti/nuxt-social-share/commit/d127243)), closes [#299](https://github.com/stefanobartoletti/nuxt-social-share/issues/299)
+* chore(deps): update dependency eslint to ^9.14.0 (#302) ([2ad558f](https://github.com/stefanobartoletti/nuxt-social-share/commit/2ad558f)), closes [#302](https://github.com/stefanobartoletti/nuxt-social-share/issues/302)
+* chore(deps): update dependency eslint to ^9.16.0 (#308) ([1820a74](https://github.com/stefanobartoletti/nuxt-social-share/commit/1820a74)), closes [#308](https://github.com/stefanobartoletti/nuxt-social-share/issues/308)
+* chore(deps): update dependency husky to ^9.1.7 (#310) ([7475a54](https://github.com/stefanobartoletti/nuxt-social-share/commit/7475a54)), closes [#310](https://github.com/stefanobartoletti/nuxt-social-share/issues/310)
+* chore(deps): update dependency vitest to ^2.1.4 (#297) ([e272f59](https://github.com/stefanobartoletti/nuxt-social-share/commit/e272f59)), closes [#297](https://github.com/stefanobartoletti/nuxt-social-share/issues/297)
+* chore(deps): update dependency vitest to ^2.1.8 (#306) ([b23d0e3](https://github.com/stefanobartoletti/nuxt-social-share/commit/b23d0e3)), closes [#306](https://github.com/stefanobartoletti/nuxt-social-share/issues/306)
+* chore(deps): update docs deps ([cb3b0ac](https://github.com/stefanobartoletti/nuxt-social-share/commit/cb3b0ac))
+* chore(deps): update docs deps ([685fca4](https://github.com/stefanobartoletti/nuxt-social-share/commit/685fca4))
+* chore(deps): update docs deps ([6e118e8](https://github.com/stefanobartoletti/nuxt-social-share/commit/6e118e8))
+* chore(deps): update playground deps ([48fb558](https://github.com/stefanobartoletti/nuxt-social-share/commit/48fb558))
+* chore(deps): update pnpm to v9.12.3 (#294) ([3c66957](https://github.com/stefanobartoletti/nuxt-social-share/commit/3c66957)), closes [#294](https://github.com/stefanobartoletti/nuxt-social-share/issues/294)
+* chore(deps): update pnpm to v9.15.0 (#305) ([c0aebc5](https://github.com/stefanobartoletti/nuxt-social-share/commit/c0aebc5)), closes [#305](https://github.com/stefanobartoletti/nuxt-social-share/issues/305)
+* chore(docs): fix eslint rules ([d055359](https://github.com/stefanobartoletti/nuxt-social-share/commit/d055359))
+* chore(docs): fix posthog plugin import ([af74157](https://github.com/stefanobartoletti/nuxt-social-share/commit/af74157))
+* chore(docs): update `docs` dependencies ([18f4697](https://github.com/stefanobartoletti/nuxt-social-share/commit/18f4697))
+* chore(docs): update posthog to use posthog-js ([ef6714a](https://github.com/stefanobartoletti/nuxt-social-share/commit/ef6714a))
+* fix(deps): update dependency @nuxtjs/seo to v2.0.2 (#313) ([66adbc9](https://github.com/stefanobartoletti/nuxt-social-share/commit/66adbc9)), closes [#313](https://github.com/stefanobartoletti/nuxt-social-share/issues/313)
+* fix(deps): update nuxt monorepo to v3.14.159 ([5988413](https://github.com/stefanobartoletti/nuxt-social-share/commit/5988413))
+* docs: add Bluesky profile link ([73ae3d4](https://github.com/stefanobartoletti/nuxt-social-share/commit/73ae3d4))
+* docs: fix networksIndex import ([195c37b](https://github.com/stefanobartoletti/nuxt-social-share/commit/195c37b))
+
 ## [1.2.0](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.1.5...v1.2.0) (2024-10-24)
 
 
