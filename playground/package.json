@@ -7,7 +7,9 @@
     "build": "nuxi build",
     "generate": "nuxi generate"
   },
-  "devDependencies": {
-    "nuxt": "^3.13.2"
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "daisyui": "^4.12.20",
+    "nuxt": "^3.14.1592"
   }
 }
