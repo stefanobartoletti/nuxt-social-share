@@ -46,6 +46,10 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    preset: 'netlify-static',
+  },
+
   sitemap: {
     sources: [
       '/api/__sitemap__/urls',
