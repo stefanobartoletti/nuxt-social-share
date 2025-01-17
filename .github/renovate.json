@@ -9,5 +9,19 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "groupName": "@commitlint",
+      "matchPackagePrefixes": [
+        "@commitlint/"
+      ]
+    },
+    {
+      "groupName": "@iconify-json",
+      "matchPackagePrefixes": [
+        "@iconify-json/"
+      ]
+    }
+  ]
 }
