@@ -37,8 +37,8 @@ importers:
         specifier: ^3.15.1
         version: 3.15.1(@types/node@22.10.2)(magicast@0.3.5)(playwright-core@1.49.1)(rollup@3.29.5)(terser@5.37.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(terser@5.37.0))
       '@release-it/conventional-changelog':
-        specifier: ^9.0.3
-        version: 9.0.3(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))
+        specifier: ^9.0.4
+        version: 9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))
       '@stefanobartoletti/eslint-config':
         specifier: ^3.0.8
         version: 3.0.8(@typescript-eslint/utils@8.18.0(eslint@9.16.0(jiti@2.4.2))(typescript@5.6.3))(@vue/compiler-sfc@3.5.13)(eslint@9.16.0(jiti@2.4.2))(tailwindcss@3.4.17)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(terser@5.37.0))
@@ -1670,8 +1670,8 @@ packages:
     resolution: {integrity: sha512-qVrDc27DHpeO2NRCMeRdb4299nijKQE3BY0wrA+WUHlOLScorIi/y7JzammLk22IaTvjR9Mv9aTAdjE1aUwJnA==}
     engines: {node: '>=14.19.0', npm: '>=7.0.0'}
 
-  '@release-it/conventional-changelog@9.0.3':
-    resolution: {integrity: sha512-+3TL+B89Kc+VTbfGxpTvJkbegWt5XIzkovsYVJyoZpOZDG07v25FU8c5R5Q8yNUs76Ikfq0sp+ZTTxmefG4Hiw==}
+  '@release-it/conventional-changelog@9.0.4':
+    resolution: {integrity: sha512-eSZVATX2qiyxzpXdIVNczxTGR+uD4lG/ZEfDDYBJ8vKIj6fKp+eYicIS8Ff/eL3bA9XiQTmllKqxPRzmz9d45w==}
     engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     peerDependencies:
       release-it: ^17.0.0
@@ -10278,7 +10278,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@release-it/conventional-changelog@9.0.3(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))':
+  '@release-it/conventional-changelog@9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))':
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 6.0.0(conventional-commits-filter@5.0.0)
@@ -16448,7 +16448,7 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.0
       read-pkg: 9.0.1
-      type-fest: 4.26.1
+      type-fest: 4.32.0
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -16468,7 +16468,7 @@ snapshots:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 8.1.0
-      type-fest: 4.26.1
+      type-fest: 4.32.0
       unicorn-magic: 0.1.0
 
   readable-stream@2.3.8:
