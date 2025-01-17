@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "daisyui": "^4.12.20",
+    "daisyui": "^4.12.23",
     "nuxt": "^3.14.1592"
   }
 }
