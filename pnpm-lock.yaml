@@ -38,7 +38,7 @@ importers:
         version: 3.15.1(@types/node@22.10.2)(magicast@0.3.5)(playwright-core@1.49.1)(rollup@3.29.5)(terser@5.37.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(terser@5.37.0))
       '@release-it/conventional-changelog':
         specifier: ^9.0.4
-        version: 9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))
+        version: 9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.11.0(typescript@5.6.3))
       '@stefanobartoletti/eslint-config':
         specifier: ^3.0.8
         version: 3.0.8(@typescript-eslint/utils@8.18.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.6.3))(@vue/compiler-sfc@3.5.13)(eslint@9.18.0(jiti@2.4.2))(tailwindcss@3.4.17)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(terser@5.37.0))
@@ -58,8 +58,8 @@ importers:
         specifier: ^3.14.159
         version: 3.14.159(@parcel/watcher@2.5.0)(@types/node@22.10.2)(eslint@9.18.0(jiti@2.4.2))(ioredis@5.4.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@3.29.5)(terser@5.37.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.10.2)(terser@5.37.0))(vue-tsc@2.1.10(typescript@5.6.3))
       release-it:
-        specifier: ^17.10.0
-        version: 17.10.0(typescript@5.6.3)
+        specifier: ^17.11.0
+        version: 17.11.0(typescript@5.6.3)
       typescript:
         specifier: ~5.6
         version: 5.6.3
@@ -2656,10 +2656,6 @@ packages:
   add-stream@1.0.0:
     resolution: {integrity: sha512-qQLMr+8o0WC4FZGQTcJiKBVC59JylcPSrTtk6usvmIDFUOCKegapy1VHQwRbFMOFyb/inzUVqHs+eMYKDM1YeQ==}
 
-  agent-base@7.1.1:
-    resolution: {integrity: sha512-H0TSyFNDMomMNJQBn8wFV5YC/2eJ+VXECwOadZJT554xP6cODZHPX3H9QMQECxvrgiSOP1pHjy1sMWQVYJOUOA==}
-    engines: {node: '>= 14'}
-
   agent-base@7.1.3:
     resolution: {integrity: sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==}
     engines: {node: '>= 14'}
@@ -2965,10 +2961,6 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  chalk@5.3.0:
-    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-
   chalk@5.4.1:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
@@ -3037,10 +3029,6 @@ packages:
     resolution: {integrity: sha512-YclTJey34KUm5jB1aEJCq807bSievi7Nb/TU4Gu504fUYi3jw3KCIaH6L7nFWQhdEgH3V+wCh+kKD1P5cXnfxw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
-
-  ci-info@4.0.0:
-    resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
-    engines: {node: '>=8'}
 
   ci-info@4.1.0:
     resolution: {integrity: sha512-HutrvTNsF48wnxkzERIXOe5/mlcfFcbfCmwcg6CJnizbSue78AbDt+1cgl26zwn61WFxhcPykPfZrbqjGmBb4A==}
@@ -3354,10 +3342,6 @@ packages:
 
   cross-fetch@3.2.0:
     resolution: {integrity: sha512-Q+xVJLoGOeIMXZmbUK4HYk+69cQH6LudR0Vu/pRm2YlU/hDV9CiS0gKUMaWY5f2NeUH9C1nV3bsTlCo0FsTV1Q==}
-
-  cross-spawn@7.0.5:
-    resolution: {integrity: sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==}
-    engines: {node: '>= 8'}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4490,10 +4474,6 @@ packages:
   http-shutdown@1.2.2:
     resolution: {integrity: sha512-S9wWkJ/VSY9/k4qcjG318bqJNruzE4HySUhFYknwmu6LBP97KLLfwNf+n4V1BHurvFNkSKLFnK/RsuUnRTf9Vw==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
-
-  https-proxy-agent@7.0.5:
-    resolution: {integrity: sha512-1e4Wqeblerz+tMKPIq2EMGiiWW1dIjZOksyHWSUm1rmuvw/how9hBHZ38lAGj5ID4Ik6EdkOw7NmWPy6LAwalw==}
-    engines: {node: '>= 14'}
 
   https-proxy-agent@7.0.6:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
@@ -5654,8 +5634,8 @@ packages:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
     engines: {node: '>=10'}
 
-  ora@8.1.0:
-    resolution: {integrity: sha512-GQEkNkH/GHOhPFXcqZs3IDahXEQcQxsSjEkK4KvEEST4t7eNzoMjxTzef+EZ+JluDEV+Raoi3WQ2CflnRdSVnQ==}
+  ora@8.1.1:
+    resolution: {integrity: sha512-YWielGi1XzG1UTvOaCFaNgEnuhZVMSHYkW/FQ7UX8O26PtlpdM84c0f7wLPlkvx2RfiQmnzd61d/MGxmpQeJPw==}
     engines: {node: '>=18'}
 
   os-name@5.1.0:
@@ -5694,8 +5674,8 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
-  pac-proxy-agent@7.0.2:
-    resolution: {integrity: sha512-BFi3vZnO9X5Qt6NRz7ZOaPja3ic0PhlsmCRYLOpN11+mWBCR6XJDqW5RF3j8jm4WGGQZtBA+bTfxYzeKW73eHg==}
+  pac-proxy-agent@7.1.0:
+    resolution: {integrity: sha512-Z5FnLVVZSnX7WjBg0mhDtydeRZ1xMcATZThjySQUHqr+0ksP8kqaw23fNKkaaN/Z8gwLUs/W7xdl0I75eP2Xyw==}
     engines: {node: '>= 14'}
 
   pac-resolver@7.0.1:
@@ -6152,8 +6132,8 @@ packages:
   protocols@2.0.1:
     resolution: {integrity: sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==}
 
-  proxy-agent@6.4.0:
-    resolution: {integrity: sha512-u0piLU+nCOHMgGjRbimiXmA9kM/L9EHh3zL81xCdp7m+Y2pHIsnmbdDoEDoAz5geaonNR6q6+yOPQs6n4T6sBQ==}
+  proxy-agent@6.5.0:
+    resolution: {integrity: sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==}
     engines: {node: '>= 14'}
 
   proxy-from-env@1.1.0:
@@ -6301,8 +6281,8 @@ packages:
   rehype-sort-attributes@5.0.1:
     resolution: {integrity: sha512-Bxo+AKUIELcnnAZwJDt5zUDDRpt4uzhfz9d0PVGhcxYWsbFj5Cv35xuWxu5r1LeYNFNhgGqsr9Q2QiIOM/Qctg==}
 
-  release-it@17.10.0:
-    resolution: {integrity: sha512-00cXYEl7RFD5NnjXpwaH9JFjpwe8w3NcfUd4XPxrKQkszp1xppPo42zK9eSbxStKyPA5CVk2KmKPDPDiAKVJTA==}
+  release-it@17.11.0:
+    resolution: {integrity: sha512-qQGgfMbUZ3/vpXUPmngsgjFObOLjlkwtiozHUYen9fo9AEGciXjG1ZpGr+FNmuBT8R7TOSY+x/s84wOCRKJjbA==}
     engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     hasBin: true
 
@@ -6601,8 +6581,8 @@ packages:
     resolution: {integrity: sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew==}
     engines: {node: '>=10.0.0'}
 
-  socks-proxy-agent@8.0.4:
-    resolution: {integrity: sha512-GNAq/eg8Udq2x0eNiFkr9gRg5bA7PXEWagQdeRX4cPSG+X/8V38v637gim9bjFptMk1QWsCTr0ttrJEiXbNnRw==}
+  socks-proxy-agent@8.0.5:
+    resolution: {integrity: sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==}
     engines: {node: '>= 14'}
 
   socks@2.8.3:
@@ -6952,9 +6932,6 @@ packages:
       typescript:
         optional: true
 
-  tslib@2.7.0:
-    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -6988,10 +6965,6 @@ packages:
   type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
-
-  type-fest@4.26.1:
-    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
-    engines: {node: '>=16'}
 
   type-fest@4.32.0:
     resolution: {integrity: sha512-rfgpoi08xagF3JSdtJlCwMq9DGNDE0IMh3Mkpc1wUypg9vPi786AiqeBBKcqvIkq42azsBM85N490fyZjeUftw==}
@@ -7676,8 +7649,8 @@ packages:
     resolution: {integrity: sha512-c9bZp7b5YtRj2wOe6dlj32MK+Bx/M/d+9VB2SHM1OtsUHR0aV0tdP6DWh/iMt0kWi1t5g1Iudu6hQRNd1A4PVA==}
     engines: {node: '>=18'}
 
-  wildcard-match@5.1.3:
-    resolution: {integrity: sha512-a95hPUk+BNzSGLntNXYxsjz2Hooi5oL7xOfJR6CKwSsSALh7vUNuTlzsrZowtYy38JNduYFRVhFv19ocqNOZlg==}
+  wildcard-match@5.1.4:
+    resolution: {integrity: sha512-wldeCaczs8XXq7hj+5d/F38JE2r7EXgb6WQDM84RVwxy81T/sxB5e9+uZLK9Q9oNz1mlvjut+QtvgaOQFPVq/g==}
 
   windows-release@5.1.1:
     resolution: {integrity: sha512-NMD00arvqcq2nwqc5Q6KtrSRHK+fVD31erE5FEMahAw5PmVCgD7MUXodq3pdZSUkqA9Cda2iWx6s1XYwiJWRmw==}
@@ -7900,6 +7873,7 @@ snapshots:
     dependencies:
       '@babel/highlight': 7.25.7
       picocolors: 1.1.1
+    optional: true
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -8026,6 +8000,7 @@ snapshots:
       chalk: 2.4.2
       js-tokens: 4.0.0
       picocolors: 1.1.1
+    optional: true
 
   '@babel/parser@7.26.3':
     dependencies:
@@ -10279,13 +10254,13 @@ snapshots:
       - encoding
       - supports-color
 
-  '@release-it/conventional-changelog@9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))':
+  '@release-it/conventional-changelog@9.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.11.0(typescript@5.6.3))':
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 6.0.0(conventional-commits-filter@5.0.0)
       conventional-recommended-bump: 10.0.0
       git-semver-tags: 8.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)
-      release-it: 17.10.0(typescript@5.6.3)
+      release-it: 17.11.0(typescript@5.6.3)
       semver: 7.6.3
     transitivePeerDependencies:
       - conventional-commits-filter
@@ -11515,12 +11490,6 @@ snapshots:
 
   add-stream@1.0.0: {}
 
-  agent-base@7.1.1:
-    dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
-    transitivePeerDependencies:
-      - supports-color
-
   agent-base@7.1.3: {}
 
   ajv@6.12.6:
@@ -11559,6 +11528,7 @@ snapshots:
   ansi-styles@3.2.1:
     dependencies:
       color-convert: 1.9.3
+    optional: true
 
   ansi-styles@4.3.0:
     dependencies:
@@ -11739,7 +11709,7 @@ snapshots:
       chalk: 5.4.1
       cli-boxes: 3.0.0
       string-width: 7.2.0
-      type-fest: 4.26.1
+      type-fest: 4.32.0
       widest-line: 5.0.0
       wrap-ansi: 9.0.0
 
@@ -11869,13 +11839,12 @@ snapshots:
       ansi-styles: 3.2.1
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
+    optional: true
 
   chalk@4.1.2:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-
-  chalk@5.3.0: {}
 
   chalk@5.4.1: {}
 
@@ -11973,8 +11942,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ci-info@4.0.0: {}
-
   ci-info@4.1.0: {}
 
   citty@0.1.6:
@@ -12024,12 +11991,14 @@ snapshots:
   color-convert@1.9.3:
     dependencies:
       color-name: 1.1.3
+    optional: true
 
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
 
-  color-name@1.1.3: {}
+  color-name@1.1.3:
+    optional: true
 
   color-name@1.1.4: {}
 
@@ -12273,12 +12242,6 @@ snapshots:
       node-fetch: 2.7.0
     transitivePeerDependencies:
       - encoding
-
-  cross-spawn@7.0.5:
-    dependencies:
-      path-key: 3.1.1
-      shebang-command: 2.0.0
-      which: 2.0.2
 
   cross-spawn@7.0.6:
     dependencies:
@@ -13153,7 +13116,7 @@ snapshots:
 
   execa@8.0.0:
     dependencies:
-      cross-spawn: 7.0.5
+      cross-spawn: 7.0.6
       get-stream: 8.0.1
       human-signals: 5.0.0
       is-stream: 3.0.0
@@ -13583,7 +13546,8 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.3
 
-  has-flag@3.0.0: {}
+  has-flag@3.0.0:
+    optional: true
 
   has-flag@4.0.0: {}
 
@@ -13731,19 +13695,12 @@ snapshots:
 
   http-proxy-agent@7.0.2:
     dependencies:
-      agent-base: 7.1.1
+      agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
   http-shutdown@1.2.2: {}
-
-  https-proxy-agent@7.0.5:
-    dependencies:
-      agent-base: 7.1.1
-      debug: 4.4.0(supports-color@9.4.0)
-    transitivePeerDependencies:
-      - supports-color
 
   https-proxy-agent@7.0.6(supports-color@9.4.0):
     dependencies:
@@ -15720,9 +15677,9 @@ snapshots:
       strip-ansi: 6.0.1
       wcwidth: 1.0.1
 
-  ora@8.1.0:
+  ora@8.1.1:
     dependencies:
-      chalk: 5.3.0
+      chalk: 5.4.1
       cli-cursor: 5.0.0
       cli-spinners: 2.9.2
       is-interactive: 2.0.0
@@ -15765,16 +15722,16 @@ snapshots:
 
   p-try@2.2.0: {}
 
-  pac-proxy-agent@7.0.2:
+  pac-proxy-agent@7.1.0:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
-      agent-base: 7.1.1
+      agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.5
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       pac-resolver: 7.0.1
-      socks-proxy-agent: 8.0.4
+      socks-proxy-agent: 8.0.5
     transitivePeerDependencies:
       - supports-color
 
@@ -15835,7 +15792,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.25.7
+      '@babel/code-frame': 7.26.2
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -16386,16 +16343,16 @@ snapshots:
 
   protocols@2.0.1: {}
 
-  proxy-agent@6.4.0:
+  proxy-agent@6.5.0:
     dependencies:
-      agent-base: 7.1.1
-      debug: 4.3.7
+      agent-base: 7.1.3
+      debug: 4.4.0(supports-color@9.4.0)
       http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.5
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       lru-cache: 7.18.3
-      pac-proxy-agent: 7.0.2
+      pac-proxy-agent: 7.1.0
       proxy-from-env: 1.1.0
-      socks-proxy-agent: 8.0.4
+      socks-proxy-agent: 8.0.5
     transitivePeerDependencies:
       - supports-color
 
@@ -16510,7 +16467,7 @@ snapshots:
 
   rechoir@0.6.2:
     dependencies:
-      resolve: 1.22.8
+      resolve: 1.22.10
 
   redis-errors@1.2.0: {}
 
@@ -16586,13 +16543,13 @@ snapshots:
       '@types/hast': 3.0.4
       unist-util-visit: 5.0.0
 
-  release-it@17.10.0(typescript@5.6.3):
+  release-it@17.11.0(typescript@5.6.3):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 20.1.1
       async-retry: 1.3.3
-      chalk: 5.3.0
-      ci-info: 4.0.0
+      chalk: 5.4.1
+      ci-info: 4.1.0
       cosmiconfig: 9.0.0(typescript@5.6.3)
       execa: 8.0.0
       git-url-parse: 14.0.0
@@ -16603,14 +16560,14 @@ snapshots:
       mime-types: 2.1.35
       new-github-release-url: 2.0.0
       open: 10.1.0
-      ora: 8.1.0
+      ora: 8.1.1
       os-name: 5.1.0
-      proxy-agent: 6.4.0
+      proxy-agent: 6.5.0
       semver: 7.6.3
       shelljs: 0.8.5
       update-notifier: 7.3.1
       url-join: 5.0.0
-      wildcard-match: 5.1.3
+      wildcard-match: 5.1.4
       yargs-parser: 21.1.1
     transitivePeerDependencies:
       - supports-color
@@ -16834,7 +16791,7 @@ snapshots:
 
   rxjs@7.8.1:
     dependencies:
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   safe-buffer@5.1.2: {}
 
@@ -17036,9 +16993,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  socks-proxy-agent@8.0.4:
+  socks-proxy-agent@8.0.5:
     dependencies:
-      agent-base: 7.1.1
+      agent-base: 7.1.3
       debug: 4.4.0(supports-color@9.4.0)
       socks: 2.8.3
     transitivePeerDependencies:
@@ -17213,6 +17170,7 @@ snapshots:
   supports-color@5.5.0:
     dependencies:
       has-flag: 3.0.0
+    optional: true
 
   supports-color@7.2.0:
     dependencies:
@@ -17459,8 +17417,6 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
-  tslib@2.7.0: {}
-
   tslib@2.8.1: {}
 
   tsscmp@1.0.6: {}
@@ -17483,8 +17439,6 @@ snapshots:
   type-fest@0.8.1: {}
 
   type-fest@2.19.0: {}
-
-  type-fest@4.26.1: {}
 
   type-fest@4.32.0: {}
 
@@ -17947,7 +17901,7 @@ snapshots:
   update-notifier@7.3.1:
     dependencies:
       boxen: 8.0.1
-      chalk: 5.3.0
+      chalk: 5.4.1
       configstore: 7.0.0
       is-in-ci: 1.0.0
       is-installed-globally: 1.0.0
@@ -18504,7 +18458,7 @@ snapshots:
     dependencies:
       string-width: 7.2.0
 
-  wildcard-match@5.1.3: {}
+  wildcard-match@5.1.4: {}
 
   windows-release@5.1.1:
     dependencies:
