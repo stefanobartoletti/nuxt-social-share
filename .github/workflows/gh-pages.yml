@@ -14,11 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: pnpm
+      - run: npm install --global corepack@latest
+      - run: corepack enable
+
       # Pick your own package manager and build script
       - run: pnpm install
       - run: pnpm dev:generate --preset=github-pages
