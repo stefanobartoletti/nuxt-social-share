@@ -41,8 +41,4 @@ const getFacebook = useSocialShare({ network: 'facebook' })
     border-radius: 0;
   }
 }
-
-pre {
-  @apply bg-slate-600 text-white rounded-md p-4 whitespace-pre-wrap;
-}
 </style>
