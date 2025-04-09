@@ -1,5 +1,39 @@
 # Changelog
 
+## <small>1.2.2 (2025-04-09)</small>
+
+* fix(deps): update dependency @nuxtjs/seo to v2.0.3 (#336) ([3b0138b](https://github.com/stefanobartoletti/nuxt-social-share/commit/3b0138b)), closes [#336](https://github.com/stefanobartoletti/nuxt-social-share/issues/336)
+* fix(deps): update nuxt packages to v3.16.x ([c5ef70e](https://github.com/stefanobartoletti/nuxt-social-share/commit/c5ef70e))
+* chore: ad ahrefs analytics ([fcd0267](https://github.com/stefanobartoletti/nuxt-social-share/commit/fcd0267))
+* chore: playground migrate to tailwind 4 ([bce2cf2](https://github.com/stefanobartoletti/nuxt-social-share/commit/bce2cf2))
+* chore: update commitlint and release-it ([f9acf7f](https://github.com/stefanobartoletti/nuxt-social-share/commit/f9acf7f))
+* chore: update dependencies ([bf9910c](https://github.com/stefanobartoletti/nuxt-social-share/commit/bf9910c))
+* chore: update docs @nuxt/fonts ([95608f5](https://github.com/stefanobartoletti/nuxt-social-share/commit/95608f5))
+* chore: update docs site dependencies ([08890ea](https://github.com/stefanobartoletti/nuxt-social-share/commit/08890ea))
+* chore: update eslint packages ([7c38d51](https://github.com/stefanobartoletti/nuxt-social-share/commit/7c38d51))
+* chore: update iconify-json deps ([b6f92c3](https://github.com/stefanobartoletti/nuxt-social-share/commit/b6f92c3))
+* chore: update nuxt devtools ([acb37b0](https://github.com/stefanobartoletti/nuxt-social-share/commit/acb37b0))
+* chore: update playground dependencies ([da0f66a](https://github.com/stefanobartoletti/nuxt-social-share/commit/da0f66a))
+* chore: update posthog-js ([0cda95b](https://github.com/stefanobartoletti/nuxt-social-share/commit/0cda95b))
+* chore: update test dependencies ([478fc94](https://github.com/stefanobartoletti/nuxt-social-share/commit/478fc94))
+* chore: update vue-tsc from 2.2.0 to 2.2.8 ([1a900f6](https://github.com/stefanobartoletti/nuxt-social-share/commit/1a900f6))
+* chore(config): migrate config .github/renovate.json (#333) ([cbfd919](https://github.com/stefanobartoletti/nuxt-social-share/commit/cbfd919)), closes [#333](https://github.com/stefanobartoletti/nuxt-social-share/issues/333)
+* chore(deps): update dependency @commitlint/cli to ^19.6.1 (#330) ([a4209ad](https://github.com/stefanobartoletti/nuxt-social-share/commit/a4209ad)), closes [#330](https://github.com/stefanobartoletti/nuxt-social-share/issues/330)
+* chore(deps): update dependency @nuxt/devtools to ^1.7.0 (#323) ([3329f60](https://github.com/stefanobartoletti/nuxt-social-share/commit/3329f60)), closes [#323](https://github.com/stefanobartoletti/nuxt-social-share/issues/323)
+* chore(deps): update dependency @nuxt/eslint-config to ^0.7.5 (#329) ([02c17c1](https://github.com/stefanobartoletti/nuxt-social-share/commit/02c17c1)), closes [#329](https://github.com/stefanobartoletti/nuxt-social-share/issues/329)
+* chore(deps): update dependency @release-it/conventional-changelog to ^9.0.4 (#332) ([8e71e3f](https://github.com/stefanobartoletti/nuxt-social-share/commit/8e71e3f)), closes [#332](https://github.com/stefanobartoletti/nuxt-social-share/issues/332)
+* chore(deps): update dependency @release-it/conventional-changelog to v10 (#338) ([1731fb4](https://github.com/stefanobartoletti/nuxt-social-share/commit/1731fb4)), closes [#338](https://github.com/stefanobartoletti/nuxt-social-share/issues/338)
+* chore(deps): update dependency @stefanobartoletti/eslint-config to ^3.0.9 (#334) ([98b00f8](https://github.com/stefanobartoletti/nuxt-social-share/commit/98b00f8)), closes [#334](https://github.com/stefanobartoletti/nuxt-social-share/issues/334)
+* chore(deps): update dependency eslint to ^9.18.0 (#326) ([7c6ee0c](https://github.com/stefanobartoletti/nuxt-social-share/commit/7c6ee0c)), closes [#326](https://github.com/stefanobartoletti/nuxt-social-share/issues/326)
+* chore(deps): update dependency release-it to v18 (#339) ([46abd8a](https://github.com/stefanobartoletti/nuxt-social-share/commit/46abd8a)), closes [#339](https://github.com/stefanobartoletti/nuxt-social-share/issues/339)
+* chore(deps): update pnpm to v9.15.4 (#328) ([8fe1b2b](https://github.com/stefanobartoletti/nuxt-social-share/commit/8fe1b2b)), closes [#328](https://github.com/stefanobartoletti/nuxt-social-share/issues/328)
+* docs: fix spelling error in component.md (#348) ([f46f16c](https://github.com/stefanobartoletti/nuxt-social-share/commit/f46f16c)), closes [#348](https://github.com/stefanobartoletti/nuxt-social-share/issues/348)
+* ci: fix docs website ([440bbf4](https://github.com/stefanobartoletti/nuxt-social-share/commit/440bbf4))
+* ci: fix nitro netlify config ([ca790d2](https://github.com/stefanobartoletti/nuxt-social-share/commit/ca790d2))
+* ci: update ci pipelines ([aa085c5](https://github.com/stefanobartoletti/nuxt-social-share/commit/aa085c5))
+* ci: update renovate rules ([1c30101](https://github.com/stefanobartoletti/nuxt-social-share/commit/1c30101))
+* ci: update workflows node version ([0130c20](https://github.com/stefanobartoletti/nuxt-social-share/commit/0130c20))
+
 ## <small>1.2.1 (2024-12-12)</small>
 
 * chore: clean readme ([bcf81b7](https://github.com/stefanobartoletti/nuxt-social-share/commit/bcf81b7))
