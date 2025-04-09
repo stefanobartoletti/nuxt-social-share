@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+pre {
+  @apply bg-slate-600 text-white rounded-md p-4 whitespace-pre-wrap;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}

@@ -1,6 +1,6 @@
 <template>
   <footer class="navbar bg-base-200">
-    <div class="container">
+    <div class="container flex">
       <div class="flex flex-row gap-8 mx-auto">
         <SocialShare
           v-for="network in ['facebook', 'x', 'linkedin', 'email']"
