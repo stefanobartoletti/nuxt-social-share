@@ -1,6 +1,6 @@
 <template>
   <header class="navbar bg-base-200">
-    <div class="container">
+    <div class="container flex">
       <h1 class="font-bold text-xl">Nuxt Social Share</h1>
 
       <ul class="ml-auto">
