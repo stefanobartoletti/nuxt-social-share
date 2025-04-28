@@ -2,7 +2,7 @@
   "name": "@stefanobartoletti/nuxt-social-share",
   "type": "module",
   "version": "1.2.2",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.10.0",
   "description": "Simple Social Sharing for Nuxt",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
   "license": "MIT",
