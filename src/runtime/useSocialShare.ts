@@ -46,7 +46,7 @@ export function useSocialShare(options: Options = defaultOptions) {
 
     // Replace placeholders with actual values
     fullUrl = fullUrl
-      .replace(/\[u\]/i, pageUrl.value)
+      .replace(/\[u\]/i, encodeURIComponent(pageUrl.value))
       .replace(/\[t\]/i, title || '')
       .replace(/\[uid\]/i, user || '')
       .replace(/\[h\]/i, hashtags || '')
