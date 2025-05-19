@@ -1,5 +1,12 @@
 # Changelog
 
+## <small>1.2.3 (2025-05-19)</small>
+
+* fix: allow sharing URLs with multiple parameters ([0b78c1e](https://github.com/stefanobartoletti/nuxt-social-share/commit/0b78c1e))
+* ci: remove GH pages workflow ([5a035c7](https://github.com/stefanobartoletti/nuxt-social-share/commit/5a035c7))
+* chore: update deps ([73076c8](https://github.com/stefanobartoletti/nuxt-social-share/commit/73076c8))
+* chore(deps): update pnpm to v10 (#354) ([b8f9bc0](https://github.com/stefanobartoletti/nuxt-social-share/commit/b8f9bc0)), closes [#354](https://github.com/stefanobartoletti/nuxt-social-share/issues/354)
+
 ## <small>1.2.2 (2025-04-09)</small>
 
 * fix(deps): update dependency @nuxtjs/seo to v2.0.3 (#336) ([3b0138b](https://github.com/stefanobartoletti/nuxt-social-share/commit/3b0138b)), closes [#336](https://github.com/stefanobartoletti/nuxt-social-share/issues/336)
