@@ -44,7 +44,7 @@ const isStyled = props.styled !== undefined ? props.styled : moduleOptions.style
 const isLabeled = props.label !== undefined ? props.label : moduleOptions.label
 const hasIcon = props.icon !== undefined ? props.icon : moduleOptions.icon
 
-const selectedNetwork = useSocialShare({
+const selectedNetwork = await useSocialShare({
   network: props.network,
   url: props.url,
   title: props.title,

@@ -1,7 +1,7 @@
 import type { Options } from './types/'
 
 import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
-import { networksIndex } from './networksIndex'
+import { getNetwork } from './networksIndex'
 
 const defaultOptions = {
   network: '',
@@ -12,12 +12,12 @@ const defaultOptions = {
   image: undefined,
 }
 
-export function useSocialShare(options: Options = defaultOptions) {
+export async function useSocialShare(options: Options = defaultOptions) {
   const { network, url, title, user, hashtags, image } = options
   const moduleOptions = useRuntimeConfig().public.socialShare
 
   // Get network. Using a shallow copy to avoid mutating the original object
-  const selectedNetwork = ref({ ...networksIndex[network] })
+  const selectedNetwork = ref(await getNetwork(network))
   const route = useRoute()
 
   // Set default value for url if not provided from options

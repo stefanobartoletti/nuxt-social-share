@@ -1,46 +1,24 @@
-import type { NetworksIndex } from './types'
+import type { Network } from './types'
 
-import { bluesky } from './networks/bluesky'
-import { email } from './networks/email'
-import { facebook } from './networks/facebook'
-import { line } from './networks/line'
-import { linkedin } from './networks/linkedin'
-import { pinterest } from './networks/pinterest'
-import { pocket } from './networks/pocket'
-import { reddit } from './networks/reddit'
-import { skype } from './networks/skype'
-import { telegram } from './networks/telegram'
-import { threads } from './networks/threads'
-import { viber } from './networks/viber'
-import { whatsapp } from './networks/whatsapp'
-import { x } from './networks/x'
+const networkImporters = import.meta.glob('./networks/*.ts')
 
-export const networksBase: NetworksIndex = {
-  // Social Networks
-  facebook,
-  x,
-  linkedin,
-  pinterest,
-  reddit,
-  bluesky,
-  threads,
-  // Read it later
-  pocket,
-  // Instant Messaging
-  whatsapp,
-  telegram,
-  skype,
-  line,
-  viber,
-  // Other
-  email,
+export const networksBase = Object.fromEntries(
+  Object.keys(networkImporters).map((path) => {
+    const name = path.split('/').pop()?.replace('.ts', '') as string
+    return [name, name]
+  }),
+) as Record<string, string>
+
+export const networksAlias: Record<string, string> = {
+  twitter: 'x',
 }
 
-export const networksAlias: NetworksIndex = {
-  twitter: x,
-}
+export async function getNetwork(name: string): Promise<Network> {
+  const target = networksAlias[name] || name
+  const importer = networkImporters[`./networks/${target}.ts`]
+  if (!importer)
+    throw new Error(`Unsupported network: '${name}'`)
 
-export const networksIndex: NetworksIndex = {
-  ...networksBase,
-  ...networksAlias,
+  const mod: any = await importer()
+  return mod[target] as Network
 }

@@ -28,7 +28,7 @@
 <script setup>
 import { useSocialShare } from '#imports'
 
-const getFacebook = useSocialShare({ network: 'facebook' })
+const getFacebook = await useSocialShare({ network: 'facebook' })
 </script>
 
 <style>

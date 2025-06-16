@@ -25,14 +25,14 @@
 
 <script setup>
 import { useSocialShare } from '#imports'
-import { networksIndex } from '../../src/runtime/networksIndex'
+import { networksBase } from '../../src/runtime/networksIndex'
 
-const testNetworks = Object.keys(networksIndex)
+const testNetworks = Object.keys(networksBase)
 
 const allNetworks = []
 
-testNetworks.forEach((el) => {
-  allNetworks.push(useSocialShare({
+for (const el of testNetworks) {
+  allNetworks.push(await useSocialShare({
     network: el,
     url: 'https://www.example.com/',
     title: 'Test Title',
@@ -40,7 +40,7 @@ testNetworks.forEach((el) => {
     hashtags: 'test,hashtags',
     image: 'https://www.example.com/image.jpg',
   }))
-})
+}
 </script>
 
 <style>
