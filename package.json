@@ -24,15 +24,20 @@
     }
   },
   "main": "./dist/module.mjs",
-  "types": "./dist/types.d.mts",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
-    "dev": "nuxi dev playground",
+    "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:generate": "nuxi generate playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "docs:dev": "nuxi dev docs",
     "docs:build": "nuxi build docs",
@@ -41,13 +46,14 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
     "release": "release-it",
     "release:beta": "release-it --no-git.requireBranch --preRelease=beta",
     "commitlint": "commitlint --edit",
     "prepare": "husky"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.17.2",
+    "@nuxt/kit": "^4.1.2",
     "defu": "^6.1.4"
   },
   "devDependencies": {
@@ -56,17 +62,18 @@
     "@nuxt/devtools": "2.6.5",
     "@nuxt/eslint-config": "^1.9.0",
     "@nuxt/module-builder": "^1.0.2",
-    "@nuxt/schema": "^3.17.2",
+    "@nuxt/schema": "^4.1.2",
     "@nuxt/test-utils": "^3.19.2",
     "@release-it/conventional-changelog": "^10.0.1",
     "@stefanobartoletti/eslint-config": "^4.0.2",
-    "@types/node": "^22.18.8",
+    "@types/node": "latest",
     "changelogen": "^0.6.2",
     "eslint": "^9.37.0",
     "husky": "^9.1.7",
-    "nuxt": "^3.17.2",
+    "nuxt": "^4.1.2",
     "release-it": "^19.0.5",
-    "typescript": "~5.8.3",
-    "vitest": "^3.2.4"
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.1.0"
   }
 }

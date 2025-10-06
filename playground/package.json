@@ -8,9 +8,6 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.14",
-    "daisyui": "^5.0.35",
-    "nuxt": "^3.17.2",
-    "tailwindcss": "^4.1.14"
+    "nuxt": "^4.1.2"
   }
 }
