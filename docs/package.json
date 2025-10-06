@@ -14,7 +14,7 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui-pro": "^1.8.2",
-    "@nuxtjs/seo": "3.0.3",
+    "@nuxtjs/seo": "3.2.2",
     "nuxt": "^3.17.2",
     "posthog-js": "^1.271.0"
   },
