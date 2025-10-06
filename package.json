@@ -65,7 +65,7 @@
     "eslint": "^9.26.0",
     "husky": "^9.1.7",
     "nuxt": "^3.17.2",
-    "release-it": "^19.0.2",
+    "release-it": "^19.0.5",
     "typescript": "~5.8.3",
     "vitest": "^3.2.4"
   }
