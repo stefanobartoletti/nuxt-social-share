@@ -70,10 +70,10 @@ importers:
   docs:
     dependencies:
       '@iconify-json/lucide':
-        specifier: ^1.2.41
+        specifier: ^1.2.68
         version: 1.2.68
       '@iconify-json/simple-icons':
-        specifier: ^1.2.33
+        specifier: ^1.2.54
         version: 1.2.54
       '@nuxt/content':
         specifier: ^2.13.4
