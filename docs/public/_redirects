@@ -1,4 +1,0 @@
-# Netlify redirects
-# https://docs.netlify.com/routing/redirects/
-
-https://nuxt-social-share.netlify.app/*   https://nuxt-social-share.stefanobartoletti.it/:splat    301!
