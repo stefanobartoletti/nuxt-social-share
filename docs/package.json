@@ -1,7 +1,7 @@
 {
   "name": "docs",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,6 +22,5 @@
     "nuxt-llms": "0.1.3",
     "nuxt-og-image": "^5.1.11"
   }
-
 
 }

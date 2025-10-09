@@ -5,11 +5,11 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     'nuxt-og-image',
-    'nuxt-llms'
+    'nuxt-llms',
   ],
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   css: ['~/assets/css/main.css'],
@@ -18,10 +18,10 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         toc: {
-          searchDepth: 1
-        }
-      }
-    }
+          searchDepth: 1,
+        },
+      },
+    },
   },
 
   compatibilityDate: '2024-07-11',
@@ -29,16 +29,15 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
       ],
       crawlLinks: true,
-      autoSubfolderIndex: false
-    }
+      autoSubfolderIndex: false,
+    },
   },
 
-
   icon: {
-    provider: 'iconify'
+    provider: 'iconify',
   },
 
   llms: {
@@ -47,7 +46,7 @@ export default defineNuxtConfig({
     description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
     full: {
       title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.'
-    }
-  }
+      description: 'This is the full documentation for the Nuxt Docs Template.',
+    },
+  },
 })

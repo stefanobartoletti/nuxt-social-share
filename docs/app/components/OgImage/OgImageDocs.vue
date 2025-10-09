@@ -1,13 +1,3 @@
-<script lang="ts" setup>
-const props = withDefaults(defineProps<{ title?: string, description?: string, headline?: string }>(), {
-  title: 'title',
-  description: 'description'
-})
-
-const title = computed(() => (props.title || '').slice(0, 60))
-const description = computed(() => (props.description || '').slice(0, 200))
-</script>
-
 <template>
   <div class="w-full h-full flex flex-col justify-center bg-[#020420]">
     <svg
@@ -74,3 +64,13 @@ const description = computed(() => (props.description || '').slice(0, 200))
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const props = withDefaults(defineProps<{ title?: string, description?: string, headline?: string }>(), {
+  title: 'title',
+  description: 'description',
+})
+
+const title = computed(() => (props.title || '').slice(0, 60))
+const description = computed(() => (props.description || '').slice(0, 200))
+</script>

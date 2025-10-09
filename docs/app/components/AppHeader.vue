@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
-
-const { header } = useAppConfig()
-</script>
-
 <template>
   <UHeader
     :ui="{ center: 'flex-1' }"
@@ -70,3 +62,11 @@ const { header } = useAppConfig()
     </template>
   </UHeader>
 </template>
+
+<script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+
+const { header } = useAppConfig()
+</script>

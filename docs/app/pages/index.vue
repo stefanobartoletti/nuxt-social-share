@@ -1,3 +1,11 @@
+<template>
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+    :prose="false"
+  />
+</template>
+
 <script setup lang="ts">
 const { data: page } = await useAsyncData('index', () => queryCollection('landing').path('/').first())
 if (!page.value) {
@@ -14,14 +22,6 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png'
+  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
 })
 </script>
-
-<template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    :prose="false"
-  />
-</template>
