@@ -1,10 +1,30 @@
 <template>
-  <div class="flex gap-2 flex-wrap justify-center w-full bg-white rounded p-4">
-    <SocialShare
-      v-for="network in ['facebook', 'x', 'linkedin']"
-      :key="network"
-      :network="network"
-      class="border-2 border-[color:--color-brand] text-[color:--color-brand] px-3 py-2 hover:bg-[color:--color-brand] hover:text-white"
-    />
-  </div>
+  <UCard class="bg-white flex justify-center">
+    <div class="share-buttons">
+      <SocialShare
+        v-for="network in ['facebook', 'x', 'linkedin']"
+        :key="network"
+        :network="network"
+      />
+    </div>
+  </UCard>
 </template>
+
+<style scoped>
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-share-button {
+  color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  padding: 0.5rem 0.75rem;
+}
+
+.social-share-button:hover {
+  background-color: var(--color-brand);
+  color: white;
+}
+</style>

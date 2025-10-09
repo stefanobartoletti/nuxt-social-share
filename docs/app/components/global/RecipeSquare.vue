@@ -1,12 +1,27 @@
 <template>
-  <div class="flex flex-wrap justify-center w-full bg-white rounded p-4">
-    <SocialShare
-      v-for="network in ['facebook', 'x', 'linkedin']"
-      :key="network"
-      :network="network"
-      :styled="true"
-      :label="false"
-      class="text-white p-4 aspect-square rounded-none border-none"
-    />
-  </div>
+  <UCard class="bg-white flex justify-center">
+    <div class="share-buttons">
+      <SocialShare
+        v-for="network in ['facebook', 'x', 'linkedin']"
+        :key="network"
+        :network="network"
+        :styled="true"
+        :label="false"
+      />
+    </div>
+  </UCard>
 </template>
+
+<style scoped>
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-share-button {
+  color: #fff;
+  padding: 1rem;
+  aspect-ratio: 1;
+  border-radius: 0;
+}
+</style>

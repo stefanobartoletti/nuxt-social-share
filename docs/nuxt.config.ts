@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'nuxt-og-image',
     'nuxt-llms',
+    '../src/module.ts',
   ],
 
   devtools: {
@@ -22,6 +23,10 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  socialShare: {
+    baseUrl: process.env.URL || 'http://localhost:3000',
   },
 
   compatibilityDate: '2024-07-11',
@@ -41,12 +46,13 @@ export default defineNuxtConfig({
   },
 
   llms: {
-    domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt Docs Template',
-    description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
+    domain: process.env.URL || 'http://localhost:3000',
+    title: 'Nuxt Social Share',
+    description: 'Simple social sharing for your Nuxt Sites',
     full: {
-      title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.',
+      title: 'Nuxt Social Share - Full Documentation',
+      description: 'This is the full documentation for the Nuxt Social Share module',
     },
   },
+
 })
