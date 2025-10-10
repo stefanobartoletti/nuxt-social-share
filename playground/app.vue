@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <!-- ComponentInstances -->
-    <section v-for="(instance, index) in instances" :key="index" class="section">
+    <section v-for="instance in instances" :key="instance.title" class="section">
       <h2 class="section-title">{{ instance.title }}</h2>
       <div class="buttons-container" :class="instance.class">
         <SocialShare
@@ -26,7 +26,7 @@
 
 <script setup>
 import { ref, useSocialShare } from '#imports'
-import { networksBase } from '/../src/runtime/networksIndex'
+import { networksBase } from '../src/runtime/networksIndex'
 
 const testNetworks = Object.keys(networksBase)
 const selectedNetwork = ref('facebook')
