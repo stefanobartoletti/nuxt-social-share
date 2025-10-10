@@ -41,7 +41,14 @@ export default defineNuxtConfig({
       ],
       script: [
         process.env.AHREFS_ANALYTICS_KEY ? { 'src': 'https://analytics.ahrefs.com/analytics.js', 'data-key': process.env.AHREFS_ANALYTICS_KEY } : false,
+        process.env.POSTHOG_API_KEY ? { src: 'https://eu.posthog.com/static/array.js', async: true } : false,
       ],
+    },
+  },
+
+    runtimeConfig: {
+    public: {
+      posthogPublicKey: process.env.POSTHOG_API_KEY,
     },
   },
 
