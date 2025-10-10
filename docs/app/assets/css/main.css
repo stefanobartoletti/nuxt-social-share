@@ -23,3 +23,8 @@
 :root {
   --ui-container: var(--container-8xl);
 }
+
+button:not(:disabled),
+[role='button']:not(:disabled) {
+  cursor: pointer;
+}
