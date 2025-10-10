@@ -110,8 +110,8 @@ importers:
         specifier: ^4.1.14
         version: 4.1.14(vite@7.1.9(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))
       daisyui:
-        specifier: ^5.0.35
-        version: 5.1.27
+        specifier: ^5.1.31
+        version: 5.1.31
       nuxt:
         specifier: ^3.17.2
         version: 3.19.0(@netlify/blobs@9.1.0)(@parcel/watcher@2.5.0)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.22)(db0@0.3.4)(eslint@9.37.0(jiti@2.6.1))(ioredis@5.8.1)(lightningcss@1.30.1)(magicast@0.3.5)(meow@13.2.0)(optionator@0.9.4)(rollup@4.52.4)(terser@5.44.0)(typescript@5.8.3)(vite@7.1.9(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))(vue-tsc@2.2.12(typescript@5.8.3))(yaml@2.8.1)
@@ -3391,8 +3391,8 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  daisyui@5.1.27:
-    resolution: {integrity: sha512-oCC2RwjrGRPTeEpaXoNmYydzVfSRdyJCthFsi/Q5PErAvaoD8kDarxlW+wiPAx2WmM8W8lXvyAHJUqjObCMWOQ==}
+  daisyui@5.1.31:
+    resolution: {integrity: sha512-p1zRMQ/eEfx1gpExFlyI62NksJ+UxyNC3kH4gYSK0JuL3qFXeo9R5lgkrIvos0V4ukaN+vMKMxGz7Gy6xg1hNg==}
 
   dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
@@ -11822,7 +11822,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  daisyui@5.1.27: {}
+  daisyui@5.1.31: {}
 
   dargs@8.1.0: {}
 
