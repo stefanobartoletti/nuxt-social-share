@@ -1,3 +1,5 @@
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
+
 export default defineNuxtPlugin(() => {
   if (!window.posthog) {
     console.warn('PostHog not loaded')
