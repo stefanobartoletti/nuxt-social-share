@@ -55,39 +55,41 @@ const selectedNetwork = useSocialShare({
 </script>
 
 <style>
-:where(.social-share-button) {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  text-decoration: none;
-  width: min-content;
-}
-
-:where(.social-share-button__icon) {
-  font-size: 1.5em;
-}
-
-:where(.social-share-button--styled) {
-  --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
-  font-size: 0.875rem;
-  line-height: normal;
-  padding: 0.5rem;
-  color: white;
-  border-radius: 0.25rem;
-  transition: background-color 0.25s ease-out;
-  background-color: var(--color-brand);
-
-  &:hover {
-    background-color: var(--color-hover);
+@layer components {
+  .social-share-button {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    text-decoration: none;
+    width: min-content;
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--color-brand);
-    outline-offset: 2px;
+  .social-share-button__icon {
+    font-size: 1.5em;
   }
 
-  :where(.social-share-button__label) {
-    padding: 0 0.5rem;
+  .social-share-button--styled {
+    --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
+    font-size: 0.875rem;
+    line-height: normal;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.25rem;
+    transition: background-color 0.25s ease-out;
+    background-color: var(--color-brand);
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand);
+      outline-offset: 2px;
+    }
+
+    .social-share-button__label {
+      padding: 0 0.5rem;
+    }
   }
 }
 </style>
