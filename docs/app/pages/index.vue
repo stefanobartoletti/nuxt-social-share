@@ -1,47 +1,28 @@
 <template>
-  <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero">
-      <template #headline>
-        <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
-          <NuxtLink :to="page.hero.headline.to" target="_blank" class="focus:outline-none" tabindex="-1">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </NuxtLink>
-
-          {{ page.hero.headline.label }}
-
-          <UIcon v-if="page.hero.headline.icon" :name="page.hero.headline.icon" class="ml-1 w-4 h-4 pointer-events-none" />
-        </UBadge>
-      </template>
-
-      <template #title>
-        <MDC :value="page.hero.title" />
-      </template>
-      <div class="flex flex-col gap-4">
-        <MDC :value="page.hero.code" class="prose prose-primary dark:prose-invert mx-auto" />
-        <ShareButtons />
-      </div>
-    </ULandingHero>
-
-    <ULandingSection :title="page.features.title" :links="page.features.links">
-      <UPageGrid>
-        <ULandingCard
-          v-for="(item, index) of page.features.items"
-          :key="index"
-          v-bind="item"
-        />
-      </UPageGrid>
-    </ULandingSection>
-  </div>
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+    :prose="false"
+  />
 </template>
 
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data: page } = await useAsyncData('index', () => queryCollection('landing').path('/').first())
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
+
+const title = page.value.seo?.title || page.value.title
+const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
   titleTemplate: '',
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description,
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
+  ogImage: `${process.env.URL || 'http://localhost:3000'}/social-card.png`,
+  twitterImage: `${process.env.URL || 'http://localhost:3000'}/social-card.png`,
+  twitterCard: 'summary_large_image',
 })
 </script>

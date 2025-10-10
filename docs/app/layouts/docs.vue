@@ -2,9 +2,12 @@
   <UContainer>
     <UPage>
       <template #left>
-        <UAside>
-          <UNavigationTree :links="mapContentNavigation(navigation)" />
-        </UAside>
+        <UPageAside>
+          <UContentNavigation
+            highlight
+            :navigation="navigation"
+          />
+        </UPageAside>
       </template>
 
       <slot></slot>
@@ -13,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<NavItem[]>>('navigation')
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>

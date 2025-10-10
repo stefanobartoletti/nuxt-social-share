@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <UApp>
     <NuxtLoadingIndicator />
 
     <AppHeader />
@@ -13,21 +13,19 @@
     <AppFooter />
 
     <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" />
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+      />
     </ClientOnly>
-
-    <UNotifications />
-  </div>
+  </UApp>
 </template>
 
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
-
 const { seo } = useAppConfig()
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
-  default: () => [],
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
   server: false,
 })
 
@@ -46,8 +44,6 @@ useHead({
 useSeoMeta({
   titleTemplate: `%s - ${seo?.siteName}`,
   ogSiteName: seo?.siteName,
-  ogImage: `${process.env.URL || 'http://localhost:3000'}/social-card.png`,
-  twitterImage: `${process.env.URL || 'http://localhost:3000'}/social-card.png`,
   twitterCard: 'summary_large_image',
 })
 

@@ -1,11 +1,13 @@
 export default defineAppConfig({
   ui: {
-    primary: 'green',
-    gray: 'slate',
+    colors: {
+      primary: 'green',
+      neutral: 'slate',
+    },
     footer: {
-      bottom: {
-        left: 'text-sm text-gray-500 dark:text-gray-400',
-        wrapper: 'border-t border-gray-200 dark:border-gray-800',
+      slots: {
+        root: 'border-t border-default',
+        left: 'text-sm text-muted',
       },
     },
   },
@@ -13,6 +15,8 @@ export default defineAppConfig({
     siteName: 'Nuxt Social Share',
   },
   header: {
+    title: 'Nuxt Social Share',
+    to: '/',
     logo: {
       alt: 'Nuxt Social Share',
       light: '/logo-light.svg',
@@ -20,17 +24,15 @@ export default defineAppConfig({
     },
     search: true,
     colorMode: true,
-    links: [
-      {
-        'icon': 'i-simple-icons-github',
-        'to': 'https://github.com/stefanobartoletti/nuxt-social-share',
-        'target': '_blank',
-        'aria-label': 'Repository on GitHub',
-      },
-    ],
+    links: [{
+      'icon': 'i-simple-icons-github',
+      'to': 'https://github.com/stefanobartoletti/nuxt-social-share',
+      'target': '_blank',
+      'aria-label': 'GitHub',
+    }],
   },
   footer: {
-    credits: '© 2023-present Stefano Bartoletti',
+    credits: `Built with Nuxt UI • © 2023-${new Date().getFullYear()} • Stefano Bartoletti`,
     colorMode: false,
     links: [
       {

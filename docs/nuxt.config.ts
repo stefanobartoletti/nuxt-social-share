@@ -1,28 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
-  uiPro: {
-    license: 'oss',
-    content: true,
-  },
-
   modules: [
-    '../src/module',
-    '@nuxt/content',
-    '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxthq/studio',
     '@nuxtjs/seo',
+    '@nuxt/content',
+    'nuxt-llms',
+    '../src/module.ts',
   ],
 
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton', 'UIcon'].includes(c.pascalName))
+  devtools: {
+    enabled: true,
+  },
 
-      globals.forEach(c => c.global = true)
+  css: ['~/assets/css/main.css'],
+
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          searchDepth: 1,
+        },
+      },
     },
   },
 
@@ -31,7 +30,7 @@ export default defineNuxtConfig({
     url: process.env.BRANCH === 'release' ? process.env.URL : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     name: 'Nuxt Social Share',
     indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
-    trailingSlash: true,
+    trailingSlash: false,
     defaultLocale: 'en',
   },
 
@@ -42,56 +41,45 @@ export default defineNuxtConfig({
       ],
       script: [
         process.env.AHREFS_ANALYTICS_KEY ? { 'src': 'https://analytics.ahrefs.com/analytics.js', 'data-key': process.env.AHREFS_ANALYTICS_KEY } : false,
+        process.env.POSTHOG_API_KEY ? { src: 'https://eu.posthog.com/static/array.js', async: true } : false,
       ],
     },
   },
 
-  nitro: {
-    preset: 'netlify-static',
-  },
-
-  sitemap: {
-    sources: [
-      '/api/__sitemap__/urls',
-    ],
-  },
-
-  colorMode: {
-    disableTransition: true,
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: process.env.POSTHOG_API_KEY,
+    },
   },
 
   socialShare: {
     baseUrl: process.env.URL || 'http://localhost:3000',
   },
 
-  routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true },
-    '/api/search.json': { prerender: true },
-  },
+  compatibilityDate: '2024-07-11',
 
-  devtools: {
-    enabled: true,
-  },
-
-  typescript: {
-    strict: false,
-  },
-
-  plugins: [
-    './plugins/posthog.client.js',
-  ],
-
-  runtimeConfig: {
-    public: {
-      posthogPublicKey: process.env.POSTHOG_API_KEY,
-      posthogHost: process.env.POSTHOG_API_HOST,
+  nitro: {
+    prerender: {
+      routes: [
+        '/',
+      ],
+      crawlLinks: true,
+      autoSubfolderIndex: false,
     },
   },
 
-  future: {
-    compatibilityVersion: 4,
+  icon: {
+    provider: 'iconify',
   },
 
-  compatibilityDate: '2024-07-11',
+  llms: {
+    domain: process.env.URL || 'http://localhost:3000',
+    title: 'Nuxt Social Share',
+    description: 'Simple social sharing for your Nuxt Sites',
+    full: {
+      title: 'Nuxt Social Share - Full Documentation',
+      description: 'This is the full documentation for the Nuxt Social Share module',
+    },
+  },
+
 })

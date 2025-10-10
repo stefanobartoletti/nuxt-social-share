@@ -1,22 +1,57 @@
 <template>
-  <UPage>
-    <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
+  <UPage v-if="page">
+    <UPageHeader
+      :title="page.title"
+      :description="page.description"
+      :headline="headline"
+    >
+      <template #links>
+        <UButton
+          v-for="(link, index) in page.links"
+          :key="index"
+          v-bind="link"
+        />
 
-    <UPageBody prose>
-      <ContentRenderer v-if="page.body" :value="page" />
+        <PageHeaderLinks />
+      </template>
+    </UPageHeader>
 
-      <hr v-if="surround?.length" />
+    <UPageBody>
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
+
+      <USeparator v-if="surround?.length" />
 
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template v-if="page.toc !== false" #right>
-      <UContentToc :title="toc?.title" :links="page.body?.toc?.links">
-        <template v-if="toc?.bottom" #bottom>
-          <div class="hidden lg:block space-y-6" :class="{ '!mt-6': page.body?.toc?.links?.length }">
-            <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
+    <template
+      v-if="page?.body?.toc?.links?.length"
+      #right
+    >
+      <UContentToc
+        :title="toc?.title"
+        :links="page.body?.toc?.links"
+      >
+        <template
+          v-if="toc?.bottom"
+          #bottom
+        >
+          <div
+            class="hidden lg:block space-y-6"
+            :class="{ '!mt-6': page.body?.toc?.links?.length }"
+          >
+            <USeparator
+              v-if="page.body?.toc?.links?.length"
+              type="dashed"
+            />
 
-            <UPageLinks :title="toc.bottom.title" :links="links" />
+            <UPageLinks
+              :title="toc.bottom.title"
+              :links="links"
+            />
           </div>
         </template>
       </UContentToc>
@@ -25,44 +60,55 @@
 </template>
 
 <script setup lang="ts">
-import { withoutTrailingSlash } from 'ufo'
+import type { ContentNavigationItem } from '@nuxt/content'
+import { findPageHeadline } from '@nuxt/content/utils'
 
 definePageMeta({
   layout: 'docs',
 })
 
 const route = useRoute()
-const { toc, seo } = useAppConfig()
+const { toc } = useAppConfig()
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
+const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent()
-  .where({ _extension: 'md', navigation: { $ne: false } })
-  .only(['title', 'description', '_path'])
-  .findSurround(withoutTrailingSlash(route.path)))
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+  return queryCollectionItemSurroundings('docs', route.path, {
+    fields: ['description'],
+  })
+})
+
+const title = page.value.seo?.title || page.value.title
+const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
-  title: page.value.title,
-  ogTitle: `${page.value.title} - ${seo?.siteName}`,
-  description: page.value.description,
-  ogDescription: page.value.description,
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
 })
 
-defineOgImage({
-  component: 'Docs',
-  title: page.value.title,
-  description: page.value.description,
+const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
+
+defineOgImageComponent('Docs', {
+  headline: headline.value,
 })
 
-const headline = computed(() => findPageHeadline(page.value))
+const links = computed(() => {
+  const links = []
+  if (toc?.bottom?.edit) {
+    links.push({
+      icon: 'i-lucide-edit',
+      label: 'Edit this page',
+      to: `${toc.bottom.edit}/${page?.value?.stem}.${page?.value?.extension}`,
+      target: '_blank',
+    })
+  }
 
-const links = computed(() => [toc?.bottom?.edit && {
-  icon: 'i-lucide-edit',
-  label: 'Edit this page',
-  to: `${toc.bottom.edit}/${page?.value?._file}`,
-  target: '_blank',
-}, ...(toc?.bottom?.links || [])].filter(Boolean))
+  return [...links, ...(toc?.bottom?.links || [])].filter(Boolean)
+})
 </script>
