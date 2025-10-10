@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     },
   },
 
-    runtimeConfig: {
+  runtimeConfig: {
     public: {
       posthogPublicKey: process.env.POSTHOG_API_KEY,
     },
