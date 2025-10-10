@@ -74,11 +74,16 @@ const selectedNetwork = useSocialShare({
   padding: 0.5rem;
   color: white;
   border-radius: 0.25rem;
-  transition: all 0.25s ease-out;
+  transition: background 0.25s ease-out;
   background-color: var(--color-brand);
 
   &:hover {
     background-color: var(--color-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
   }
 
   :where(.social-share-button__label) {
