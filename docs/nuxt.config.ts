@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxt/ui',
+    '@nuxtjs/seo',
     '@nuxt/content',
-    'nuxt-og-image',
     'nuxt-llms',
     '../src/module.ts',
   ],
@@ -22,6 +22,26 @@ export default defineNuxtConfig({
           searchDepth: 1,
         },
       },
+    },
+  },
+
+  site: {
+    // environment variables provided by Netlify
+    url: process.env.BRANCH === 'release' ? process.env.URL : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
+    name: 'Nuxt Social Share',
+    indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
+    trailingSlash: true,
+    defaultLocale: 'en',
+  },
+
+  app: {
+    head: {
+      meta: [
+        process.env.GOOGLE_VERIFICATION ? { name: 'google-site-verification', content: process.env.GOOGLE_VERIFICATION } : false,
+      ],
+      script: [
+        process.env.AHREFS_ANALYTICS_KEY ? { 'src': 'https://analytics.ahrefs.com/analytics.js', 'data-key': process.env.AHREFS_ANALYTICS_KEY } : false,
+      ],
     },
   },
 
