@@ -97,8 +97,7 @@ const data = computed(() => {
       }
     }
 
-    // Check if this network has an alias
-    const alias = Object.keys(networksAlias).find(aliasKey => networksAlias[aliasKey] === network) || null
+    const alias = Object.entries(networksAlias).find(([_aliasKey, networkObj]) => networksBase[key] === networkObj)?.[0] || null
 
     return {
       network: key,
