@@ -84,7 +84,7 @@ Powerful, customizable and easy to use
   ---
   icon: i-lucide-palette
   title: Designer Friendly
-  description: Created with custom styling in mind, for easy intergation in any UI
+  description: Created with custom styling in mind, for easy integration in any UI
   ---
   :::
 
