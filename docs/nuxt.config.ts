@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     url: process.env.BRANCH === 'release' ? process.env.URL : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     name: 'Nuxt Social Share',
     indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
-    trailingSlash: true,
+    trailingSlash: false,
     defaultLocale: 'en',
   },
 
