@@ -74,7 +74,7 @@ const selectedNetwork = useSocialShare({
   padding: 0.5rem;
   color: white;
   border-radius: 0.25rem;
-  transition: background 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
   background-color: var(--color-brand);
 
   &:hover {
