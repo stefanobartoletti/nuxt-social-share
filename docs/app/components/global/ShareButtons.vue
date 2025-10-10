@@ -6,7 +6,6 @@
         :key="network"
         :network="network"
         :styled="true"
-        class="text-white border-none p-10"
       />
     </div>
   </UCard>
