@@ -1,5 +1,45 @@
 # Changelog
 
+## v2.0.0
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.2.3...v2.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Update to Nuxt 4 ([9718eb1](https://github.com/stefanobartoletti/nuxt-social-share/commit/9718eb1))
+- Use `@layer components` for the component default styles ([86d6a36](https://github.com/stefanobartoletti/nuxt-social-share/commit/86d6a36))
+
+### 🩹 Fixes
+
+- **deps:** Update dependency posthog-js to ^1.270.1 ([#366](https://github.com/stefanobartoletti/nuxt-social-share/pull/366))
+- **deps:** Update @iconify-json ([#369](https://github.com/stefanobartoletti/nuxt-social-share/pull/369))
+- **deps:** Update dependency @nuxt/fonts to ^0.11.4 ([#367](https://github.com/stefanobartoletti/nuxt-social-share/pull/367))
+- **deps:** Update dependency @nuxt/ui-pro to ^1.8.2 ([#360](https://github.com/stefanobartoletti/nuxt-social-share/pull/360))
+- **deps:** Update dependency posthog-js to ^1.271.0 ([#376](https://github.com/stefanobartoletti/nuxt-social-share/pull/376))
+- **deps:** Update tailwindcss monorepo to ^4.1.14 ([#368](https://github.com/stefanobartoletti/nuxt-social-share/pull/368))
+- **deps:** Update dependency @nuxt/image to ^1.11.0 ([#385](https://github.com/stefanobartoletti/nuxt-social-share/pull/385))
+- **deps:** Update dependency @nuxtjs/seo to v3.2.2 ([#390](https://github.com/stefanobartoletti/nuxt-social-share/pull/390))
+- **deps:** Update dependency @iconify-json/lucide to ^1.2.69 ([#397](https://github.com/stefanobartoletti/nuxt-social-share/pull/397))
+
+### 📖 Documentation
+
+- Migrate to NuxtContent 3 & NuxtUI 4 ([6d0e6aa](https://github.com/stefanobartoletti/nuxt-social-share/commit/6d0e6aa))
+
+### 🤖 CI
+
+- Update ci config ([e9e63c9](https://github.com/stefanobartoletti/nuxt-social-share/commit/e9e63c9))
+- Add Claude Code workflow ([d603a23](https://github.com/stefanobartoletti/nuxt-social-share/commit/d603a23))
+- Move from release-it to changelogen ([6a40f79](https://github.com/stefanobartoletti/nuxt-social-share/commit/6a40f79))
+- Move from release-it to changelogen ([c146a90](https://github.com/stefanobartoletti/nuxt-social-share/commit/c146a90))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update to Nuxt 4 ([9718eb1](https://github.com/stefanobartoletti/nuxt-social-share/commit/9718eb1))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti ([@stefanobartoletti](https://github.com/stefanobartoletti))
+
 ## <small>1.2.3 (2025-05-19)</small>
 
 * fix: allow sharing URLs with multiple parameters ([0b78c1e](https://github.com/stefanobartoletti/nuxt-social-share/commit/0b78c1e))
