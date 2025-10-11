@@ -59,6 +59,13 @@ git push --follow-tags || {
   exit 1
 }
 
+# Create GitHub release using changelogen
+echo "🐙 Creating GitHub release..."
+changelogen gh release || {
+  echo "❌ Failed to create GitHub release"
+  exit 1
+}
+
 # Switch back to main and merge release
 echo "🔄 Switching to main and merging release..."
 git checkout main || {
