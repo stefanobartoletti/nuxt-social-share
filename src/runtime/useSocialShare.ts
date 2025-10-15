@@ -16,6 +16,13 @@ export function useSocialShare(options: Options = defaultOptions) {
   const { network, url, title, user, hashtags, image } = options
   const moduleOptions = useRuntimeConfig().public.socialShare
 
+  // Gracefully fail if provided network is not valid
+  if (!networksIndex[network]) {
+    const availableNetworks = Object.keys(networksIndex).sort().join(', ')
+    console.warn(`[nuxt-social-share] Network "${network}" is not valid.\n Available networks: ${availableNetworks}.\n See https://nuxt-social-share.stefanobartoletti.it/usage/supported-networks`)
+    return null
+  }
+
   // Get network. Using a shallow copy to avoid mutating the original object
   const selectedNetwork = ref({ ...networksIndex[network] })
   const route = useRoute()

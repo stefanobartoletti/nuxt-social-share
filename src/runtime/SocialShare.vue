@@ -1,5 +1,6 @@
 <template>
   <a
+    v-if="selectedNetwork"
     class="social-share-button"
     :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
     :href="selectedNetwork.shareUrl"
