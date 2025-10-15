@@ -1,6 +1,7 @@
-import type { Options } from './types/'
+import type { ComputedRef } from '#imports'
+import type { Network, Options } from './types/'
 
-import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
+import { computed, useRoute, useRuntimeConfig } from '#imports'
 import { networksIndex } from './networksIndex'
 
 const defaultOptions = {
@@ -12,12 +13,19 @@ const defaultOptions = {
   image: undefined,
 }
 
-export function useSocialShare(options: Options = defaultOptions) {
+export function useSocialShare(options: Options = defaultOptions): ComputedRef<Network | null> {
   const { network, url, title, user, hashtags, image } = options
   const moduleOptions = useRuntimeConfig().public.socialShare
 
-  // Get network. Using a shallow copy to avoid mutating the original object
-  const selectedNetwork = ref({ ...networksIndex[network] })
+  // Gracefully fail if provided network is not valid
+  if (!networksIndex[network]) {
+    const availableNetworks = Object.keys(networksIndex).sort().join(', ')
+    console.warn(`[nuxt-social-share] Network "${network}" is not valid.\n Available networks: ${availableNetworks}.\n See https://nuxt-social-share.stefanobartoletti.it/usage/supported-networks`)
+    return computed(() => null)
+  }
+
+  // Get selected network
+  const selectedNetwork = networksIndex[network]
   const route = useRoute()
 
   // Set default value for url if not provided from options
@@ -36,29 +44,35 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   const fullShareUrl = computed(() => {
     // Build full share raw url
-    const shareUrl = selectedNetwork.value.shareUrl
-    const argTitle = (selectedNetwork.value.args?.title && title) ? selectedNetwork.value.args?.title : ''
-    const argUser = (selectedNetwork.value.args?.user && user) ? selectedNetwork.value.args?.user : ''
-    const argHashtags = (selectedNetwork.value.args?.hashtags && hashtags) ? selectedNetwork.value.args?.hashtags : ''
-    const argImage = (selectedNetwork.value.args?.image && image) ? selectedNetwork.value.args?.image : ''
+    const shareUrl = selectedNetwork.shareUrl
+    const argTitle = (selectedNetwork.args?.title && title) ? selectedNetwork.args?.title : ''
+    const argUser = (selectedNetwork.args?.user && user) ? selectedNetwork.args?.user : ''
+    const argHashtags = (selectedNetwork.args?.hashtags && hashtags) ? selectedNetwork.args?.hashtags : ''
+    const argImage = (selectedNetwork.args?.image && image) ? selectedNetwork.args?.image : ''
 
     let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
-    // Replace placeholders with actual values
+    // Replace placeholders with actual values (encode all parameters for URL safety)
     fullUrl = fullUrl
       .replace(/\[u\]/i, encodeURIComponent(pageUrl.value))
-      .replace(/\[t\]/i, title || '')
-      .replace(/\[uid\]/i, user || '')
-      .replace(/\[h\]/i, hashtags || '')
-      .replace(/\[i\]/i, image || '')
+      .replace(/\[t\]/i, encodeURIComponent(title || ''))
+      .replace(/\[uid\]/i, encodeURIComponent(user || ''))
+      .replace(/\[h\]/i, encodeURIComponent(hashtags || ''))
+      .replace(/\[i\]/i, encodeURIComponent(image || ''))
 
     return new URL(fullUrl).href
   })
 
-  // Update shareNetwork object
+  // Return a fully reactive network object
+  const reactiveNetwork = computed(() => {
+    // Destructure to explicitly exclude args and raw shareUrl
+    const { args, shareUrl: rawShareUrl, ...networkProps } = selectedNetwork
 
-  selectedNetwork.value.shareUrl = fullShareUrl.value
-  delete selectedNetwork.value.args
+    return {
+      ...networkProps,
+      shareUrl: fullShareUrl.value,
+    }
+  })
 
-  return selectedNetwork
+  return reactiveNetwork
 }
