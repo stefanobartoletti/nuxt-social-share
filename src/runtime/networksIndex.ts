@@ -3,6 +3,7 @@ import type { NetworksIndex } from './types'
 import { bluesky } from './networks/bluesky'
 import { email } from './networks/email'
 import { facebook } from './networks/facebook'
+import { instapaper } from './networks/instapaper'
 import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
 import { pinterest } from './networks/pinterest'
@@ -14,6 +15,7 @@ import { threads } from './networks/threads'
 import { viber } from './networks/viber'
 import { whatsapp } from './networks/whatsapp'
 import { x } from './networks/x'
+import { xing } from './networks/xing'
 
 export const networksBase: NetworksIndex = {
   // Social Networks
@@ -24,8 +26,10 @@ export const networksBase: NetworksIndex = {
   reddit,
   bluesky,
   threads,
+  xing,
   // Read it later
   pocket,
+  instapaper,
   // Instant Messaging
   whatsapp,
   telegram,
