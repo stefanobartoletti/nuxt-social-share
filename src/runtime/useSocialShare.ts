@@ -51,13 +51,13 @@ export function useSocialShare(options: Options = defaultOptions) {
 
     let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
-    // Replace placeholders with actual values
+    // Replace placeholders with actual values (encode all parameters for URL safety)
     fullUrl = fullUrl
       .replace(/\[u\]/i, encodeURIComponent(pageUrl.value))
-      .replace(/\[t\]/i, title || '')
-      .replace(/\[uid\]/i, user || '')
-      .replace(/\[h\]/i, hashtags || '')
-      .replace(/\[i\]/i, image || '')
+      .replace(/\[t\]/i, encodeURIComponent(title || ''))
+      .replace(/\[uid\]/i, encodeURIComponent(user || ''))
+      .replace(/\[h\]/i, encodeURIComponent(hashtags || ''))
+      .replace(/\[i\]/i, encodeURIComponent(image || ''))
 
     return new URL(fullUrl).href
   })
