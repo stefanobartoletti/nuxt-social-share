@@ -1,6 +1,6 @@
 import type { Options } from './types/'
 
-import { computed, ref, useRoute, useRuntimeConfig } from '#imports'
+import { computed, useRoute, useRuntimeConfig } from '#imports'
 import { networksIndex } from './networksIndex'
 
 const defaultOptions = {
@@ -23,8 +23,8 @@ export function useSocialShare(options: Options = defaultOptions) {
     return null
   }
 
-  // Get network. Using a shallow copy to avoid mutating the original object
-  const selectedNetwork = ref({ ...networksIndex[network] })
+  // Get selected network
+  const selectedNetwork = networksIndex[network]
   const route = useRoute()
 
   // Set default value for url if not provided from options
@@ -43,11 +43,11 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   const fullShareUrl = computed(() => {
     // Build full share raw url
-    const shareUrl = selectedNetwork.value.shareUrl
-    const argTitle = (selectedNetwork.value.args?.title && title) ? selectedNetwork.value.args?.title : ''
-    const argUser = (selectedNetwork.value.args?.user && user) ? selectedNetwork.value.args?.user : ''
-    const argHashtags = (selectedNetwork.value.args?.hashtags && hashtags) ? selectedNetwork.value.args?.hashtags : ''
-    const argImage = (selectedNetwork.value.args?.image && image) ? selectedNetwork.value.args?.image : ''
+    const shareUrl = selectedNetwork.shareUrl
+    const argTitle = (selectedNetwork.args?.title && title) ? selectedNetwork.args?.title : ''
+    const argUser = (selectedNetwork.args?.user && user) ? selectedNetwork.args?.user : ''
+    const argHashtags = (selectedNetwork.args?.hashtags && hashtags) ? selectedNetwork.args?.hashtags : ''
+    const argImage = (selectedNetwork.args?.image && image) ? selectedNetwork.args?.image : ''
 
     let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 
@@ -62,10 +62,16 @@ export function useSocialShare(options: Options = defaultOptions) {
     return new URL(fullUrl).href
   })
 
-  // Update shareNetwork object
+  // Return a fully reactive network object
+  const reactiveNetwork = computed(() => {
+    const networkDefinition = { ...selectedNetwork }
+    delete networkDefinition.args
 
-  selectedNetwork.value.shareUrl = fullShareUrl.value
-  delete selectedNetwork.value.args
+    return {
+      ...networkDefinition,
+      shareUrl: fullShareUrl.value,
+    }
+  })
 
-  return selectedNetwork
+  return reactiveNetwork
 }
