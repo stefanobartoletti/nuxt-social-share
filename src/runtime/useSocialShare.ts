@@ -1,4 +1,5 @@
-import type { Options } from './types/'
+import type { ComputedRef } from '#imports'
+import type { Network, Options } from './types/'
 
 import { computed, useRoute, useRuntimeConfig } from '#imports'
 import { networksIndex } from './networksIndex'
@@ -12,7 +13,7 @@ const defaultOptions = {
   image: undefined,
 }
 
-export function useSocialShare(options: Options = defaultOptions) {
+export function useSocialShare(options: Options = defaultOptions): ComputedRef<Network | null> {
   const { network, url, title, user, hashtags, image } = options
   const moduleOptions = useRuntimeConfig().public.socialShare
 
@@ -20,7 +21,7 @@ export function useSocialShare(options: Options = defaultOptions) {
   if (!networksIndex[network]) {
     const availableNetworks = Object.keys(networksIndex).sort().join(', ')
     console.warn(`[nuxt-social-share] Network "${network}" is not valid.\n Available networks: ${availableNetworks}.\n See https://nuxt-social-share.stefanobartoletti.it/usage/supported-networks`)
-    return null
+    return computed(() => null)
   }
 
   // Get selected network
@@ -64,11 +65,11 @@ export function useSocialShare(options: Options = defaultOptions) {
 
   // Return a fully reactive network object
   const reactiveNetwork = computed(() => {
-    const networkDefinition = { ...selectedNetwork }
-    delete networkDefinition.args
+    // Destructure to explicitly exclude args and raw shareUrl
+    const { args, shareUrl: rawShareUrl, ...networkProps } = selectedNetwork
 
     return {
-      ...networkDefinition,
+      ...networkProps,
       shareUrl: fullShareUrl.value,
     }
   })
