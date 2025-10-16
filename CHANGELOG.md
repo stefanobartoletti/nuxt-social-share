@@ -1,5 +1,33 @@
 # Changelog
 
+## v2.1.0
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.0.0...v2.1.0)
+
+### 🚀 Enhancements
+
+- Add Xing network ([da1015d](https://github.com/stefanobartoletti/nuxt-social-share/commit/da1015d))
+- Add Instapaper network ([63548de](https://github.com/stefanobartoletti/nuxt-social-share/commit/63548de))
+- Add Raindrop network ([c071877](https://github.com/stefanobartoletti/nuxt-social-share/commit/c071877))
+
+### 🩹 Fixes
+
+- Gracefully fail if provided network is not valid ([a793597](https://github.com/stefanobartoletti/nuxt-social-share/commit/a793597))
+- Encode all shared URL parameters for safety ([d512fc8](https://github.com/stefanobartoletti/nuxt-social-share/commit/d512fc8))
+- Enhance type safety in useSocialShare composable ([b4b7b1f](https://github.com/stefanobartoletti/nuxt-social-share/commit/b4b7b1f))
+
+### 💅 Refactors
+
+- Improve reactivity in useSocialShare composable ([0240711](https://github.com/stefanobartoletti/nuxt-social-share/commit/0240711))
+
+### 🤖 CI
+
+- Update ci config ([caff0c8](https://github.com/stefanobartoletti/nuxt-social-share/commit/caff0c8))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+
 ## v2.0.0
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v1.2.3...v2.0.0)
