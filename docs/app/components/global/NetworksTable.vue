@@ -25,8 +25,9 @@ function renderIcon(iconData) {
     class: 'w-6 h-6',
   }, [
     h('path', {
-      d: iconData.path,
-      fill: 'currentColor',
+      'd': iconData.path,
+      'fill': 'currentColor',
+      'fill-rule': 'evenodd',
     }),
   ])
 }

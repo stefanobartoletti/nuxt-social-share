@@ -8,6 +8,7 @@ import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
 import { pinterest } from './networks/pinterest'
 import { pocket } from './networks/pocket'
+import { raindrop } from './networks/raindrop'
 import { reddit } from './networks/reddit'
 import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
@@ -30,6 +31,7 @@ export const networksBase: NetworksIndex = {
   // Read it later
   pocket,
   instapaper,
+  raindrop,
   // Instant Messaging
   whatsapp,
   telegram,
