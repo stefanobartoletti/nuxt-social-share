@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.1.1
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.1.0...v2.1.1)
+
+### 🩹 Fixes
+
+- **deps:** Update @iconify-json ([4429fac](https://github.com/stefanobartoletti/nuxt-social-share/commit/4429fac))
+- **deps:** Update dependency @nuxt/ui to ^4.1.0 ([ec4befd](https://github.com/stefanobartoletti/nuxt-social-share/commit/ec4befd))
+
+### 📖 Documentation
+
+- Add details about Tailwind compatibility ([596ea00](https://github.com/stefanobartoletti/nuxt-social-share/commit/596ea00))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+
 ## v2.1.0
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.0.0...v2.1.0)
