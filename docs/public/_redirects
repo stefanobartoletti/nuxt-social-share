@@ -2,3 +2,5 @@
 # https://docs.netlify.com/routing/redirects/
 
 https://nuxt-social-share.netlify.app/*   https://nuxt-social-share.stefanobartoletti.it/:splat    301!
+
+/examples/styling    /examples/custom-styling    301
