@@ -15,7 +15,7 @@
 
 ### ❤️ Contributors
 
-- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+- Stefano Bartoletti ([@stefanobartoletti](https://github.com/stefanobartoletti))
 
 ## v2.1.0
 
@@ -43,7 +43,7 @@
 
 ### ❤️ Contributors
 
-- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+- Stefano Bartoletti ([@stefanobartoletti](https://github.com/stefanobartoletti))
 
 ## v2.0.0
 
@@ -554,7 +554,7 @@
 
 ### ❤️ Contributors
 
-- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+- Stefano Bartoletti ([@stefanobartoletti](https://github.com/stefanobartoletti))
 
 ## v0.1.6
 
@@ -562,7 +562,7 @@
 
 ### ❤️ Contributors
 
-- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+- Stefano Bartoletti ([@stefanobartoletti](https://github.com/stefanobartoletti))
 
 ## v0.1.1
 

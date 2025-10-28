@@ -38,7 +38,7 @@ pnpm prepack || {
 
 # Generate changelog and bump version
 echo "📝 Generating changelog and bumping version..."
-changelogen --release || {
+changelogen --release --hideAuthorEmail || {
   echo "❌ Changelog generation failed"
   exit 1
 }
