@@ -6,7 +6,10 @@
   "description": "Simple Social Sharing for Nuxt",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
   "license": "MIT",
-  "repository": "stefanobartoletti/nuxt-social-share",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanobartoletti/nuxt-social-share.git"
+  },
   "keywords": [
     "nuxt",
     "nuxt-module",
