@@ -15,6 +15,7 @@ import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
 import { threads } from './networks/threads'
 import { viber } from './networks/viber'
+import { vkontakte } from './networks/vkontakte'
 import { whatsapp } from './networks/whatsapp'
 import { x } from './networks/x'
 import { xing } from './networks/xing'
@@ -29,6 +30,7 @@ export const networksBase: NetworksIndex = {
   bluesky,
   threads,
   mastodon,
+  vkontakte,
   xing,
   // Read it later
   pocket,
@@ -46,6 +48,7 @@ export const networksBase: NetworksIndex = {
 
 export const networksAlias: NetworksIndex = {
   twitter: x,
+  vk: vkontakte,
 }
 
 export const networksIndex: NetworksIndex = {
