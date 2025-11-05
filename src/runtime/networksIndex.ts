@@ -14,6 +14,7 @@ import { reddit } from './networks/reddit'
 import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
 import { threads } from './networks/threads'
+import { tumblr } from './networks/tumblr'
 import { viber } from './networks/viber'
 import { vkontakte } from './networks/vkontakte'
 import { whatsapp } from './networks/whatsapp'
@@ -32,6 +33,7 @@ export const networksBase: NetworksIndex = {
   mastodon,
   vkontakte,
   xing,
+  tumblr,
   // Read it later
   pocket,
   instapaper,
