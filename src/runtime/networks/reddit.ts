@@ -1,3 +1,7 @@
+/**
+ * Reddit Network Definition
+ */
+
 import type { Network } from '../types'
 
 export const reddit: Network = {

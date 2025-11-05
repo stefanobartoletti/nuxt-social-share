@@ -1,3 +1,8 @@
+/**
+ * Threads Network Definition
+ * @see https://developers.facebook.com/docs/threads/threads-web-intents/
+ */
+
 import type { Network } from '../types'
 
 export const threads: Network = {

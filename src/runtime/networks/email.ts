@@ -1,3 +1,8 @@
+/**
+ * Email Network Definition
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#linking_to_an_email_address
+ */
+
 import type { Network } from '../types'
 
 export const email: Network = {

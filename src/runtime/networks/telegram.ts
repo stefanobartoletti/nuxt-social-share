@@ -1,3 +1,8 @@
+/**
+ * Telegram Network Definition
+ * @see https://core.telegram.org/widgets/share
+ */
+
 import type { Network } from '../types'
 
 export const telegram: Network = {

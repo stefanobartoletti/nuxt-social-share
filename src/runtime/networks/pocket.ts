@@ -1,3 +1,7 @@
+/**
+ * Pocket Network Definition
+ */
+
 import type { Network } from '../types'
 
 export const pocket: Network = {

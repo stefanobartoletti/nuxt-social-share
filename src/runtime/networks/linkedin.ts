@@ -1,3 +1,8 @@
+/**
+ * LinkedIn Network Definition
+ * @see https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/plugins/share-plugin
+ */
+
 import type { Network } from '../types'
 
 export const linkedin: Network = {

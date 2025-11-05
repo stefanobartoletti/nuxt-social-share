@@ -1,3 +1,8 @@
+/**
+ * Bluesky Network Definition
+ * @see https://docs.bsky.app/docs/advanced-guides/intent-links
+ */
+
 import type { Network } from '../types'
 
 export const bluesky: Network = {

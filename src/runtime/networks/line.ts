@@ -1,3 +1,8 @@
+/**
+ * LINE Network Definition
+ * @see https://developers.line.biz/en/docs/line-social-plugins/install-guide/using-line-share-buttons
+ */
+
 import type { Network } from '../types'
 
 export const line: Network = {

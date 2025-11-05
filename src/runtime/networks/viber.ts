@@ -1,3 +1,8 @@
+/**
+ * Viber Network Definotion
+ * @see https://developers.viber.com/docs/tools/share-button/
+ */
+
 import type { Network } from '../types'
 
 export const viber: Network = {

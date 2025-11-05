@@ -1,3 +1,8 @@
+/**
+ * X Network Definition
+ * @see https://developer.x.com/en/docs/x-for-websites/tweet-button/guides/web-intent
+ */
+
 import type { Network } from '../types'
 
 export const x: Network = {

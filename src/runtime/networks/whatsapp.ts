@@ -1,3 +1,8 @@
+/**
+ * WhatsApp Network Definition
+ * @see https://faq.whatsapp.com/5913398998672934
+ */
+
 import type { Network } from '../types'
 
 export const whatsapp: Network = {

@@ -1,3 +1,7 @@
+/**
+ * Skype Network Definition
+ */
+
 import type { Network } from '../types'
 
 export const skype: Network = {

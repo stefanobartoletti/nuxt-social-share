@@ -1,3 +1,8 @@
+/**
+ * Pinterest Network Definition
+ * @see https://developers.pinterest.com/docs/web-features/buttons/
+ */
+
 import type { Network } from '../types'
 
 export const pinterest: Network = {

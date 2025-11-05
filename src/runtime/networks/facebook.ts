@@ -1,3 +1,8 @@
+/**
+ * Facebook Network Definition
+ * @see https://developers.facebook.com/docs/sharing/reference/share-dialog
+ */
+
 import type { Network } from '../types'
 
 export const facebook: Network = {
