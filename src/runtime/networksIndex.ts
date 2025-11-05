@@ -6,6 +6,7 @@ import { facebook } from './networks/facebook'
 import { instapaper } from './networks/instapaper'
 import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
+import { mastodon } from './networks/mastodon'
 import { pinterest } from './networks/pinterest'
 import { pocket } from './networks/pocket'
 import { raindrop } from './networks/raindrop'
@@ -27,6 +28,7 @@ export const networksBase: NetworksIndex = {
   reddit,
   bluesky,
   threads,
+  mastodon,
   xing,
   // Read it later
   pocket,
