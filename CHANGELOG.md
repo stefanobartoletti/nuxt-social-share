@@ -1,5 +1,33 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.1.1...v2.2.0)
+
+### 🚀 Enhancements
+
+- Add Mastodon network ([1da4fe8](https://github.com/stefanobartoletti/nuxt-social-share/commit/1da4fe8))
+- Add VKontakte network ([5c04df7](https://github.com/stefanobartoletti/nuxt-social-share/commit/5c04df7))
+- Add Tumblr network ([b5838f0](https://github.com/stefanobartoletti/nuxt-social-share/commit/b5838f0))
+- Add Hacker News network ([3f854bb](https://github.com/stefanobartoletti/nuxt-social-share/commit/3f854bb))
+
+### 📖 Documentation
+
+- Add links to network share documentation ([19f45dd](https://github.com/stefanobartoletti/nuxt-social-share/commit/19f45dd))
+
+### 🏡 Chore
+
+- **release:** V2.1.1 ([facf708](https://github.com/stefanobartoletti/nuxt-social-share/commit/facf708))
+- Fix repository in package.json ([311b658](https://github.com/stefanobartoletti/nuxt-social-share/commit/311b658))
+
+### 🤖 CI
+
+- Fix changelogen config ([86fa5a3](https://github.com/stefanobartoletti/nuxt-social-share/commit/86fa5a3))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti <bartoletti.stefano@gmail.com>
+
 ## v2.1.1
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.1.0...v2.1.1)
