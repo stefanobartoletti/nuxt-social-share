@@ -3,6 +3,7 @@ import type { NetworksIndex } from './types'
 import { bluesky } from './networks/bluesky'
 import { email } from './networks/email'
 import { facebook } from './networks/facebook'
+import { hackernews } from './networks/hackernews'
 import { instapaper } from './networks/instapaper'
 import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
@@ -34,6 +35,7 @@ export const networksBase: NetworksIndex = {
   vkontakte,
   xing,
   tumblr,
+  hackernews,
   // Read it later
   pocket,
   instapaper,
