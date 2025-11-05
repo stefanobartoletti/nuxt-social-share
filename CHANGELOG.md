@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.2.1
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.2.0...v2.2.1)
+
+### 🩹 Fixes
+
+- **deps:** Update @iconify-json ([3477624](https://github.com/stefanobartoletti/nuxt-social-share/commit/3477624))
+- **deps:** Update dependency @nuxt/content to ^3.8.0 ([2e3c10e](https://github.com/stefanobartoletti/nuxt-social-share/commit/2e3c10e))
+- **deps:** Update nuxtjs monorepo to ^4.2.0 ([7dfcb99](https://github.com/stefanobartoletti/nuxt-social-share/commit/7dfcb99))
+
 ## v2.2.0
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.1.1...v2.2.0)
