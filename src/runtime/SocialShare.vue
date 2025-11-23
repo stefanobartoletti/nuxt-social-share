@@ -1,12 +1,14 @@
 <template>
-  <a
+  <component
+    :is="isObfuscated ? 'button' : 'a'"
     v-if="selectedNetwork"
-    class="social-share-button"
-    :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
-    :href="selectedNetwork.shareUrl"
-    :style="`--color-brand:${selectedNetwork.color}`"
+    :href="!isObfuscated ? selectedNetwork.shareUrl : null"
     :aria-label="`Share with ${selectedNetwork.name}`"
     target="_blank"
+    class="social-share-button"
+    :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
+    :style="`--color-brand:${selectedNetwork.color}`"
+    @click="isObfuscated ? openLink(selectedNetwork.shareUrl) : null"
   >
     <template v-if="hasIcon">
       <slot name="icon">
@@ -18,7 +20,7 @@
     <span v-if="isLabeled" class="social-share-button__label">
       <slot name="label">Share</slot>
     </span>
-  </a>
+  </component>
 </template>
 
 <script setup>
@@ -37,6 +39,8 @@ const props = defineProps({
   user: { type: String, default: undefined },
   hashtags: { type: String, default: undefined },
   image: { type: String, default: undefined },
+  // Other props
+  isObfuscated: { type: Boolean, default: false },
 })
 
 const moduleOptions = useRuntimeConfig().public.socialShare
@@ -53,45 +57,49 @@ const selectedNetwork = useSocialShare({
   hashtags: props.hashtags,
   image: props.image,
 })
+
+function openLink(url) {
+  const newWindow = window.open(url, '_blank')
+  newWindow.focus()
+}
 </script>
 
 <style>
-@layer components {
-  .social-share-button {
-    display: flex;
-    gap: 0.5em;
-    align-items: center;
-    text-decoration: none;
-    width: min-content;
+.social-share-button {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  text-decoration: none;
+  width: min-content;
+}
+
+.social-share-button__icon {
+  font-size: 1.5em;
+}
+
+.social-share-button--styled {
+  --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
+  font-size: 0.875rem;
+  line-height: normal;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.25rem;
+  transition: background-color 0.25s ease-out;
+  background-color: var(--color-brand);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-hover);
   }
 
-  .social-share-button__icon {
-    font-size: 1.5em;
+  &:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
   }
 
-  .social-share-button--styled {
-    --color-hover: color-mix(in srgb, var(--color-brand), #000 15%);
-    font-size: 0.875rem;
-    line-height: normal;
-    padding: 0.5rem;
-    color: white;
-    border-radius: 0.25rem;
-    transition: background-color 0.25s ease-out;
-    background-color: var(--color-brand);
-
-    &:hover {
-      background-color: var(--color-hover);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-brand);
-      outline-offset: 2px;
-    }
-
-    .social-share-button__label {
-      padding: 0 0.5rem;
-      white-space: nowrap;
-    }
+  .social-share-button__label {
+    padding: 0 0.5rem;
+    white-space: nowrap;
   }
 }
 </style>
