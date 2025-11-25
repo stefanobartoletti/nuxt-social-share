@@ -13,7 +13,7 @@ body:
     attributes:
       label: Please take a moment to familiarize yourself with this project scope and standards
       options:
-        - label: I have read the [Documentation](https://github.com/stefanobartoletti/nuxt-social-share?tab=readme-ov-file) and I understand how to correctly use this module.
+        - label: I have read the [Documentation](https://nuxt-social-share.stefanobartoletti.it) and I understand how to correctly use this module.
           required: true
         - label: I have read the [Contributing Guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/main/.github/CONTRIBUTING.md).
           required: true
@@ -34,8 +34,7 @@ body:
       label: Minimal reproduction link
       description: |
         Please provide a link to a minimal reproduction of the issue. Some common ways to provide it are a minimal demo on platforms such as CodeSandbox or StackBlitz or a GitHub repository. Do NOT post here links to full live websites or production environments.
-        **This step is required**, unless you are absolutely sure that the provided information is enough to understand the problem. If not provided, it may be required later if the issue is not clear enough.
-        **If the issue is not described clearly and cannot be reproduced, it may be closed**.
+        **This step is required. If the issue is not described clearly and cannot be reproduced, it may be closed**.
     validations:
       required: true
   - type: textarea
@@ -57,11 +56,12 @@ body:
         - Brave
         - Safari
         - Microsoft Edge
+        - Other (specify in Additional context)
   - type: textarea
     id: logs
     attributes:
       label: Logs
-      description: Optional if provided reproduction. Please do not to insert an image but copy paste the log text.
+      description: Optional but may be very useful. Please do not to insert an image but copy paste the log text.
       render: shell
   - type: textarea
     id: additional-context
