@@ -12,7 +12,7 @@ body:
     attributes:
       label: Please take a moment to familiarize yourself with this project scope and standards
       options:
-        - label: I have read the [Documentation](https://github.com/stefanobartoletti/nuxt-social-share?tab=readme-ov-file) and I understand how to correctly use this module.
+        - label: I have read the [Documentation](https://nuxt-social-share.stefanobartoletti.it) and I understand how to correctly use this module.
           required: true
         - label: I have read the [Contributing Guidelines](https://github.com/stefanobartoletti/nuxt-social-share/blob/main/.github/CONTRIBUTING.md).
           required: true

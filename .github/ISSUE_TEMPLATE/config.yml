@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: 📚 Documentation
-    url: https://github.com/stefanobartoletti/nuxt-social-share/blob/main/README.md
+    url: https://nuxt-social-share.stefanobartoletti.it
     about: Check the documentation for usage of this moudule
   - name: 💬 Questions & Discussions
     url: https://github.com/stefanobartoletti/nuxt-social-share/discussions
