@@ -6,6 +6,7 @@
     :href="selectedNetwork.shareUrl"
     :style="`--color-brand:${selectedNetwork.color}`"
     :aria-label="`Share with ${selectedNetwork.name}`"
+    :rel="rel"
     target="_blank"
   >
     <template v-if="hasIcon">
@@ -37,6 +38,8 @@ const props = defineProps({
   user: { type: String, default: undefined },
   hashtags: { type: String, default: undefined },
   image: { type: String, default: undefined },
+  // SEO props
+  rel: { type: String, default: 'nofollow noopener noreferrer' },
 })
 
 const moduleOptions = useRuntimeConfig().public.socialShare
