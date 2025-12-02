@@ -38,7 +38,7 @@ const props = defineProps({
   user: { type: String, default: undefined },
   hashtags: { type: String, default: undefined },
   image: { type: String, default: undefined },
-  // SEO props
+  // Link props
   rel: { type: String, default: 'nofollow noopener noreferrer' },
 })
 
