@@ -1,5 +1,32 @@
 # Changelog
 
+## v2.3.0
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.2.1...v2.3.0)
+
+### 🚀 Enhancements
+
+- Added a rel prop ([5299894](https://github.com/stefanobartoletti/nuxt-social-share/commit/5299894))
+
+### 🩹 Fixes
+
+- **deps:** Update nuxtjs monorepo to ^4.2.1 ([f6e296e](https://github.com/stefanobartoletti/nuxt-social-share/commit/f6e296e))
+
+### 📖 Documentation
+
+- Add docs for "rel" prop ([08f3a2c](https://github.com/stefanobartoletti/nuxt-social-share/commit/08f3a2c))
+
+### 🏡 Chore
+
+- **release:** V2.2.1 ([ac86272](https://github.com/stefanobartoletti/nuxt-social-share/commit/ac86272))
+- Remove Claude Code Review workflow ([13c0656](https://github.com/stefanobartoletti/nuxt-social-share/commit/13c0656))
+- Update issue templates ([6f14ae2](https://github.com/stefanobartoletti/nuxt-social-share/commit/6f14ae2))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti
+- Joanny Prignol
+
 ## v2.2.1
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.2.0...v2.2.1)
