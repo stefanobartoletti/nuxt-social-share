@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/content',
     'nuxt-llms',
+    ...(process.env.POSTHOG_API_KEY ? ['@posthog/nuxt'] : []), // Only load Posthog in production (where API key is set)
     '../src/module.ts',
   ],
 
@@ -41,16 +42,20 @@ export default defineNuxtConfig({
       ],
       script: [
         process.env.AHREFS_ANALYTICS_KEY ? { 'src': 'https://analytics.ahrefs.com/analytics.js', 'data-key': process.env.AHREFS_ANALYTICS_KEY } : false,
-        process.env.POSTHOG_API_KEY ? { src: 'https://eu.posthog.com/static/array.js', async: true } : false,
       ],
     },
   },
 
-  runtimeConfig: {
-    public: {
-      posthogPublicKey: process.env.POSTHOG_API_KEY,
-    },
-  },
+  // Only load Posthog in production (where API key is set)
+  posthogConfig: process.env.POSTHOG_API_KEY
+    ? {
+        publicKey: process.env.POSTHOG_API_KEY,
+        host: 'https://eu.i.posthog.com',
+        clientConfig: {
+          persistence: 'memory',
+        },
+      }
+    : undefined,
 
   socialShare: {
     baseUrl: process.env.URL || 'http://localhost:3000',
