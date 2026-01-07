@@ -88,8 +88,8 @@ importers:
         specifier: ^3.2.2
         version: 3.2.2(@unhead/vue@2.0.19(vue@3.5.25(typescript@5.9.3)))(db0@0.3.4(better-sqlite3@12.5.0))(h3@1.15.4)(ioredis@5.8.2)(magicast@0.5.1)(rollup@4.53.3)(unhead@2.0.19)(unstorage@1.17.3(db0@0.3.4(better-sqlite3@12.5.0))(ioredis@5.8.2))(vite@7.2.6(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))
       '@posthog/nuxt':
-        specifier: ^1.3.3
-        version: 1.3.3(magicast@0.5.1)
+        specifier: ^1.4.9
+        version: 1.4.9(magicast@0.5.1)
       better-sqlite3:
         specifier: ^12.5.0
         version: 12.5.0
@@ -1483,16 +1483,19 @@ packages:
   '@poppinss/exception@1.2.2':
     resolution: {integrity: sha512-m7bpKCD4QMlFCjA/nKTs23fuvoVFoA83brRKmObCUNmi/9tVu8Ve3w4YQAnJu4q3Tjf5fr685HYIC/IA2zHRSg==}
 
-  '@posthog/cli@0.5.16':
-    resolution: {integrity: sha512-qZnEKUGWmC7V+fdvpRQpfKouezYE6CNX39yE8hSxnpWAFPLF9Aix6EBVCiuEGhn+uaWgXef+bvYcGLo8kwKADg==}
+  '@posthog/cli@0.5.21':
+    resolution: {integrity: sha512-puidwKOOCZ424MZ9CKSWWPY5YPAVRI1ts1IR5dXpBY3Nqj8MCz6dEXiE49TbpLYy49yBOwIFFkKbBDxlW+Dj2A==}
     engines: {node: '>=14', npm: '>=6'}
     hasBin: true
 
-  '@posthog/core@1.6.0':
-    resolution: {integrity: sha512-Tbh8UACwbb7jFdDC7wwXHtfNzO+4wKh3VbyMHmp2UBe6w1jliJixexTJNfkqdGZm+ht3M10mcKvGGPnoZ2zLBg==}
+  '@posthog/core@1.9.0':
+    resolution: {integrity: sha512-j7KSWxJTUtNyKynLt/p0hfip/3I46dWU2dk+pt7dKRoz2l5CYueHuHK4EO7Wlgno5yo1HO4sc4s30MXMTICHJw==}
 
-  '@posthog/nuxt@1.3.3':
-    resolution: {integrity: sha512-sYAXwDtOozt2EQlGAYpYxdj4gkqss5g55y0zSeKqLUKxGZn4gZLW5waQOLqQdcGp7U/xsYEfG2JZqApQffHcYg==}
+  '@posthog/nuxt@1.4.9':
+    resolution: {integrity: sha512-l8UyUUG6VH/wBiY0X73q47DiRD3JMeJG3tr/jElC2vNMsJl1SIelxbK24ujwSYpd3DrjeXAUkpm8J7/GSBVwvg==}
+
+  '@posthog/types@1.315.1':
+    resolution: {integrity: sha512-m2NggfJRYby3AkAES6yHMLURvTeK+rxN+5nmkuaCbOXQPdtWacSFIG5ZwN8d3crSx+WpiFauCDdr1sc3ZFkTHg==}
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     resolution: {integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==}
@@ -5237,11 +5240,11 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  posthog-js@1.299.0:
-    resolution: {integrity: sha512-euHXKcEqQpRJNWitudVl4/doTJsftgaBDRLNGczt/v3S9N6ppLMzEOmeoqvNhNDIlpxGVlTvSawfw9HeW1r5nA==}
+  posthog-js@1.315.1:
+    resolution: {integrity: sha512-ambT1azidu4hKhSmB95KdLY6yHfj9vvz1XNn68syh8DtkQ0uSdjpRY6tjMp96EQtPqCrDKr+8QpcusT1KQEZSA==}
 
-  posthog-node@5.15.0:
-    resolution: {integrity: sha512-Q70DGmUoy/Lavrq+qn2shIj/EQSeyaz6huIZQlLE6y8Xa6xtZw+Jg1lyr2nC1sEEFPCU1X7zkNvP6mjbYwqjYA==}
+  posthog-node@5.19.0:
+    resolution: {integrity: sha512-5Nx+/b1JbAy6TaCENuO+mLFfZIXyYavae+D6FABd52gzkGryRkRTsKi+WLlILI5shSCAMWs5gxzGAZ3nOC0gFA==}
     engines: {node: '>=20'}
 
   preact@10.28.0:
@@ -8384,7 +8387,7 @@ snapshots:
 
   '@poppinss/exception@1.2.2': {}
 
-  '@posthog/cli@0.5.16':
+  '@posthog/cli@0.5.21':
     dependencies:
       axios: 1.13.2
       axios-proxy-builder: 0.1.2
@@ -8394,20 +8397,22 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@posthog/core@1.6.0':
+  '@posthog/core@1.9.0':
     dependencies:
       cross-spawn: 7.0.6
 
-  '@posthog/nuxt@1.3.3(magicast@0.5.1)':
+  '@posthog/nuxt@1.4.9(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
-      '@posthog/cli': 0.5.16
-      '@posthog/core': 1.6.0
-      posthog-js: 1.299.0
-      posthog-node: 5.15.0
+      '@posthog/cli': 0.5.21
+      '@posthog/core': 1.9.0
+      posthog-js: 1.315.1
+      posthog-node: 5.19.0
     transitivePeerDependencies:
       - debug
       - magicast
+
+  '@posthog/types@1.315.1': {}
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
@@ -12800,17 +12805,18 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  posthog-js@1.299.0:
+  posthog-js@1.315.1:
     dependencies:
-      '@posthog/core': 1.6.0
+      '@posthog/core': 1.9.0
+      '@posthog/types': 1.315.1
       core-js: 3.47.0
       fflate: 0.4.8
       preact: 10.28.0
       web-vitals: 4.2.4
 
-  posthog-node@5.15.0:
+  posthog-node@5.19.0:
     dependencies:
-      '@posthog/core': 1.6.0
+      '@posthog/core': 1.9.0
 
   preact@10.28.0: {}
 
