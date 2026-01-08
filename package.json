@@ -2,7 +2,7 @@
   "name": "@stefanobartoletti/nuxt-social-share",
   "type": "module",
   "version": "2.3.0",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.27.0",
   "description": "Simple Social Sharing for Nuxt",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
   "license": "MIT",
@@ -55,25 +55,25 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.2.1",
+    "@nuxt/kit": "^4.2.2",
     "defu": "^6.1.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.3.0",
+    "@commitlint/config-conventional": "^20.3.0",
     "@nuxt/devtools": "3.1.1",
-    "@nuxt/eslint-config": "^1.11.0",
+    "@nuxt/eslint-config": "^1.12.1",
     "@nuxt/module-builder": "^1.0.2",
-    "@nuxt/schema": "^4.2.1",
-    "@nuxt/test-utils": "^3.20.1",
-    "@stefanobartoletti/eslint-config": "^4.0.3",
-    "@types/node": "^24.10.1",
+    "@nuxt/schema": "^4.2.2",
+    "@nuxt/test-utils": "^3.23.0",
+    "@stefanobartoletti/eslint-config": "^4.0.4",
+    "@types/node": "^24.10.4",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "nuxt": "^4.2.1",
+    "nuxt": "^4.2.2",
     "typescript": "~5.9.3",
-    "vitest": "^4.0.14",
-    "vue-tsc": "^3.1.5"
+    "vitest": "^4.0.16",
+    "vue-tsc": "^3.2.2"
   }
 }

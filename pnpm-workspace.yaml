@@ -1,3 +1,5 @@
+shellEmulator: true
+
 packages:
   - docs
   - playground
