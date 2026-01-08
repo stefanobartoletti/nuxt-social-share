@@ -45,9 +45,7 @@ changelogen --release --hideAuthorEmail || {
 
 # Publish to npm
 echo "🚀 Publishing to npm..."
-echo "📱 Please enter your npm OTP (One-Time Password):"
-read -r OTP
-npm publish --otp="$OTP" || {
+npm publish || {
   echo "❌ Publishing failed"
   exit 1
 }
