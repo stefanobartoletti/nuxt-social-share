@@ -18,7 +18,7 @@
     "@nuxt/content": "^3.10.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.2.1",
-    "@nuxtjs/seo": "^3.2.2",
+    "@nuxtjs/seo": "^3.3.0",
     "@posthog/nuxt": "^1.4.9",
     "better-sqlite3": "^12.5.0",
     "nuxt": "^4.2.1",
