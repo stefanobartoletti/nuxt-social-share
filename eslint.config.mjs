@@ -16,5 +16,10 @@ export default createConfigForNuxt({
     stefanobartoletti(
       {},
       vue,
+      {
+        rules: {
+          'pnpm/yaml-enforce-settings': 'off', // temporarily disabled
+        },
+      },
     ),
   )
