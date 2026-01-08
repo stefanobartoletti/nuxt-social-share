@@ -1,5 +1,35 @@
 # Changelog
 
+## v2.3.1
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.3.0...v2.3.1)
+
+### 🩹 Fixes
+
+- **deps:** Update dependency @nuxt/content to ^3.10.0 ([8942a99](https://github.com/stefanobartoletti/nuxt-social-share/commit/8942a99))
+- **deps:** Update dependency @posthog/nuxt to ^1.4.9 ([4cfc00e](https://github.com/stefanobartoletti/nuxt-social-share/commit/4cfc00e))
+- **deps:** Update @iconify-json ([ea7bc1b](https://github.com/stefanobartoletti/nuxt-social-share/commit/ea7bc1b))
+- **deps:** Update dependency @nuxtjs/seo to ^3.3.0 ([46830d6](https://github.com/stefanobartoletti/nuxt-social-share/commit/46830d6))
+- **deps:** Update dependency @nuxt/ui to ^4.3.0 ([676cfb5](https://github.com/stefanobartoletti/nuxt-social-share/commit/676cfb5))
+- **deps:** Update nuxtjs monorepo to ^4.2.2 ([eb69eea](https://github.com/stefanobartoletti/nuxt-social-share/commit/eb69eea))
+
+### 📖 Documentation
+
+- Add official posthog module ([2af2272](https://github.com/stefanobartoletti/nuxt-social-share/commit/2af2272))
+
+### 🏡 Chore
+
+- **release:** V2.3.0 ([5787a66](https://github.com/stefanobartoletti/nuxt-social-share/commit/5787a66))
+- Temporarily disable 'pnpm/yaml-enforce-settings' ([7d331d4](https://github.com/stefanobartoletti/nuxt-social-share/commit/7d331d4))
+
+### 🤖 CI
+
+- Update npm publishing workflow ([1566d1f](https://github.com/stefanobartoletti/nuxt-social-share/commit/1566d1f))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti
+
 ## v2.3.0
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.2.1...v2.3.0)
