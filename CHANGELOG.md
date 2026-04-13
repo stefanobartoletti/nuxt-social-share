@@ -1,5 +1,39 @@
 # Changelog
 
+## v3.0.0
+
+[compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.3.1...v3.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Remove deprecated `pocket` network ([4c63d39](https://github.com/stefanobartoletti/nuxt-social-share/commit/4c63d39))
+- ⚠️  Remove deprecated `skype` network ([5b82c87](https://github.com/stefanobartoletti/nuxt-social-share/commit/5b82c87))
+
+### 🩹 Fixes
+
+- **deps:** Update @iconify-json ([ffb7aa4](https://github.com/stefanobartoletti/nuxt-social-share/commit/ffb7aa4))
+- **deps:** Update dependency @iconify-json/simple-icons to ^1.2.78 ([a1126bf](https://github.com/stefanobartoletti/nuxt-social-share/commit/a1126bf))
+- **deps:** Update dependency @nuxt/content to ^3.12.0 ([72c8772](https://github.com/stefanobartoletti/nuxt-social-share/commit/72c8772))
+- **deps:** Update dependency nuxt-llms to v0.2.0 ([ab18fbf](https://github.com/stefanobartoletti/nuxt-social-share/commit/ab18fbf))
+- **deps:** Update dependency @posthog/nuxt to ^1.6.9 ([903c95f](https://github.com/stefanobartoletti/nuxt-social-share/commit/903c95f))
+
+### 🏡 Chore
+
+- **release:** V2.3.1 ([b45247e](https://github.com/stefanobartoletti/nuxt-social-share/commit/b45247e))
+
+### 🤖 CI
+
+- Update renovate config ([7ba80a4](https://github.com/stefanobartoletti/nuxt-social-share/commit/7ba80a4))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove deprecated `pocket` network ([4c63d39](https://github.com/stefanobartoletti/nuxt-social-share/commit/4c63d39))
+- ⚠️  Remove deprecated `skype` network ([5b82c87](https://github.com/stefanobartoletti/nuxt-social-share/commit/5b82c87))
+
+### ❤️ Contributors
+
+- Stefano Bartoletti
+
 ## v2.3.1
 
 [compare changes](https://github.com/stefanobartoletti/nuxt-social-share/compare/v2.3.0...v2.3.1)
