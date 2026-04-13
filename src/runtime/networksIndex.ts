@@ -11,7 +11,6 @@ import { mastodon } from './networks/mastodon'
 import { pinterest } from './networks/pinterest'
 import { raindrop } from './networks/raindrop'
 import { reddit } from './networks/reddit'
-import { skype } from './networks/skype'
 import { telegram } from './networks/telegram'
 import { threads } from './networks/threads'
 import { tumblr } from './networks/tumblr'
@@ -41,7 +40,6 @@ export const networksBase: NetworksIndex = {
   // Instant Messaging
   whatsapp,
   telegram,
-  skype,
   line,
   viber,
   // Other
