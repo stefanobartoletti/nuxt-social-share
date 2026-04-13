@@ -1,31 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ],
-  "rangeStrategy": "bump",
-  "prHourlyLimit": 0,
-  "labels": [
-    "dependencies"
-  ],
-  "vulnerabilityAlerts": {
-    "labels": [
-      "security"
-    ],
-    "enabled": true
-  },
-  "packageRules": [
-    {
-      "groupName": "@commitlint",
-      "matchPackageNames": [
-        "@commitlint/{/,}**"
-      ]
-    },
-    {
-      "groupName": "@iconify-json",
-      "matchPackageNames": [
-        "@iconify-json/{/,}**"
-      ]
-    }
+    "config:recommended",
+    "github>stefanobartoletti/renovate-config"
   ]
+
 }
