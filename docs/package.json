@@ -17,14 +17,14 @@
     "@iconify-json/vscode-icons": "^1.2.45",
     "@nuxt/content": "^3.12.0",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.3.0",
-    "@nuxtjs/seo": "^3.3.0",
+    "@nuxt/ui": "^4.6.1",
+    "@nuxtjs/seo": "^3.4.0",
     "@posthog/nuxt": "^1.6.9",
     "better-sqlite3": "^12.9.0",
-    "nuxt": "^4.2.2",
+    "nuxt": "^4.4.2",
     "nuxt-llms": "0.2.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "3.1.1"
+    "@nuxt/devtools": "3.2.4"
   }
 }
