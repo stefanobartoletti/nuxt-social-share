@@ -1,19 +1,16 @@
-<picture><img src=".github/nuxt-social-share-cover.png" /></picture>
+<picture><img src=".github/nuxt-social-share-cover.png" alt="Nuxt Social Share"/></picture>
 
 <div align="center">
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![code quality][code-quality-src]][code-quality-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
-<!-- [![bundle size][bundle-size-src]][bundle-size-href] -->
 
 Simple social sharing for your Nuxt Sites
 
 [Documentation][docs-site] |
-[Release Notes](/CHANGELOG.md) |
-[Demo](https://stefanobartoletti.github.io/nuxt-social-share/)
+[Release Notes](/CHANGELOG.md)
 
 </div>
 
@@ -57,12 +54,6 @@ The full docs are available in a dedicated [documentation website][docs-site]
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/@stefanobartoletti/nuxt-social-share.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npmjs.com/package/@stefanobartoletti/nuxt-social-share
-
-[code-quality-src]: https://img.shields.io/codacy/grade/437177566f784faf81dc6382e0919017.svg?style=flat&colorA=18181B&colorB=28CF8D
-[code-quality-href]: https://app.codacy.com/gh/stefanobartoletti/nuxt-social-share
-
-[bundle-size-src]: https://img.shields.io/bundlephobia/minzip/@stefanobartoletti/nuxt-social-share.svg?style=flat&colorA=18181B&colorB=28CF8D
-[bundle-size-href]: https://bundlephobia.com/result?p=@stefanobartoletti/nuxt-social-share
 
 [license-src]: https://img.shields.io/npm/l/@stefanobartoletti/nuxt-social-share.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/@stefanobartoletti/nuxt-social-share

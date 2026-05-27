@@ -23,3 +23,9 @@ export default createConfigForNuxt({
       },
     ),
   )
+  .append({
+    files: ['docs/**/*.md'],
+    rules: {
+      'markdown/no-missing-atx-heading-space': 'off', // creates problems with markdown components
+    },
+  })
