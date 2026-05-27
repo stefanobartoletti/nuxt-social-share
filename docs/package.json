@@ -19,7 +19,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.8.0",
     "@nuxtjs/seo": "^3.4.0",
-    "@posthog/nuxt": "^1.7.45",
+    "@posthog/nuxt": "^1.7.46",
     "better-sqlite3": "^12.10.0",
     "nuxt": "^4.4.6",
     "nuxt-llms": "0.2.0"
