@@ -69,7 +69,7 @@
     "@stefanobartoletti/eslint-config": "^4.0.6",
     "@types/node": "^24.12.4",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.4",
+    "eslint": "^10.4.0",
     "husky": "^9.1.7",
     "nuxt": "^4.4.6",
     "typescript": "~5.9.3",
