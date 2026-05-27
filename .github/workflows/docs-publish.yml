@@ -1,0 +1,30 @@
+name: Publish Docs
+
+permissions:
+  contents: write
+
+on:
+  workflow_run:
+    workflows:
+      - Release
+    types:
+      - completed
+
+jobs:
+  publish-docs:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge main into release branch
+        run: |
+          git fetch origin main release || git fetch origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B release origin/release || git checkout -B release origin/main
+          git merge --no-edit origin/main
+          git push origin release

@@ -10,7 +10,7 @@
 Simple social sharing for your Nuxt Sites
 
 [Documentation][docs-site] |
-[Release Notes](/CHANGELOG.md)
+[Release Notes][releases]
 
 </div>
 
@@ -62,3 +62,4 @@ The full docs are available in a dedicated [documentation website][docs-site]
 [nuxt-href]: https://nuxt.com
 
 [docs-site]: https://nuxt-social-share.stefanobartoletti.it
+[releases]: https://github.com/stefanobartoletti/nuxt-social-share/releases
