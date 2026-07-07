@@ -60,16 +60,12 @@
 </template>
 
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-import { findPageHeadline } from '@nuxt/content/utils'
-
 definePageMeta({
   layout: 'docs',
 })
 
 const route = useRoute()
 const { toc } = useAppConfig()
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first())
 if (!page.value) {
@@ -85,9 +81,6 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
-console.log('title', title)
-console.log('description', description)
-
 useSeoMeta({
   title,
   ogTitle: title,
@@ -95,10 +88,7 @@ useSeoMeta({
   ogDescription: description,
 })
 
-const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
-
 defineOgImage('Docs.takumi', {
-  headline: headline.value,
   title,
   description,
 })
