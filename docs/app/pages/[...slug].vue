@@ -85,6 +85,9 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
+console.log('title', title)
+console.log('description', description)
+
 useSeoMeta({
   title,
   ogTitle: title,
@@ -94,7 +97,7 @@ useSeoMeta({
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
 
-defineOgImage('OgImageDocs', {
+defineOgImage('Docs.takumi', {
   headline: headline.value,
   title,
   description,
