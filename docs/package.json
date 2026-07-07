@@ -20,6 +20,7 @@
     "@nuxt/ui": "^4.9.0",
     "@nuxtjs/seo": "^5.3.2",
     "@posthog/nuxt": "^1.7.80",
+    "@takumi-rs/core": "2.0.0-rc.13",
     "better-sqlite3": "^12.11.1",
     "nuxt": "^4.4.8",
     "nuxt-llms": "0.2.0"
