@@ -5,7 +5,7 @@
     :class="[`social-share-button--${network}`, { 'social-share-button--styled': isStyled }]"
     :href="selectedNetwork.shareUrl"
     :style="`--color-brand:${selectedNetwork.color}`"
-    :aria-label="`Share with ${selectedNetwork.name}`"
+    :aria-label="label.long"
     :rel="rel"
     target="_blank"
   >
@@ -17,13 +17,13 @@
       </slot>
     </template>
     <span v-if="isLabeled" class="social-share-button__label">
-      <slot name="label">Share</slot>
+      <slot name="label">{{ label.short }}</slot>
     </span>
   </a>
 </template>
 
 <script setup>
-import { useRuntimeConfig } from '#imports'
+import { computed, useRuntimeConfig } from '#imports'
 import { useSocialShare } from './useSocialShare'
 
 const props = defineProps({
@@ -40,6 +40,7 @@ const props = defineProps({
   image: { type: String, default: undefined },
   // Link props
   rel: { type: String, default: 'nofollow noopener noreferrer' },
+  prompt: { type: String, default: undefined },
 })
 
 const moduleOptions = useRuntimeConfig().public.socialShare
@@ -55,6 +56,44 @@ const selectedNetwork = useSocialShare({
   user: props.user,
   hashtags: props.hashtags,
   image: props.image,
+  prompt: props.prompt,
+})
+
+const label = computed(() => {
+  if (!selectedNetwork.value) {
+    return { short: 'Share', long: 'Share' }
+  }
+
+  const networkName = selectedNetwork.value.name
+  const category = selectedNetwork.value.category
+
+  switch (category) {
+    case 'social':
+      return {
+        short: `Share`,
+        long: `Share on ${networkName}`,
+      }
+    case 'messaging':
+      return {
+        short: `Send`,
+        long: `Send with ${networkName}`,
+      }
+    case 'bookmark':
+      return {
+        short: `Save`,
+        long: `Save to ${networkName}`,
+      }
+    case 'ai':
+      return {
+        short: `Ask AI`,
+        long: `Ask ${networkName}`,
+      }
+    default:
+      return {
+        short: 'Share',
+        long: `Share on ${networkName}`,
+      }
+  }
 })
 </script>
 
