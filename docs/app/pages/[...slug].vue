@@ -94,8 +94,10 @@ useSeoMeta({
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
 
-defineOgImageComponent('Docs', {
+defineOgImage('OgImageDocs', {
   headline: headline.value,
+  title,
+  description,
 })
 
 const links = computed(() => {
