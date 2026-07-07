@@ -1,13 +1,18 @@
 import type { NetworksIndex } from './types'
 
 import { bluesky } from './networks/bluesky'
+import { chatgpt } from './networks/chatgpt'
+import { claude } from './networks/claude'
 import { email } from './networks/email'
 import { facebook } from './networks/facebook'
+import { gemini } from './networks/gemini'
+import { grok } from './networks/grok'
 import { hackernews } from './networks/hackernews'
 import { instapaper } from './networks/instapaper'
 import { line } from './networks/line'
 import { linkedin } from './networks/linkedin'
 import { mastodon } from './networks/mastodon'
+import { perplexity } from './networks/perplexity'
 import { pinterest } from './networks/pinterest'
 import { raindrop } from './networks/raindrop'
 import { reddit } from './networks/reddit'
@@ -44,6 +49,12 @@ export const networksBase: NetworksIndex = {
   viber,
   // Other
   email,
+  // AI
+  chatgpt,
+  claude,
+  gemini,
+  perplexity,
+  grok,
 }
 
 export const networksAlias: NetworksIndex = {

@@ -80,6 +80,10 @@ const columns = [
     accessorKey: 'image',
     header: () => renderCodeCell('image'),
   },
+  {
+    accessorKey: 'prompt',
+    header: () => renderCodeCell('prompt'),
+  },
 ]
 
 const data = computed(() => {
@@ -95,6 +99,7 @@ const data = computed(() => {
         user: '❌',
         hashtags: '❌',
         image: '❌',
+        prompt: '❌',
       }
     }
 
@@ -108,6 +113,7 @@ const data = computed(() => {
       user: network.args?.user ? '☑️' : '❌',
       hashtags: network.args?.hashtags ? '☑️' : '❌',
       image: network.args?.image ? '☑️' : '❌',
+      prompt: network.shareUrl.includes('[p]') ? '✅' : '❌',
     }
   })
 })

@@ -5,6 +5,7 @@ export interface Options {
   user?: string
   hashtags?: string
   image?: string
+  prompt?: string
 };
 
 export interface Network {
@@ -21,6 +22,7 @@ export interface Network {
     path: string
   }
   color: string
+  category: 'social' | 'messaging' | 'ai' | 'bookmark' | 'other'
 };
 
 export interface NetworksIndex {
