@@ -11,10 +11,11 @@ const defaultOptions = {
   user: undefined,
   hashtags: undefined,
   image: undefined,
+  prompt: 'Read this page so I can ask questions about it:',
 }
 
 export function useSocialShare(options: Options = defaultOptions): ComputedRef<Network | null> {
-  const { network, url, title, user, hashtags, image } = options
+  const { network, url, title, user, hashtags, image, prompt } = options
   const moduleOptions = useRuntimeConfig().public.socialShare
 
   // Gracefully fail if provided network is not valid
@@ -55,6 +56,7 @@ export function useSocialShare(options: Options = defaultOptions): ComputedRef<N
     // Replace placeholders with actual values (encode all parameters for URL safety)
     fullUrl = fullUrl
       .replace(/\[u\]/i, encodeURIComponent(pageUrl.value))
+      .replace(/\[p\]/i, encodeURIComponent(`${prompt || defaultOptions.prompt} `))
       .replace(/\[t\]/i, encodeURIComponent(title || ''))
       .replace(/\[uid\]/i, encodeURIComponent(user || ''))
       .replace(/\[h\]/i, encodeURIComponent(hashtags || ''))
