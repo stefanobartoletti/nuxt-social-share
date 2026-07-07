@@ -1,7 +1,7 @@
 {
   "name": "@stefanobartoletti/nuxt-social-share",
   "type": "module",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "packageManager": "pnpm@10.34.4",
   "description": "Simple Social Sharing for Nuxt",
   "author": "Stefano Bartoletti (https://github.com/stefanobartoletti/)",
