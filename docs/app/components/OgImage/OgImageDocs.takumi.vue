@@ -43,7 +43,7 @@
     </svg>
 
     <div class="pl-[100px] flex flex-col justify-center h-full">
-      <p v-if="headline" class="uppercase text-[24px] text-[#00DC82] mb-4 font-semibold">{{ headline }}</p>
+      <p class="uppercase text-[24px] text-[#00DC82] mb-4 font-semibold">Nuxt Social Share</p>
 
       <h1 v-if="title" class="m-0 text-[75px] font-semibold mb-4 text-white">{{ title }}</h1>
 
@@ -53,7 +53,7 @@
 </template>
 
 <script lang="ts" setup>
-const props = withDefaults(defineProps<{ title?: string, description?: string, headline?: string }>(), {
+withDefaults(defineProps<{ title?: string, description?: string }>(), {
   title: 'title',
   description: 'description',
 })
