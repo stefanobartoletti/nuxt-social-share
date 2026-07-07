@@ -39,16 +39,15 @@ export const networksBase: NetworksIndex = {
   xing,
   tumblr,
   hackernews,
-  // Read it later
-  instapaper,
-  raindrop,
-  // Instant Messaging
+  // Messaging
   whatsapp,
   telegram,
   line,
   viber,
-  // Other
   email,
+  // Read it later
+  instapaper,
+  raindrop,
   // AI
   chatgpt,
   claude,

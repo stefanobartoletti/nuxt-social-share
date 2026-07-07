@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { networksAlias, networksBase } from '../../../../src/runtime/networksIndex'
+const { networksBase, networksAlias } = useNetworksIndex()
 
 function renderCodeCell(value) {
   if (!value) {

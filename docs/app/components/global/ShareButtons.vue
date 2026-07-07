@@ -1,18 +1,25 @@
 <template>
-  <UCard class="py-6">
-    <div class="flex gap-2 justify-center flex-wrap max-w-xl mx-auto">
-      <SocialShare
-        v-for="network in networks"
-        :key="network"
-        :network="network"
-        :styled="true"
-      />
+  <UCard>
+    <div class="flex flex-col gap-8 max-w-2xl mx-auto">
+      <div v-for="group in networksByCategory" :key="group.category">
+        <p class="text-sm font-medium text-muted uppercase mb-2">
+          {{ group.label }}
+        </p>
+        <div class="flex gap-2 flex-wrap">
+          <SocialShare
+            v-for="network in group.networks"
+            :key="network"
+            :network="network"
+            :styled="true"
+          />
+        </div>
+      </div>
     </div>
   </UCard>
 </template>
 
 <script setup lang="ts">
-const networks = useNetworkIndex()
+const { networksByCategory } = useNetworksIndex()
 </script>
 
 <style scoped>
