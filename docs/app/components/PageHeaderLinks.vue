@@ -41,7 +41,7 @@ const { copy, copied } = useClipboard()
 const site = useSiteConfig()
 const isCopying = ref(false)
 
-const mdPath = computed(() => `${site.url}/raw${route.path}.md`)
+const mdPath = computed(() => `${site.url}${route.path}.md`)
 
 const items = [
   {
@@ -59,7 +59,7 @@ const items = [
     label: 'View as Markdown',
     icon: 'i-simple-icons:markdown',
     target: '_blank',
-    to: `/raw${route.path}.md`,
+    to: `${route.path}.md`,
   },
   {
     label: 'Open in ChatGPT',
@@ -77,7 +77,7 @@ const items = [
 
 async function copyPage() {
   isCopying.value = true
-  copy(await $fetch<string>(`/raw${route.path}.md`))
+  copy(await $fetch<string>(`${route.path}.md`))
   isCopying.value = false
 }
 </script>
