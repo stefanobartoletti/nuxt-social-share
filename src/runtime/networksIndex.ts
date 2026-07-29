@@ -25,7 +25,7 @@ import { whatsapp } from './networks/whatsapp'
 import { x } from './networks/x'
 import { xing } from './networks/xing'
 
-export const networksBase: NetworksIndex = {
+export const networksBase = {
   // Social Networks
   facebook,
   x,
@@ -54,14 +54,21 @@ export const networksBase: NetworksIndex = {
   gemini,
   perplexity,
   grok,
-}
+} satisfies NetworksIndex
 
-export const networksAlias: NetworksIndex = {
-  twitter: x,
-  vk: vkontakte,
-}
+export const networksAliasTargets = {
+  twitter: 'x',
+  vk: 'vkontakte',
+} satisfies Record<string, keyof typeof networksBase>
+
+export const networksAlias = {
+  twitter: networksBase[networksAliasTargets.twitter],
+  vk: networksBase[networksAliasTargets.vk],
+} satisfies NetworksIndex
 
 export const networksIndex: NetworksIndex = {
   ...networksBase,
   ...networksAlias,
 }
+
+export type NetworkKey = keyof typeof networksBase | keyof typeof networksAliasTargets
