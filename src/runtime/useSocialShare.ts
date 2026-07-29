@@ -2,7 +2,7 @@ import type { ComputedRef } from '#imports'
 import type { Network, Options } from './types/'
 
 import { computed, useRoute, useRuntimeConfig } from '#imports'
-import { networksIndex } from './networksIndex'
+import { knownNetworkKeys, networksIndex } from '#nuxt-social-share/networks-index'
 
 const defaultOptions = {
   network: '',
@@ -20,8 +20,12 @@ export function useSocialShare(options: Options = defaultOptions): ComputedRef<N
 
   // Gracefully fail if provided network is not valid
   if (!networksIndex[network]) {
-    const availableNetworks = Object.keys(networksIndex).sort().join(', ')
-    console.warn(`[nuxt-social-share] Network "${network}" is not valid.\n Available networks: ${availableNetworks}.\n See https://nuxt-social-share.stefanobartoletti.it/usage/supported-networks`)
+    if (knownNetworkKeys.includes(network)) {
+      console.warn(`[nuxt-social-share] Network "${network}" was excluded from this build by the "networks" module option.\n Add it to your "socialShare.networks" config to use it. Bundled networks: ${Object.keys(networksIndex).sort().join(', ')}`)
+    }
+    else {
+      console.warn(`[nuxt-social-share] Network "${network}" is not valid.\n Available networks: ${knownNetworkKeys.join(', ')}.\n See https://nuxt-social-share.stefanobartoletti.it/usage/supported-networks`)
+    }
     return computed(() => null)
   }
 
