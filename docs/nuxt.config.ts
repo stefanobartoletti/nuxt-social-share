@@ -68,6 +68,16 @@ export default defineNuxtConfig({
             },
           }
         : undefined,
+      databuddyAnalytics: process.env.DATABUDDY_CLIENT_ID
+        ? {
+            clientId: process.env.DATABUDDY_CLIENT_ID,
+            proxy: false,
+            trigger: 'onNuxtReady',
+            trackWebVitals: true,
+            trackInteractions: true,
+            trackOutgoingLinks: true,
+          }
+        : undefined,
     },
   },
 
