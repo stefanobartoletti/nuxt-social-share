@@ -104,7 +104,7 @@ export default defineNuxtModule<ModuleOptions>({
     // rather than relying on bundlers to eliminate a dynamic object-key lookup.
     const networksIndexPath = resolver.resolve('./runtime/networksIndex')
     const networksDirPath = resolver.resolve('./runtime/networks')
-    const networksTypesPath = resolver.resolve('./runtime/types')
+    const networksTypesPath = resolver.resolve('./runtime/types/index')
 
     const template = addTemplate({
       filename: 'social-share-networks-index.ts',
