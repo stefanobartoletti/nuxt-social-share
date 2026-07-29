@@ -31,7 +31,7 @@
       #left
     >
       <NuxtLink :to="header?.to || '/'">
-        <AppLogo class="w-auto h-6 shrink-0" />
+        <AppLogo class="h-6 w-auto shrink-0" />
       </NuxtLink>
 
       <TemplateMenu />

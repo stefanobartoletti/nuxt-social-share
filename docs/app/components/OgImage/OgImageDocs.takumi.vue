@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-full flex flex-col justify-center bg-[#020420]">
+  <div class="flex size-full flex-col justify-center bg-[#020420]">
     <svg
-      class="absolute right-0 top-0"
+      class="absolute top-0 right-0"
       width="629"
       height="593"
       viewBox="0 0 629 593"
@@ -42,12 +42,12 @@
       </defs>
     </svg>
 
-    <div class="pl-[100px] flex flex-col justify-center h-full">
-      <p class="uppercase text-[24px] text-[#00DC82] mb-4 font-semibold">Nuxt Social Share</p>
+    <div class="flex h-full flex-col justify-center pl-25">
+      <p class="mb-4 text-[24px] font-semibold text-[#00DC82] uppercase">Nuxt Social Share</p>
 
-      <h1 v-if="title" class="m-0 text-[75px] font-semibold mb-4 text-white">{{ title }}</h1>
+      <h1 v-if="title" class="m-0 mb-4 text-[75px] font-semibold text-white">{{ title }}</h1>
 
-      <p v-if="description" class="text-[32px] text-muted leading-tight w-[700px]">{{ description }}</p>
+      <p v-if="description" class="w-175 text-[32px] leading-tight text-muted">{{ description }}</p>
     </div>
   </div>
 </template>

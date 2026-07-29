@@ -5,9 +5,15 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "generate": "nuxi generate"
+    "generate": "nuxi generate",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "nuxt": "^4.4.8"
+    "nuxt": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^1.16.0",
+    "@stefanobartoletti/eslint-config": "^6.0.1",
+    "eslint": "^10.8.0"
   }
 }

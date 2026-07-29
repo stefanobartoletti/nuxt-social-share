@@ -7,5 +7,6 @@ export default defineNuxtConfig({
 
   socialShare: {
     baseUrl: 'https://www.example.com',
+    networks: ['facebook'],
   },
 })

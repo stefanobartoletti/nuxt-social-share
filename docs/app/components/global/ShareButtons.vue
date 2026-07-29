@@ -1,11 +1,11 @@
 <template>
   <UCard>
-    <div class="flex flex-col gap-8 max-w-2xl mx-auto">
+    <div class="mx-auto flex max-w-2xl flex-col gap-8">
       <div v-for="group in networksByCategory" :key="group.category">
-        <p class="text-sm font-medium text-muted uppercase mb-2">
+        <p class="mb-2 text-sm font-medium text-muted uppercase">
           {{ group.label }}
         </p>
-        <div class="flex gap-2 flex-wrap">
+        <div class="flex flex-wrap gap-2">
           <SocialShare
             v-for="network in group.networks"
             :key="network"

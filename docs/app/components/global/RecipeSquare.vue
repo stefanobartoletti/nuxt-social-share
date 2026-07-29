@@ -1,5 +1,5 @@
 <template>
-  <UCard class="bg-white flex justify-center">
+  <UCard class="flex justify-center bg-white">
     <div class="share-buttons">
       <SocialShare
         v-for="network in ['facebook', 'x', 'linkedin']"
