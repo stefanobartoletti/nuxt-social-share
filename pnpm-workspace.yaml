@@ -4,6 +4,9 @@ packages:
   - docs
   - playground
 
+overrides:
+  typescript: ~6.0.3
+
 ignoredBuiltDependencies:
   - '@parcel/watcher'
   - '@tailwindcss/oxide'

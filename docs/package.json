@@ -26,6 +26,11 @@
     "nuxt-ai-ready": "1.5.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "3.3.1"
+    "@nuxt/devtools": "3.3.1",
+    "@nuxt/eslint-config": "^1.16.0",
+    "@stefanobartoletti/eslint-config": "^6.0.1",
+    "eslint": "^10.8.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3"
   }
 }

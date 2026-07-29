@@ -1,31 +1,18 @@
-import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 import { stefanobartoletti, vue } from '@stefanobartoletti/eslint-config'
 
-export default createConfigForNuxt({
-  features: {
-    standalone: false,
-  },
-  dirs: {
-    src: [
-      './docs/app',
-      './playground',
+// docs/ and playground/ are separate pnpm workspaces with their own eslint.config.mjs,
+// linted via their own `pnpm --filter` scripts (see root package.json "lint" script).
+export default stefanobartoletti(
+  {
+    ignores: [
+      '**/docs/**',
+      '**/playground/**',
     ],
   },
-})
-  .prepend(
-    stefanobartoletti(
-      {},
-      vue,
-      {
-        rules: {
-          'pnpm/yaml-enforce-settings': 'off', // temporarily disabled
-        },
-      },
-    ),
-  )
-  .append({
-    files: ['docs/**/*.md'],
+  vue,
+  {
     rules: {
-      'markdown/no-missing-atx-heading-space': 'off', // creates problems with markdown components
+      'pnpm/yaml-enforce-settings': 'off', // temporarily disabled
     },
-  })
+  },
+)

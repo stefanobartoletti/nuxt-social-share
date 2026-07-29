@@ -1,7 +1,7 @@
 <template>
-  <div class="absolute pointer-events-none z-[-1] inset-y-0 inset-x-5 sm:inset-x-7 lg:inset-x-9 overflow-hidden">
+  <div class="pointer-events-none absolute inset-x-5 inset-y-0 -z-1 overflow-hidden sm:inset-x-7 lg:inset-x-9">
     <svg
-      class="absolute inset-0 pointer-events-none"
+      class="pointer-events-none absolute inset-0"
       viewBox="0 0 1017 181"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@
       </defs>
     </svg>
 
-    <div class="stars size-full absolute inset-x-0 top-0">
+    <div class="stars absolute inset-x-0 top-0 size-full">
       <div
         v-for="(layer, index) in starLayers"
         :key="index"
