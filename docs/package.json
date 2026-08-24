@@ -23,7 +23,7 @@
     "@takumi-rs/core": "2.5.3",
     "better-sqlite3": "^13.0.2",
     "nuxt": "^4.5.1",
-    "nuxt-ai-ready": "1.5.8",
+    "nuxt-ai-ready": "2.0.1",
     "posthog-js": "^1.417.3"
   },
   "devDependencies": {
