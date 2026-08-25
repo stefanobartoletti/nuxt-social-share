@@ -11,7 +11,15 @@
   >
     <template v-if="hasIcon">
       <slot name="icon">
-        <svg class="social-share-button__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" :viewBox="`${selectedNetwork.icon.viewBox}`">
+        <svg
+          class="social-share-button__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          role="img"
+          width="1em"
+          height="1em"
+          :viewBox="`${selectedNetwork.icon.viewBox}`"
+        >
           <path fill="currentColor" fill-rule="evenodd" :d="`${selectedNetwork.icon.path}`" />
         </svg>
       </slot>

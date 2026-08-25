@@ -3,7 +3,7 @@
     class="absolute -top-px w-full shrink-0 text-primary transition-all"
     :class="[
       isLoading ? 'animate-pulse' : (appear ? '' : 'opacity-0'),
-      appeared ? 'duration-[400ms]' : 'duration-1000',
+      appeared ? 'duration-400' : 'duration-1000',
     ]"
   >
     <svg
