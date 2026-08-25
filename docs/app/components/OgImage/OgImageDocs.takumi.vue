@@ -43,7 +43,7 @@
     </svg>
 
     <div class="flex h-full flex-col justify-center pl-25">
-      <p class="mb-4 text-[24px] font-semibold text-[#00DC82] uppercase">Nuxt Social Share</p>
+      <p class="mb-4 text-[24px] font-semibold text-green-400 uppercase">Nuxt Social Share</p>
 
       <h1 v-if="title" class="m-0 mb-4 text-[75px] font-semibold text-white">{{ title }}</h1>
 
