@@ -9,11 +9,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "nuxt": "^4.5.1"
+    "nuxt": "^4.5.2"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^1.16.0",
-    "@stefanobartoletti/eslint-config": "^6.0.1",
-    "eslint": "^10.8.0"
+    "@nuxt/eslint-config": "^1.17.0",
+    "@stefanobartoletti/eslint-config": "^6.1.1",
+    "eslint": "^10.9.1"
   }
 }
