@@ -4,6 +4,8 @@ import { stefanobartoletti, vue } from '@stefanobartoletti/eslint-config'
 // linted via their own `pnpm --filter` scripts (see root package.json "lint" script).
 export default stefanobartoletti(
   {
+    vue: { a11y: true },
+    typescript: true,
     ignores: [
       '**/docs/**',
       '**/playground/**',
