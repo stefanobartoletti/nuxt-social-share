@@ -51,7 +51,7 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
-    "release": "pnpm lint && pnpm test && pnpm prepack && bumpp -r --all",
+    "release": "pnpm lint && pnpm test && pnpm prepack && bumpp conventional -r --all",
     "commitlint": "commitlint --edit",
     "prepare": "husky"
   },
