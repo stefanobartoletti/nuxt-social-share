@@ -3,7 +3,7 @@ import { addComponent, addImports, addTemplate, createResolver, defineNuxtModule
 import { defu } from 'defu'
 import { networksAliasTargets, networksBase } from './runtime/networksIndex'
 
-// Module options TypeScript interface definition
+/** Module options TypeScript interface definition */
 export interface ModuleOptions {
   baseUrl?: string
   styled?: boolean

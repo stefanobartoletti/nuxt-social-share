@@ -12,7 +12,7 @@ describe('networks option (excluded network warning)', async () => {
     const logs = await getServerLogs()
 
     // LinkedIn is a real, supported network, but this fixture's `networks: ['facebook']`
-    // excludes it — the warning must say so, distinct from the "not valid" message used
+    // excludes it: the warning must say so, distinct from the "not valid" message used
     // for genuinely unsupported network names.
     expect(html).not.toContain('social-share-button--linkedin')
     expect(logs.some(line => line.includes('Network "linkedin" was excluded from this build by the "networks" module option'))).toBe(true)
