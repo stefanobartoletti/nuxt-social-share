@@ -12,9 +12,9 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.132",
+    "@iconify-json/lucide": "^1.2.134",
     "@iconify-json/simple-icons": "^1.2.96",
-    "@iconify-json/vscode-icons": "^1.2.77",
+    "@iconify-json/vscode-icons": "^1.2.78",
     "@nuxt/content": "^3.16.0",
     "@nuxt/image": "^2.1.0",
     "@nuxt/scripts": "^1.3.9",
@@ -23,14 +23,14 @@
     "@takumi-rs/core": "2.14.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.5.2",
-    "nuxt-ai-ready": "2.3.3",
-    "posthog-js": "^1.433.4"
+    "nuxt-ai-ready": "2.3.4",
+    "posthog-js": "^1.434.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "3.4.2",
     "@nuxt/eslint-config": "^1.17.0",
-    "@stefanobartoletti/eslint-config": "^6.3.0",
-    "eslint": "^10.10.0",
+    "@stefanobartoletti/eslint-config": "^6.3.1",
+    "eslint": "^10.11.0",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.3"
   }
