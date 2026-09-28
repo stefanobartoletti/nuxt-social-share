@@ -32,6 +32,6 @@
     "@stefanobartoletti/eslint-config": "^6.3.1",
     "eslint": "^10.11.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   }
 }
