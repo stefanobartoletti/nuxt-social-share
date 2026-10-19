@@ -5,6 +5,7 @@ import { chatgpt } from './networks/chatgpt'
 import { claude } from './networks/claude'
 import { email } from './networks/email'
 import { facebook } from './networks/facebook'
+import { flipboard } from './networks/flipboard'
 import { gemini } from './networks/gemini'
 import { grok } from './networks/grok'
 import { hackernews } from './networks/hackernews'
@@ -39,6 +40,7 @@ export const networksBase = {
   xing,
   tumblr,
   hackernews,
+  flipboard,
   // Messaging
   whatsapp,
   telegram,
