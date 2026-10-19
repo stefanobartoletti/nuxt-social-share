@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "nuxt": "^4.6.0"
+    "nuxt": "^4.6.1"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.17.0",
