@@ -4,6 +4,7 @@ import { bluesky } from './networks/bluesky'
 import { chatgpt } from './networks/chatgpt'
 import { claude } from './networks/claude'
 import { email } from './networks/email'
+import { evernote } from './networks/evernote'
 import { facebook } from './networks/facebook'
 import { flipboard } from './networks/flipboard'
 import { gemini } from './networks/gemini'
@@ -50,6 +51,7 @@ export const networksBase = {
   // Read it later
   instapaper,
   raindrop,
+  evernote,
   // AI
   chatgpt,
   claude,
