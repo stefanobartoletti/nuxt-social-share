@@ -3,6 +3,7 @@ import type { NetworksIndex } from './types'
 import { bluesky } from './networks/bluesky'
 import { chatgpt } from './networks/chatgpt'
 import { claude } from './networks/claude'
+import { copilot } from './networks/copilot'
 import { email } from './networks/email'
 import { evernote } from './networks/evernote'
 import { facebook } from './networks/facebook'
@@ -55,6 +56,7 @@ export const networksBase = {
   // AI
   chatgpt,
   claude,
+  copilot,
   gemini,
   perplexity,
   grok,
