@@ -1,5 +1,23 @@
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1" />
+  <UTable
+    sticky
+    :data="data"
+    :columns="columns"
+    :ui="{ root: 'lg:overflow-visible', thead: 'top-(--ui-header-height)' }"
+    class="flex-1"
+  >
+    <template #icon-header>
+      <UDropdownMenu :items="categoryItems">
+        <UButton
+          icon="i-lucide-list-filter"
+          size="xs"
+          variant="ghost"
+          :color="selectedCategory === 'all' ? 'neutral' : 'primary'"
+          :aria-label="`Filter by category: ${selectedCategory}`"
+        />
+      </UDropdownMenu>
+    </template>
+  </UTable>
 </template>
 
 <script setup>
@@ -31,6 +49,18 @@ function renderIcon(iconData) {
     }),
   ])
 }
+
+const selectedCategory = ref('all')
+
+const categories = [...new Set(Object.values(networksBase).map(network => network.category))]
+
+const categoryItems = computed(() => ['all', ...categories].map(category => ({
+  label: category.charAt(0).toUpperCase() + category.slice(1),
+  icon: selectedCategory.value === category ? 'i-lucide-check' : undefined,
+  onSelect: () => {
+    selectedCategory.value = category
+  },
+})))
 
 const columns = [
   {
@@ -87,7 +117,7 @@ const columns = [
 ]
 
 const data = computed(() => {
-  return Object.keys(networksBase).map((key) => {
+  return Object.keys(networksBase).filter(key => selectedCategory.value === 'all' || networksBase[key]?.category === selectedCategory.value).map((key) => {
     const network = networksBase[key]
 
     if (!network) {
