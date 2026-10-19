@@ -19,6 +19,7 @@ import { perplexity } from './networks/perplexity'
 import { pinterest } from './networks/pinterest'
 import { raindrop } from './networks/raindrop'
 import { reddit } from './networks/reddit'
+import { sms } from './networks/sms'
 import { telegram } from './networks/telegram'
 import { threads } from './networks/threads'
 import { tumblr } from './networks/tumblr'
@@ -49,6 +50,7 @@ export const networksBase = {
   line,
   viber,
   email,
+  sms,
   // Read it later
   instapaper,
   raindrop,
