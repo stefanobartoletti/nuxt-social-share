@@ -62,7 +62,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
-    "@nuxt/devtools": "3.4.4",
+    "@nuxt/devtools": "4.0.0",
     "@nuxt/eslint-config": "^1.17.0",
     "@nuxt/module-builder": "^1.0.3",
     "@nuxt/schema": "^4.6.3",
