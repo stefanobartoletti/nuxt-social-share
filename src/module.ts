@@ -94,6 +94,10 @@ export default defineNuxtModule<ModuleOptions>({
       filePath: resolver.resolve('./runtime/SocialShare.vue'),
     })
 
+    // Global stylesheet rather than a component `<style>`, to ensure proper CSS
+    // cascade and not rely on order set by bundlers.
+    nuxt.options.css.push(resolver.resolve('./runtime/style.css'))
+
     addImports({
       name: 'useSocialShare',
       from: resolver.resolve('./runtime/useSocialShare'),
