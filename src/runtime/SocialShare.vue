@@ -53,9 +53,15 @@ const props = defineProps({
 
 const moduleOptions = useRuntimeConfig().public.socialShare
 
-const isStyled = props.styled !== undefined ? props.styled : moduleOptions.styled
-const isLabeled = props.label !== undefined ? props.label : moduleOptions.label
-const hasIcon = props.icon !== undefined ? props.icon : moduleOptions.icon
+const isStyled = props.styled !== undefined
+  ? props.styled
+  : moduleOptions.styled
+const isLabeled = props.label !== undefined
+  ? props.label
+  : moduleOptions.label
+const hasIcon = props.icon !== undefined
+  ? props.icon
+  : moduleOptions.icon
 
 const selectedNetwork = useSocialShare({
   network: props.network,

@@ -24,12 +24,14 @@ export default defineAppConfig({
     },
     search: true,
     colorMode: true,
-    links: [{
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/stefanobartoletti/nuxt-social-share',
-      'target': '_blank',
-      'aria-label': 'GitHub',
-    }],
+    links: [
+      {
+        'icon': 'i-simple-icons-github',
+        'to': 'https://github.com/stefanobartoletti/nuxt-social-share',
+        'target': '_blank',
+        'aria-label': 'GitHub',
+      },
+    ],
   },
   footer: {
     credits: `Built with Nuxt UI • © 2023-${new Date().getFullYear()} • Stefano Bartoletti`,

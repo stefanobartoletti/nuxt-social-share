@@ -15,7 +15,10 @@ export interface ModuleOptions {
 const validBaseKeys = new Set(Object.keys(networksBase))
 const validAliasKeys = new Set(Object.keys(networksAliasTargets))
 
-const allKnownKeys = [...validBaseKeys, ...validAliasKeys].sort()
+const allKnownKeys = [
+  ...validBaseKeys,
+  ...validAliasKeys,
+].sort()
 
 function generateNetworksIndexContent(
   requestedNetworks: NetworkKey[] | undefined,

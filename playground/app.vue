@@ -28,7 +28,10 @@
 import { ref, useSocialShare } from '#imports'
 import { networksBase } from '../src/runtime/networksIndex'
 
-const testNetworks = [...Object.keys(networksBase), 'invalidnetwork']
+const testNetworks = [
+  ...Object.keys(networksBase),
+  'invalidnetwork',
+]
 const selectedNetwork = ref('facebook')
 
 const instances = [

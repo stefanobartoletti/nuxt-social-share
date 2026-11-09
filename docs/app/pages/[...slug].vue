@@ -104,6 +104,9 @@ const links = computed(() => {
     })
   }
 
-  return [...links, ...(toc?.bottom?.links || [])].filter(Boolean)
+  return [
+    ...links,
+    ...(toc?.bottom?.links || []),
+  ].filter(Boolean)
 })
 </script>

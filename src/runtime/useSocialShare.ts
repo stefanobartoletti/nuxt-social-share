@@ -50,10 +50,18 @@ export function useSocialShare(options: Options = defaultOptions): ComputedRef<N
   const fullShareUrl = computed(() => {
     // Build full share raw url
     const shareUrl = selectedNetwork.shareUrl
-    const argTitle = (selectedNetwork.args?.title && title) ? selectedNetwork.args?.title : ''
-    const argUser = (selectedNetwork.args?.user && user) ? selectedNetwork.args?.user : ''
-    const argHashtags = (selectedNetwork.args?.hashtags && hashtags) ? selectedNetwork.args?.hashtags : ''
-    const argImage = (selectedNetwork.args?.image && image) ? selectedNetwork.args?.image : ''
+    const argTitle = (selectedNetwork.args?.title && title)
+      ? selectedNetwork.args?.title
+      : ''
+    const argUser = (selectedNetwork.args?.user && user)
+      ? selectedNetwork.args?.user
+      : ''
+    const argHashtags = (selectedNetwork.args?.hashtags && hashtags)
+      ? selectedNetwork.args?.hashtags
+      : ''
+    const argImage = (selectedNetwork.args?.image && image)
+      ? selectedNetwork.args?.image
+      : ''
 
     let fullUrl = shareUrl + argTitle + argUser + argHashtags + argImage
 

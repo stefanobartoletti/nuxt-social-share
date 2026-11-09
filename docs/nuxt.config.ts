@@ -34,7 +34,9 @@ export default defineNuxtConfig({
 
   site: {
     // environment variables provided by Netlify
-    url: process.env.BRANCH === 'release' ? process.env.URL : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
+    url: process.env.BRANCH === 'release'
+      ? process.env.URL
+      : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     name: 'Nuxt Social Share',
     description: 'Simple social sharing for your Nuxt Sites',
     indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
@@ -45,7 +47,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        process.env.GOOGLE_VERIFICATION ? { name: 'google-site-verification', content: process.env.GOOGLE_VERIFICATION } : false,
+        process.env.GOOGLE_VERIFICATION
+          ? { name: 'google-site-verification', content: process.env.GOOGLE_VERIFICATION }
+          : false,
       ],
     },
   },

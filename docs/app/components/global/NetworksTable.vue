@@ -52,11 +52,15 @@ function renderIcon(iconData) {
 
 const selectedCategory = ref('all')
 
-const categories = [...new Set(Object.values(networksBase).map(network => network.category))]
+const categories = [
+  ...new Set(Object.values(networksBase).map(network => network.category)),
+]
 
 const categoryItems = computed(() => ['all', ...categories].map(category => ({
   label: category.charAt(0).toUpperCase() + category.slice(1),
-  icon: selectedCategory.value === category ? 'i-lucide-check' : undefined,
+  icon: selectedCategory.value === category
+    ? 'i-lucide-check'
+    : undefined,
   onSelect: () => {
     selectedCategory.value = category
   },
@@ -69,7 +73,9 @@ const columns = [
     cell: ({ row }) => {
       const networkKey = row.getValue('network')
       const network = networksBase[networkKey]
-      return network ? renderIcon(network.icon) : null
+      return network
+        ? renderIcon(network.icon)
+        : null
     },
   },
   {
@@ -138,12 +144,16 @@ const data = computed(() => {
     return {
       network: key,
       alias,
-      url: network.shareUrl.includes('[u]') ? '✅' : '❌',
+      url: network.shareUrl.includes('[u]')
+        ? '✅'
+        : '❌',
       title: network.args?.title ? '☑️' : '❌',
       user: network.args?.user ? '☑️' : '❌',
       hashtags: network.args?.hashtags ? '☑️' : '❌',
       image: network.args?.image ? '☑️' : '❌',
-      prompt: network.shareUrl.includes('[p]') ? '✅' : '❌',
+      prompt: network.shareUrl.includes('[p]')
+        ? '✅'
+        : '❌',
     }
   })
 })
